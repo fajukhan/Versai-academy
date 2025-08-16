@@ -92,7 +92,7 @@ const Home = () => {
        {/* <!-- First Navbar (Top) --> */}
     <nav class="navbar navbar-expand-lg top-navbar py-2">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Tutorials</a>
+            <a class="navbar-brand" href="/">Sutorials</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/topNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
