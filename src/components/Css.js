@@ -215,11 +215,7 @@ const Html = () => {
 
             <div className="collapse navbar-collapse" id="bottomNavbar">
               <ul className="navbar-nav d-flex gap-2">
-                <li className="nav-item">
-                  <Link className="nav-link" to="html">
-                    HTML
-                  </Link>
-                </li>
+                <li className="nav-item"><a className="nav-link" href="html">HTML</a></li>
                 <li className="nav-item"><a className="nav-link" href="css">CSS</a></li>
                 <li className="nav-item"><a className="nav-link" href="/">JAVASCRIPT</a></li>
                 <li className="nav-item"><a className="nav-link" href="/">SQL</a></li>
@@ -247,59 +243,76 @@ const Html = () => {
       
       {/* Sidebar (Left - col-2) */}
       <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
-        <h5 className="fw-bold">HTML Tutorial</h5>
+        <h5 className="fw-bold">CSS Tutorial</h5>
         <ul className="list-unstyled">
-          <li><a href="html">HTML HOME</a></li>
-          <li><a href="htmlhome">HTML Introduction</a></li>
-          <li><a href="/">HTML Editors</a></li>
-          <li><a href="/">HTML Basic</a></li>
-          <li><a href="/">HTML Elements</a></li>
-          <li><a href="/">HTML Attributes</a></li>
-          <li><a href="/">HTML Headings</a></li>
-          <li><a href="/">HTML Paragraphs</a></li>
-          <li><a href="/">HTML Styles</a></li>
-          <li><a href="/">HTML Formatting</a></li>
-          <li><a href="/">HTML Quotations</a></li>
-          <li><a href="/">HTML Comments</a></li>
-          <li><a href="/">HTML Colors</a></li>
-          <li><a href="/">HTML CSS</a></li>
-          <li><a href="/">HTML Links</a></li>
-          <li><a href="/">HTML Images</a></li>
-          <li><a href="/">HTML Favicon</a></li>
-          <li><a href="/">HTML Page Title</a></li>
-          <li><a href="/">HTML Tables</a></li>
-          <li><a href="/">HTML Lists</a></li>
-          <li><a href="/">HTML Div</a></li>
-          <li><a href="/">HTML Block & Inline</a></li>
-          <li><a href="/">HTML Class</a></li>
-          <li><a href="/">HTML Id</a></li>
-          <li><a href="/">HTML Iframes</a></li>
-          <li><a href="/">HTML Javascript</a></li>
-          <li><a href="/">HTML File Paths</a></li>
-          <li><a href="/">HTML Head</a></li>
-          <li><a href="/">HTML Layout</a></li>
-          <li><a href="/">HTML Responsive</a></li>
-          <li><a href="/">HTML Semantics</a></li>
+          <li><a href="/">CSS HOME</a></li>
+          <li><a href="/">CSS Introduction</a></li>
+          <li><a href="/">CSS Syntax</a></li>
+          <li><a href="/">CSS Selector</a></li>
+          <li><a href="/">CSS How To</a></li>
+          <li><a href="/">CSS Comments</a></li>
+          <li><a href="/">CSS Errors</a></li>
+          <li><a href="/">CSS Color</a></li>
+          <li><a href="/">CSS Background</a></li>
+          <li><a href="/">CSS Borders</a></li>
+          <li><a href="/">CSS Margins</a></li>
+          <li><a href="/">CSS Padding</a></li>
+          <li><a href="/">CSS Height/Width</a></li>
+          <li><a href="/">CSS Box Model</a></li>
+          <li><a href="/">CSS Outline</a></li>
+          <li><a href="/">CSS Tex</a></li>
+          <li><a href="/">CSS Fonts</a></li>
+          <li><a href="/">CSS Icons</a></li>
+          <li><a href="/">CSS Links</a></li>
+          <li><a href="/">CSS Lists</a></li>
+          <li><a href="/">CSS Table</a></li>
+          <li><a href="/">CSS Display</a></li>
+          <li><a href="/">CSS Max-Width</a></li>
+          <li><a href="/">CSS Position</a></li>
+          <li><a href="/">CSS Z-index</a></li>
+          <li><a href="/">CSS Overflow</a></li>
+          <li><a href="/">CSS Inline-Block</a></li>
+          <li><a href="/">CSS Align</a></li>
+          <li><a href="/">CSS Combinator</a></li>
+          <li><a href="/">CSS Pseudo-classes</a></li>
+          <li><a href="/">CSS Pseudo-elements</a></li>
+          <li><a href="/">CSS Dropdowns</a></li>
+          <li><a href="/">CSS Image Gallery</a></li>
         </ul>
-        <h5 className="fw-bold">HTML Forms</h5>
+        <h5 className="fw-bold">CSS Flexbox</h5>
         <ul className="list-unstyled">
         
          
-          <li><a href="/">HTML Forms</a></li>
-          <li><a href="/">HTML Form Elements</a></li>
-          <li><a href="/">HTML Input Types</a></li>
-          <li><a href="/">HTML Input Attributes</a></li>
-          <li><a href="/">HTML Form Attributes</a></li>
+          <li><a href="/">Flexbox Intro</a></li>
+          <li><a href="/">Flex Container</a></li>
+          <li><a href="/">Flex Items</a></li>
+          <li><a href="/">Flex Responsive</a></li>
+          
         
         </ul>
-        <h5 className="fw-bold">HTML Media</h5>
+        <h5 className="fw-bold">CSS Grid</h5>
         <ul className="list-unstyled">
         
          
-          <li><a href="/">HTML Media</a></li>
-          <li><a href="/">HTML Audio</a></li>
-          <li><a href="/">HTML Video</a></li>
-          <li><a href="/">HTML Youtube</a></li>
+          <li><a href="/">Grid Intro</a></li>
+          <li><a href="/">Grid Columns/Rows</a></li>
+          <li><a href="/">Grid Container</a></li>
+          <li><a href="/">Grid Item</a></li>
+           <li><a href="/">CSS @supports</a></li>
+          
+        
+        </ul>
+         <h5 className="fw-bold">CSS Responsive</h5>
+        <ul className="list-unstyled">
+        
+         
+          <li><a href="/">RWD Intro</a></li>
+          <li><a href="/">RWD Viewport</a></li>
+          <li><a href="/">RWD Grid View</a></li>
+          <li><a href="/">RWD Media Queries</a></li>
+           <li><a href="/">RWD Images</a></li>
+           <li><a href="/">RWD Videos</a></li>
+           <li><a href="/">RWD Framworks</a></li>
           
         
         </ul>

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home';
 import Html from './components/Html';
 import Htmlhome from './components/Htmlhome';
+import Css from './components/Css';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const App = () => {
       {
       path: "htmlhome",
       element: <Htmlhome/>
+    },
+     {
+      path: "css",
+      element: <Css/>
     },
    
   ]);

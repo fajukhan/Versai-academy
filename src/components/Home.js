@@ -154,7 +154,7 @@ const Home = () => {
             <Link className="nav-link" to="html">HTML</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">CSS</a>
+            <a className="nav-link" href="css">CSS</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/">JAVASCRIPT</a>
