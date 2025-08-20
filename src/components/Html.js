@@ -250,7 +250,7 @@ const Html = () => {
         <h5 className="fw-bold">HTML Tutorial</h5>
         <ul className="list-unstyled">
           <li><a href="html">HTML HOME</a></li>
-          <li><a href="htmlhome">HTML Introduction</a></li>
+          <li><a href="html-home">HTML Introduction</a></li>
           <li><a href="/">HTML Editors</a></li>
           <li><a href="/">HTML Basic</a></li>
           <li><a href="/">HTML Elements</a></li>
