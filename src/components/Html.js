@@ -269,7 +269,39 @@ const Html = () => {
           <li><a href="/">HTML Page Title</a></li>
           <li><a href="/">HTML Tables</a></li>
           <li><a href="/">HTML Lists</a></li>
+          <li><a href="/">HTML Div</a></li>
           <li><a href="/">HTML Block & Inline</a></li>
+          <li><a href="/">HTML Class</a></li>
+          <li><a href="/">HTML Id</a></li>
+          <li><a href="/">HTML Iframes</a></li>
+          <li><a href="/">HTML Javascript</a></li>
+          <li><a href="/">HTML File Paths</a></li>
+          <li><a href="/">HTML Head</a></li>
+          <li><a href="/">HTML Layout</a></li>
+          <li><a href="/">HTML Responsive</a></li>
+          <li><a href="/">HTML Semantics</a></li>
+        </ul>
+        <h5 className="fw-bold">HTML Forms</h5>
+        <ul className="list-unstyled">
+        
+         
+          <li><a href="/">HTML Forms</a></li>
+          <li><a href="/">HTML Form Elements</a></li>
+          <li><a href="/">HTML Input Types</a></li>
+          <li><a href="/">HTML Input Attributes</a></li>
+          <li><a href="/">HTML Form Attributes</a></li>
+        
+        </ul>
+        <h5 className="fw-bold">HTML Media</h5>
+        <ul className="list-unstyled">
+        
+         
+          <li><a href="/">HTML Media</a></li>
+          <li><a href="/">HTML Audio</a></li>
+          <li><a href="/">HTML Video</a></li>
+          <li><a href="/">HTML Youtube</a></li>
+          
+        
         </ul>
       </div>
 
