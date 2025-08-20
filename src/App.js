@@ -3,7 +3,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home';
 import Html from './components/Html';
-import Htmlhome from './components/Html-home';
+import Htmlhome from './components/Htmlhome';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -18,8 +18,8 @@ const App = () => {
     },
 
       {
-      path: "html-home",
-      element: <Html-home/>
+      path: "htmlhome",
+      element: <Htmlhome/>
     },
    
   ]);
