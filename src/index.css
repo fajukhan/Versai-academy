@@ -1511,7 +1511,7 @@ body {
     }
     .sidebar ul li a {
       display: block;
-      padding: 8px 12px;
+      padding: 2px 12px;
       border-radius: 6px;
       text-decoration: none;
       color: #333;
