@@ -11,6 +11,7 @@ import Basic from './components/Basic';
 import Elements from './components/Elements';
 import Attribute from './components/Attribute';
 import Heading from './components/Heading';
+import Css from './components/Css';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -44,6 +45,12 @@ const App = () => {
      {
       path: "html",
       element: <Html/>
+    },
+
+
+     {
+      path: "css",
+      element: <Css />
     },
 
       {

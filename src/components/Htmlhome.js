@@ -1,6 +1,8 @@
 
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import Navbar from './Navbar';
+import Footer from "./Footer";
 const Htmlhome = () => {
 
 
