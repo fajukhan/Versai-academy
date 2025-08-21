@@ -1518,7 +1518,7 @@ body {
       transition: 0.3s ease;
     }
     .sidebar ul li a:hover {
-      background: #0d6efd;
+      background: #812B8F;
       color: #fff;
       transform: translateX(5px);
     }
@@ -1556,19 +1556,280 @@ body {
       min-height: 200px;
     }
 
+
+       /* Code Box */
+    .code-box {
+      background: #f8f9fa;
+      border-left: 6px solid #812B8F;
+      padding: 20px;
+      font-family: "Courier New", monospace;
+      white-space: pre-wrap;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Button */
+    .custom-btn {
+      background-color: #812B8F;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .custom-btn:hover {
+      background-color: #fff;
+      color: #812B8F;
+      border: 2px solid #812B8F;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(129, 43, 143, 0.3);
+    }
+
    
 
 
 
+     /* Tag Highlight */
+  .tag {
+    background: #f8f8f8;
+    color: #812B8F;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .tag:hover {
+    background: #812B8F;
+    color: #fff;
+  }
+
+  /* Example Box */
+  .example-box {
+    background: #f4f4f4;
+    border-left: 6px solid #812B8F;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .example-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(129, 43, 143, 0.2);
+  }
+
+  /* Tagname inside code */
+  .tagname {
+    color: #812B8F;
+    font-weight: 700;
+  }
+
+.ref-card {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ref-card:hover {
+    background: #812B8F;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(129, 43, 143, 0.3);
+  }
+
+
+   .step-box {
+    background: #fff;
+    border-left: 5px solid #812B8F;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .step-box:hover {
+    background: #f8f1fa;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(129, 43, 143, 0.3);
+  }
+
+  .step-box h4 {
+    color: #812B8F;
+  }
+
+  .highlight {
+    color: #812B8F;
+    font-weight: 600;
+  }
+
+
+   /* Highlight Tags */
+    .tag {
+      color: #812B8F;
+      font-weight: bold;
+      background: #fce9ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .tag:hover {
+      background: #812B8F;
+      color: #fff;
+    }
+
+    /* Example Code Box */
+    .code-box {
+      background: #f8f9fa;
+      border-left: 5px solid #812B8F;
+      padding: 15px;
+      font-family: monospace;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .code-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(129, 43, 143, 0.3);
+    }
+
+    /* Custom Buttons */
+    .custom-btn {
+      background-color: #812B8F;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .custom-btn:hover {
+      background-color: #5d1f66;
+      transform: scale(1.05);
+    }
+
+    /* Section Titles */
+    h2, h3 {
+      color: #000;
+      font-weight: 600;
+    }
+
+    /* Responsive spacing */
+    section {
+      padding: 40px 15px;
+    }
 
 
 
 
 
+   /* Tag Styling */
+    .tag {
+      color: #812B8F;
+      font-weight: bold;
+      background: #fce9ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .tag:hover {
+      background: #812B8F;
+      color: #fff;
+    }
+
+    /* Code Example */
+    .code-box {
+      background: #f8f9fa;
+      border-left: 5px solid #812B8F;
+      padding: 15px;
+      font-family: monospace;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .code-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(129, 43, 143, 0.3);
+    }
+
+    /* Table Styling */
+    .custom-table th,
+    .custom-table td {
+      border: 1px solid #dee2e6;
+      padding: 8px;
+    }
+
+    /* Note Box */
+    .note-box {
+      background: #fff3cd;
+      border-left: 5px solid #812B8F;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      margin-top: 15px;
+    }
+
+    /* Headings */
+    h2, h3 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    section {
+      padding: 40px 15px;
+    }
 
 
 
 
+      h2 {
+      color: #812B8F;
+      font-weight: bold;
+    }
+    .highlight {
+      color: #812B8F;
+      font-weight: 600;
+    }
+    .code-box {
+      background: #f1f1f1;
+      padding: 15px;
+      border-left: 4px solid #812B8F;
+      border-radius: 8px;
+      font-family: Consolas, monospace;
+      transition: all 0.3s ease-in-out;
+    }
+    .code-box:hover {
+      background: #812B8F;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+    .btn-custom {
+      background: #812B8F;
+      color: #fff;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+      background: #a94fb0;
+      transform: scale(1.05);
+    }
+    .note-box {
+      background: #fff3cd;
+      border-left: 4px solid #812B8F;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    table {
+      border: 1px solid #dee2e6;
+    }
+    table thead {
+      background: #812B8F;
+      color: #fff;
+    }
+    table tbody tr:hover {
+      background: #f2e6f5;
+      transition: 0.3s;
+    }
 
 
 
