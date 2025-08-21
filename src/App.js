@@ -30,6 +30,17 @@ const App = () => {
       element: <Footer/>
     },
 
+      {
+      path: "navbar",
+      element: <Navbar/>
+    },
+
+
+     {
+      path: "footer",
+      element: <Footer/>
+    },
+
      {
       path: "html",
       element: <Html/>
