@@ -14,8 +14,8 @@ const Html = () => {
      <Navbar />
 
     {/* Section-1 */}
-<section>
-  <div className="">
+<section  className="p-0">
+  <div className="bg-white">
     <div className="row g-0">
       
       {/* Sidebar (Left - col-2) */}
@@ -29,7 +29,7 @@ const Html = () => {
           <li><a href="elements">HTML Elements</a></li>
           <li><a href="attribute">HTML Attributes</a></li>
           <li><a href="heading">HTML Headings</a></li>
-          <li><a href="/">HTML Paragraphs</a></li>
+          <li><a href="paragraph">HTML Paragraphs</a></li>
           <li><a href="/">HTML Styles</a></li>
           <li><a href="/">HTML Formatting</a></li>
           <li><a href="/">HTML Quotations</a></li>
@@ -101,7 +101,7 @@ const Html = () => {
 
         {/* Example Section */}
               <div className="row justify-content-start pt-3">
-                <div className="col-lg-10 col-md-12">
+                <div className="col-lg-12 col-md-12">
                   {/* Heading */}
                   <h4 className="fw-bold mb-3">Example</h4>
 
@@ -200,18 +200,7 @@ const Html = () => {
        
       </div>
 
-      {/* Ads (Right - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 bg-white">
-        <div className="ads-box text-center p-3">
-          <h6 className="fw-bold">ADVERTISEMENT</h6>
-          <img
-            src={require('../images/ads.jpeg')}
-            alt="ads"
-            className="img-fluid mt-2"
-          />
-        </div>
-      </div>
-
+     
     </div>
   </div>
 </section>

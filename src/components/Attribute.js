@@ -13,8 +13,8 @@ const Attribute = () => {
        <Navbar />
    
          {/* Section-1 */}
-         <section>
-           <div className="">
+         <section className="p-0">
+           <div className="bg-white">
              <div className="row g-0">
                {/* Sidebar (Left - col-2) */}
                <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
@@ -42,7 +42,7 @@ const Attribute = () => {
                      <a href="heading">HTML Headings</a>
                    </li>
                    <li>
-                     <a href="/">HTML Paragraphs</a>
+                     <a href="paragraph">HTML Paragraphs</a>
                    </li>
                    <li>
                      <a href="/">HTML Styles</a>
@@ -118,7 +118,7 @@ const Attribute = () => {
           <a href="elements"> <button className="custom-btn">
             <i className="bi"><FaArrowLeft /></i> Previous
           </button></a> 
-        <a href="basic"> <button className="custom-btn">
+        <a href="heading"> <button className="custom-btn">
             Next <i className="bi"><FaArrowRight /></i>
           </button></a>
         </div> 
@@ -171,17 +171,6 @@ const Attribute = () => {
                  </div>
                </div>
    
-               {/* Ads (Right - col-2) */}
-               <div className="col-lg-2 col-md-3 col-12">
-                 <div className="ads-box text-center p-3">
-                   <h6 className="fw-bold">ADVERTISEMENT</h6>
-                   <img
-                     src="https://via.placeholder.com/160x600?text=Ad+Banner"
-                     alt="ads"
-                     className="img-fluid mt-2"
-                   />
-                 </div>
-               </div>
              </div>
            </div>
          </section>
