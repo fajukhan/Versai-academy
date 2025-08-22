@@ -155,40 +155,40 @@ const Navbar = () => {
                <a className="nav-link" href="css">CSS</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">JAVASCRIPT</a>
+               <a className="nav-link" href="javascript">JAVASCRIPT</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">SQL</a>
+               <a className="nav-link" href="Sql">SQL</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">PYTHON</a>
+               <a className="nav-link" href="Python">PYTHON</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">JAVA</a>
+               <a className="nav-link" href="java">JAVA</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">PHP</a>
+               <a className="nav-link" href="Php">PHP</a>
              </li>
              <li className="nav-item">
                <a className="nav-link" href="/">BOOTSTRAP</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">REACT</a>
+               <a className="nav-link" href="React">REACT</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">JQUERY</a>
+               <a className="nav-link" href="JQuery">JQUERY</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">EXCEL</a>
+               <a className="nav-link" href="Excel">EXCEL</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">GITHUB</a>
+               <a className="nav-link" href="Git">GIT</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">WORDPRESS</a>
+               <a className="nav-link" href="Wordpress">WORDPRESS</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="/">DIGITALMARKETING</a>
+               <a className="nav-link" href="DigitalMarketing">DIGITALMARKETING</a>
              </li>
              <li className="nav-item">
                <a className="nav-link" href="/">GRAPHICDESIGN</a>
