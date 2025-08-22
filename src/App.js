@@ -12,6 +12,17 @@ import Elements from './components/Elements';
 import Attribute from './components/Attribute';
 import Heading from './components/Heading';
 import Css from './components/Css';
+import Javascript from './components/Javascript';
+import Sql from './components/Sql';
+import Python from './components/Python';
+import Java from './components/Java';
+import Php from './components/Php';
+import React from './components/React';
+import JQuery from './components/JQuery';
+import Excel from './components/Excel';
+import Git from './components/Git';
+import Wordpress from './components/Wordpress';
+import DigitalMarketing from './components/DigitalMarketing';
 import Paragraph from './components/Paragraph';
 import Style from './components/Style';
 import Formatting from './components/Formatting';
@@ -60,8 +71,52 @@ const App = () => {
       path: "css",
       element: <Css />
     },
-
       {
+      path: "javascript",
+      element: <Javascript />
+    },
+    {
+      path: "sql",
+      element: <Sql />
+    },
+    {
+      path: "python",
+      element: <Python />
+    },
+    {
+      path: "java",
+      element: <Java />
+    },
+    {
+      path: "php",
+      element: <Php />
+    },
+    {
+      path: "react",
+      element: <React />
+    },
+    {
+      path: "jquery",
+      element: <JQuery />
+    },
+    {
+      path: "excel",
+      element: <Excel />
+    },
+    {
+      path: "git",
+      element: <Git />
+    },
+
+    {
+      path: "wordpress",
+      element: <Wordpress />
+    },
+    {
+      path: "digitalmarketing",
+      element: <DigitalMarketing />
+    },
+    {
       path: "htmlhome",
       element: <Htmlhome/>
     },

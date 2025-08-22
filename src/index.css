@@ -1159,8 +1159,19 @@ body {
 
 .footer-links li {
     margin-bottom: 5px;
-    font-size: 10px !important;
+    font-size: 14px !important;
 }
+
+
+
+  .versai-link {
+    color: #812B8F;
+    text-decoration: none; /* underline hatane ke liye */
+  }
+  .versai-link:hover {
+    color: #5e216a; /* hover pe thoda dark shade */
+  }
+
 
 .footer-links a {
     color: var(--link-color);
