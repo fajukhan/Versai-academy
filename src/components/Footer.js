@@ -143,8 +143,20 @@ const Footer = () => {
                     <span class="separator">|</span> 
                     <a href="/"><i ><FaGraduationCap color='purple' /></i> ACADEMY</a>
                 </h5>
-                        <p class="about-text">W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot answer full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookies and privacy policy.</p>
-                        <p class="copyright">Copyright 1999-2025 by Refsnes Data, All Rights Reserved. W3Schools is Powered by W3.CSS.</p>
+                        <p class="about-text">
+    Versai Academy is optimized for learning and training. Examples might be simplified to improve reading and learning. 
+    Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot answer full correctness of all content. 
+    While using Versai Academy, you agree to have read and accepted our terms of use, cookies and privacy policy.
+</p>
+
+<p class="copyright">
+    Copyright 2025-2026 by Refsnes Data, All Rights Reserved. 
+    Versai Academy is Powered by <a href="" class="versai-link">VersaiTechnology</a>
+</p>
+
+
+
+
                     </div>
                 </div>
             </div>
