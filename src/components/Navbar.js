@@ -147,7 +147,7 @@ const Navbar = () => {
          </button>
          
          <div className="collapse navbar-collapse" id="bottomNavbar">
-           <ul className="navbar-nav d-flex gap-2">
+           <ul className="navbar-nav d-flex gap-4">
              <li className="nav-item">
                <Link className="nav-link" to="/html">HTML</Link>
              </li>

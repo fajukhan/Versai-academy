@@ -12,6 +12,7 @@ import Elements from './components/Elements';
 import Attribute from './components/Attribute';
 import Heading from './components/Heading';
 import Css from './components/Css';
+import Paragraph from './components/Paragraph';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -88,6 +89,12 @@ const App = () => {
       element: <Heading />
     },
    
+
+      
+       {
+      path: "paragraph",
+      element: <Paragraph />
+    },
    
   ]);
 

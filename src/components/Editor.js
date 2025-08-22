@@ -15,7 +15,7 @@ const Editor = () => {
        <Navbar />
    
          {/* Section-1 */}
-         <section>
+         <section className="bg-white p-0">
            <div className="">
              <div className="row g-0">
                {/* Sidebar (Left - col-2) */}
@@ -29,7 +29,7 @@ const Editor = () => {
           <li><a href="elements">HTML Elements</a></li>
           <li><a href="attribute">HTML Attributes</a></li>
           <li><a href="heading">HTML Headings</a></li>
-          <li><a href="/">HTML Paragraphs</a></li>
+          <li><a href="paragraph">HTML Paragraphs</a></li>
           <li><a href="/">HTML Styles</a></li>
           <li><a href="/">HTML Formatting</a></li>
           <li><a href="/">HTML Quotations</a></li>
@@ -193,17 +193,7 @@ const Editor = () => {
                  </div>
                </div>
    
-               {/* Ads (Right - col-2) */}
-               <div className="col-lg-2 col-md-3 col-12">
-                 <div className="ads-box text-center p-3">
-                   <h6 className="fw-bold">ADVERTISEMENT</h6>
-                   <img
-                     src="https://via.placeholder.com/160x600?text=Ad+Banner"
-                     alt="ads"
-                     className="img-fluid mt-2"
-                   />
-                 </div>
-               </div>
+              
              </div>
            </div>
          </section>
