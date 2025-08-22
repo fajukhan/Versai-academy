@@ -45,25 +45,25 @@ const Attribute = () => {
                      <a href="paragraph">HTML Paragraphs</a>
                    </li>
                    <li>
-                     <a href="/">HTML Styles</a>
+                     <a href="style">HTML Styles</a>
                    </li>
                    <li>
-                     <a href="/">HTML Formatting</a>
+                     <a href="formatting">HTML Formatting</a>
                    </li>
                    <li>
-                     <a href="/">HTML Quotations</a>
+                     <a href="quotation">HTML Quotations</a>
                    </li>
                    <li>
-                     <a href="/">HTML Comments</a>
+                     <a href="comments">HTML Comments</a>
                    </li>
                    <li>
-                     <a href="/">HTML Colors</a>
+                     <a href="colors">HTML Colors</a>
                    </li>
                    <li>
-                     <a href="/">HTML CSS</a>
+                     <a href="css2">HTML CSS</a>
                    </li>
                    <li>
-                     <a href="/">HTML Links</a>
+                     <a href="links">HTML Links</a>
                    </li>
                    <li>
                      <a href="/">HTML Images</a>

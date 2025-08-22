@@ -28,13 +28,13 @@ const Paragraph = () => {
           <li><a href="attribute">HTML Attributes</a></li>
           <li><a href="heading">HTML Headings</a></li>
           <li><a href="paragraph">HTML Paragraphs</a></li>
-          <li><a href="/">HTML Styles</a></li>
-          <li><a href="/">HTML Formatting</a></li>
-          <li><a href="/">HTML Quotations</a></li>
-          <li><a href="/">HTML Comments</a></li>
-          <li><a href="/">HTML Colors</a></li>
-          <li><a href="/">HTML CSS</a></li>
-          <li><a href="/">HTML Links</a></li>
+          <li><a href="style">HTML Styles</a></li>
+          <li><a href="formatting">HTML Formatting</a></li>
+          <li><a href="quotation">HTML Quotations</a></li>
+          <li><a href="comments">HTML Comments</a></li>
+          <li><a href="colors">HTML Colors</a></li>
+          <li><a href="css2">HTML CSS</a></li>
+          <li><a href="links">HTML Links</a></li>
           <li><a href="/">HTML Images</a></li>
           <li><a href="/">HTML Favicon</a></li>
           <li><a href="/">HTML Page Title</a></li>
@@ -83,10 +83,10 @@ const Paragraph = () => {
    
                    {/* Buttons */}
       <div className="d-flex justify-content-between gap-3 flex-wrap mt-3">
-          <a href="attribute"> <button className="custom-btn">
+          <a href="heading"> <button className="custom-btn">
             <i className="bi"><FaArrowLeft /></i> Previous
           </button></a> 
-        <a href="basic"> <button className="custom-btn">
+        <a href="style"> <button className="custom-btn">
             Next <i className="bi"><FaArrowRight /></i>
           </button></a>
         </div> 
@@ -182,17 +182,7 @@ const Paragraph = () => {
 
                </div>
    
-               {/* Ads (Right - col-2) */}
-               <div className="col-lg-2 col-md-3 col-12">
-                 <div className="ads-box text-center p-3">
-                   <h6 className="fw-bold">ADVERTISEMENT</h6>
-                   <img
-                     src="https://via.placeholder.com/160x600?text=Ad+Banner"
-                     alt="ads"
-                     className="img-fluid mt-2"
-                   />
-                 </div>
-               </div>
+            
              </div>
            </div>
          </section>

@@ -7,11 +7,17 @@ import Footer from "./Footer";
 
 const Html = () => {
 
+    
 
   return (
+
+
+
+
     <>
       {/* NavBar */}
      <Navbar />
+
 
     {/* Section-1 */}
 <section  className="p-0">
@@ -22,7 +28,7 @@ const Html = () => {
       <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
         <h5 className="fw-bold">HTML Tutorial</h5>
         <ul className="list-unstyled">
-          <li><a href="html">HTML HOME</a></li>
+          <li><a href="html"   >HTML HOME</a></li>
           <li><a href="htmlhome">HTML Introduction</a></li>
           <li><a href="editor">HTML Editors</a></li>
           <li><a href="basic">HTML Basic</a></li>
@@ -30,13 +36,13 @@ const Html = () => {
           <li><a href="attribute">HTML Attributes</a></li>
           <li><a href="heading">HTML Headings</a></li>
           <li><a href="paragraph">HTML Paragraphs</a></li>
-          <li><a href="/">HTML Styles</a></li>
-          <li><a href="/">HTML Formatting</a></li>
-          <li><a href="/">HTML Quotations</a></li>
-          <li><a href="/">HTML Comments</a></li>
-          <li><a href="/">HTML Colors</a></li>
-          <li><a href="/">HTML CSS</a></li>
-          <li><a href="/">HTML Links</a></li>
+          <li><a href="style">HTML Styles</a></li>
+          <li><a href="formatting">HTML Formatting</a></li>
+          <li><a href="quotation">HTML Quotations</a></li>
+          <li><a href="comments">HTML Comments</a></li>
+          <li><a href="colors">HTML Colors</a></li>
+          <li><a href="css2">HTML CSS</a></li>
+          <li><a href="links">HTML Links</a></li>
           <li><a href="/">HTML Images</a></li>
           <li><a href="/">HTML Favicon</a></li>
           <li><a href="/">HTML Page Title</a></li>
@@ -79,7 +85,8 @@ const Html = () => {
       </div>
 
       {/* Main Content (Middle - col-10) */}
-      <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
+      <div className="col-lg-8 col-md-6 col-12  bg-white p-5">
+      
         <h1>HTML Tutorial</h1>
 
         {/* Buttons */}
@@ -198,8 +205,8 @@ const Html = () => {
    </div>
 
        
-      </div>
-
+      
+   </div>
      
     </div>
   </div>

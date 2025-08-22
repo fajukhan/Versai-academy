@@ -140,14 +140,12 @@ const Navbar = () => {
      </nav>
      
      {/* <!-- Second Navbar (Bottom) --> */}
-     <nav className="navbar navbar-expand-lg bottom-navbar py-0">
+     <nav className="navbar bottom-navbar py-0">
        <div className="container-fluid">
-         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bottomNavbar">
-           <span className="navbar-toggler-icon text-white"><i className="fas fa-bars"></i></span>
-         </button>
+       
          
-         <div className="collapse navbar-collapse" id="bottomNavbar">
-           <ul className="navbar-nav d-flex gap-4">
+         <div className=" w-100 overflow-auto">
+           <ul className="nav d-flex flex-row flex-nowrap gap-1 px-0">
              <li className="nav-item">
                <Link className="nav-link" to="/html">HTML</Link>
              </li>

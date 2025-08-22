@@ -14,7 +14,7 @@ const Heading = () => {
    
          {/* Section-1 */}
          <section  className="p-0">
-           <div className="">
+           <div className="bg-white">
              <div className="row g-0">
                {/* Sidebar (Left - col-2) */}
                <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
@@ -28,13 +28,13 @@ const Heading = () => {
           <li><a href="attribute">HTML Attributes</a></li>
           <li><a href="heading">HTML Headings</a></li>
           <li><a href="paragraph">HTML Paragraphs</a></li>
-          <li><a href="/">HTML Styles</a></li>
-          <li><a href="/">HTML Formatting</a></li>
-          <li><a href="/">HTML Quotations</a></li>
-          <li><a href="/">HTML Comments</a></li>
-          <li><a href="/">HTML Colors</a></li>
-          <li><a href="/">HTML CSS</a></li>
-          <li><a href="/">HTML Links</a></li>
+          <li><a href="style">HTML Styles</a></li>
+          <li><a href="formatting">HTML Formatting</a></li>
+          <li><a href="quotation">HTML Quotations</a></li>
+          <li><a href="comments">HTML Comments</a></li>
+          <li><a href="colors">HTML Colors</a></li>
+          <li><a href="css2">HTML CSS</a></li>
+          <li><a href="links">HTML Links</a></li>
           <li><a href="/">HTML Images</a></li>
           <li><a href="/">HTML Favicon</a></li>
           <li><a href="/">HTML Page Title</a></li>
@@ -86,7 +86,7 @@ const Heading = () => {
           <a href="attribute"> <button className="custom-btn">
             <i className="bi"><FaArrowLeft /></i> Previous
           </button></a> 
-        <a href="basic"> <button className="custom-btn">
+        <a href="paragraph"> <button className="custom-btn">
             Next <i className="bi"><FaArrowRight /></i>
           </button></a>
         </div> 

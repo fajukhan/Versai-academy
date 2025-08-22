@@ -1,6 +1,6 @@
 
 import './App.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Links, RouterProvider } from "react-router-dom";
 import Home from './components/Home';
 import Html from './components/Html';
 import Htmlhome from './components/Htmlhome';
@@ -13,6 +13,13 @@ import Attribute from './components/Attribute';
 import Heading from './components/Heading';
 import Css from './components/Css';
 import Paragraph from './components/Paragraph';
+import Style from './components/Style';
+import Formatting from './components/Formatting';
+import Quotation from './components/Quotation';
+import Comments from './components/Comments';
+import Colors from './components/Colors';
+import CSS2 from './components/CSS2';
+import Links1 from './components/Links1';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -95,7 +102,54 @@ const App = () => {
       path: "paragraph",
       element: <Paragraph />
     },
+
+
+       
+       {
+      path: "style",
+      element: <Style />
+    },
    
+
+
+         {
+      path: "formatting",
+      element: <Formatting />
+    },
+
+
+        {
+      path: "quotation",
+      element: <Quotation />
+    },
+
+
+       {
+      path: "comments",
+      element: <Comments />
+    },
+
+
+        {
+      path: "colors",
+      element: <Colors />
+    },
+
+
+       {
+      path: "css2",
+      element: <CSS2 />
+    },
+
+
+      {
+      path: "links",
+      element: <Links1 />
+    },
+
+
+
+
   ]);
 
   return <RouterProvider router={router} />;
