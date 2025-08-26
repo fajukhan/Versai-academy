@@ -1,7 +1,7 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Comments = () => {
   return (
@@ -32,39 +32,39 @@ const Comments = () => {
                 <li><a href="colors">HTML Colors</a></li>
                 <li><a href="css2">HTML CSS</a></li>
                 <li><a href="links">HTML Links</a></li>
-                <li><a href="/">HTML Images</a></li>
-                <li><a href="/">HTML Favicon</a></li>
-                <li><a href="/">HTML Page Title</a></li>
-                <li><a href="/">HTML Tables</a></li>
-                <li><a href="/">HTML Lists</a></li>
-                <li><a href="/">HTML Div</a></li>
-                <li><a href="/">HTML Block & Inline</a></li>
-                <li><a href="/">HTML Class</a></li>
-                <li><a href="/">HTML Id</a></li>
-                <li><a href="/">HTML Iframes</a></li>
-                <li><a href="/">HTML Javascript</a></li>
-                <li><a href="/">HTML File Paths</a></li>
-                <li><a href="/">HTML Head</a></li>
-                <li><a href="/">HTML Layout</a></li>
-                <li><a href="/">HTML Responsive</a></li>
-                <li><a href="/">HTML Semantics</a></li>
+                <li><a href="images">HTML Images</a></li>
+                <li><a href="favicon">HTML Favicon</a></li>
+                <li><a href="pagetitle">HTML Page Title</a></li>
+                <li><a href="tables">HTML Tables</a></li>
+                <li><a href="lists">HTML Lists</a></li>
+                <li><a href="divs">HTML Div</a></li>
+                <li><a href="blockinline">HTML Block & Inline</a></li>
+                <li><a href="htmlclass">HTML Class</a></li>
+                <li><a href="htmlid">HTML Id</a></li>
+                <li><a href="htmliframes">HTML Iframes</a></li>
+                <li><a href="htmljavascript">HTML Javascript</a></li>
+                <li><a href="htmlfilepath">HTML File Paths</a></li>
+                <li><a href="htmlhead">HTML Head</a></li>
+                <li><a href="htmllayout">HTML Layout</a></li>
+                <li><a href="htmlresponsive">HTML Responsive</a></li>
+                <li><a href="htmlsemantic">HTML Semantics</a></li>
               </ul>
 
               <h5 className="fw-bold">HTML Forms</h5>
               <ul className="list-unstyled">
-                <li><a href="/">HTML Forms</a></li>
-                <li><a href="/">HTML Form Elements</a></li>
-                <li><a href="/">HTML Input Types</a></li>
-                <li><a href="/">HTML Input Attributes</a></li>
-                <li><a href="/">HTML Form Attributes</a></li>
+                <li><a href="htmlform">HTML Forms</a></li>
+                <li><a href="htmlformelement">HTML Form Elements</a></li>
+                <li><a href="htmlinput">HTML Input Types</a></li>
+                <li><a href="htmlattribute">HTML Input Attributes</a></li>
+                  <li><a href="htmlformattribute">HTML Form Attributes</a></li>
               </ul>
 
               <h5 className="fw-bold">HTML Media</h5>
               <ul className="list-unstyled">
-                <li><a href="/">HTML Media</a></li>
-                <li><a href="/">HTML Audio</a></li>
-                <li><a href="/">HTML Video</a></li>
-                <li><a href="/">HTML Youtube</a></li>
+                 <li><a href="htmlmultimedia">HTML Media</a></li>
+              <li><a href="htmlaudio">HTML Audio</a></li>
+                <li><a href="htmlvideo">HTML Video</a></li>
+              <li><a href="htmlyoutube">HTML Youtube</a></li>
               </ul>
             </div>
 

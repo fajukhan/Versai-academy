@@ -49,7 +49,7 @@ const Home = () => {
 
 {/* Section-1 */}
 
-<section>
+<section className="p-0 py-5">
   <div className="css-section" style={{backgroundColor:'#797917ff'}}>
     <div className="container">
       <div className="row">
@@ -309,7 +309,7 @@ WHERE Country='Mexico';`}
         <div class="container pt-5">
       <div class="row g-4 py-5">
 
-      <div class="col-12 col-md-6">
+      <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="course-card bg-php">
           <h4>PHP</h4>
           <p>A web server programming language</p>

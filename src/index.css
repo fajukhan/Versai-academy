@@ -459,35 +459,35 @@ color: #812B8F !important;
             color: black;
         }
         
-        .small-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            animation: fadeInUp 0.5s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            min-height: 150px;
-        }
-        
-        .small-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            background-color: lighten(var(--card-bg), 5%);
-        }
-        
-        .small-card-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--light-color);
-            text-align: center;
-        }
-        
+     .small-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 150px;
+}
+
+.small-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.small-card-title {
+  font-size: 1.5rem;   /* Default (desktop) */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--light-color, #fff);
+  text-align: center;
+}
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -577,6 +577,13 @@ body {
 .auth-card:hover {
     transform: translateY(-5px);
 }
+
+.auth-image {
+  max-width: 100%;  /* Shrinks to fit container */
+  height: auto;     /* Keeps aspect ratio */
+  border-radius: 10px; /* optional, looks better */
+}
+
 
 .progress-card {
     background-color: var(--card-bg);
@@ -1328,7 +1335,7 @@ body {
 }
 
 .css-example-card {
-   background-color: white;
+  
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -1343,18 +1350,22 @@ body {
 }
 
 .card-header {
-    background-color: #812B8F;
+     background-color: #fff;
+  
     color: var(--text-light);
     padding: 15px 20px;
+    background-color: #fff;
 }
 
 .card-header h3 {
+   color: white;
     margin: 0;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
 .card-body {
+      background-color: #fff;
     padding: 20px;
 }
 
@@ -1414,25 +1425,55 @@ body {
     }
 }
 
+.course-card {
+  border-radius: 6px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
 
-   .course-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 120px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 1.2rem;
-      text-align: center;
-      transition: all 0.4s ease;
-      cursor: pointer;
-    }
+/* Title */
+.course-card h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.4rem; /* default desktop */
+}
 
-    /* Hover effect */
-    .course-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    }
+/* Description */
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Button */
+.btn-learn {
+  background-color: #111;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-learn:hover {
+  background-color: #812B8F;
+  transform: scale(1.05);
+}
+
+/* Hover card effect */
+.course-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
 
     /* Background colors like image */
     .bg-excel { background-color: #90d1d1; }
@@ -1443,47 +1484,6 @@ body {
     .bg-bash { background-color: #90d1d1; }
 
 
-
-
-      .course-card {
-      border-radius: 6px;
-      padding: 40px 20px;
-      text-align: center;
-      transition: all 0.4s ease;
-      cursor: pointer;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .course-card h4 {
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .course-card p {
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-      color: #222;
-    }
-
-    .btn-learn {
-      background-color: #111;
-      color: #fff;
-      font-weight: 600;
-      border-radius: 30px;
-      padding: 8px 22px;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-learn:hover {
-      background-color: #812B8F; /* Accent color */
-      transform: scale(1.05);
-    }
 
     /* Hover card effect */
     .course-card:hover {
@@ -1946,6 +1946,57 @@ body {
       background-color: #f5e8f7;
     }
 
+    img {
+  transition: transform 0.3s ease-in-out;
+}
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Styled Table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.styled-table th, .styled-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+.styled-table th {
+  background: #812B8F;
+  color: #fff;
+}
+
+
+.text-gradient {
+  background: linear-gradient(90deg, #812B8F, #e91e63);
+
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-light {
+  background: linear-gradient(120deg, #f9f9ff, #fff5fa);
+}
+
+.custom-btn {
+  background: #812B8F;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.custom-btn:hover {
+  background: #5e1f68;
+  transform: scale(1.05);
+}
+.card {
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
 
 
 
@@ -2025,24 +2076,7 @@ body {
     }
 
 
-    /* Responsive text */
-    @media (max-width: 576px) {
-      .course-card {
-        padding: 30px 15px;
-      }
-      .course-card h4 {
-        font-size: 1.1rem;
-      }
-    }
-
-
-    /* Responsive text size */
-    @media (max-width: 576px) {
-      .course-card {
-        font-size: 1rem;
-        height: 100px;
-      }
-    }
+  
 
 
 /* Responsive adjustments */
@@ -2263,34 +2297,21 @@ body {
                 font-size: 1.5rem;
             }
             
-            .small-card-title {
-                font-size: 1.3rem;
-            }
-        }
+          }
         
         @media (max-width: 768px) {
             .card-container .col-md-6 {
                 margin-bottom: 20px;
             }
-            
-            .small-card-container .col-6 {
-                margin-bottom: 15px;
-            }
-        }
+          }
+          
         
         @media (max-width: 576px) {
             .card-title {
                 font-size: 1.3rem;
             }
             
-            .small-card-title {
-                font-size: 1.1rem;
-            }
-            
-            .card-text {
-                font-size: 0.9rem;
-            }
-        }
+          }
 
 
 
@@ -2341,6 +2362,71 @@ body {
         }
 
 
+
+        
+/* ----------------- RESPONSIVE FIXES ----------------- */
+
+/* For tablets (md screens) */
+@media (max-width: 992px) {
+  .course-card {
+    padding: 30px 15px;
+  }
+  .course-card h4 {
+    font-size: 1.2rem;
+  }
+  .course-card p {
+    font-size: 0.9rem;
+  }
+  .btn-learn {
+    font-size: 0.85rem;
+    padding: 7px 18px;
+  }
+}
+
+/* For small screens (sm and xs) */
+@media (max-width: 576px) {
+  .course-card {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+  .course-card h4 {
+    font-size: 1rem;
+  }
+  .course-card p {
+    font-size: 0.8rem;
+  }
+  .btn-learn {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+}
+
+
+
+/* ----------------- RESPONSIVE FIXES ----------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .small-card {
+    padding: 15px;
+    min-height: 130px;
+  }
+  .small-card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 576px) {
+  .small-card {
+    padding: 10px;
+    min-height: 110px;
+  }
+  .small-card-title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+}
 
 
 
@@ -2436,3 +2522,11 @@ body {
                 margin-top: 10px;
             }
         }
+
+
+        /* Small screens */
+@media (max-width: 576px) {
+  .auth-image {
+    max-width: 90%;   /* add padding around image */
+  }
+}
