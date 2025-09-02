@@ -51,8 +51,7 @@ const Attribute = () => {
           <li><a href="htmllayout">HTML Layout</a></li>
           <li><a href="htmlresponsive">HTML Responsive</a></li>
           <li><a href="htmlsemantic">HTML Semantics</a></li>
-        </ul>
-
+          
          <h5 className="fw-bold">HTML Forms</h5>
         <ul className="list-unstyled">
         
@@ -62,9 +61,8 @@ const Attribute = () => {
           <li><a href="htmlinput">HTML Input Types</a></li>
          <li><a href="htmlattribute">HTML Input Attributes</a></li>
             <li><a href="htmlformattribute">HTML Form Attributes</a></li>
-        
-        </ul>
-        <h5 className="fw-bold">HTML Media</h5>
+
+              <h5 className="fw-bold">HTML Media</h5>
         <ul className="list-unstyled">
         
          
@@ -75,6 +73,11 @@ const Attribute = () => {
           
         
         </ul>
+        
+        </ul>
+        </ul>
+
+      
                </div>
    
                {/* Main Content (Middle - col-8) */}

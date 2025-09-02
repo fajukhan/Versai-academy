@@ -3,9 +3,9 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Navbar from '../Navbar';
 import Footer from "../Footer";
+
 const Htmlhome = () => {
-
-
+ 
 
   return (
     <>
@@ -17,10 +17,11 @@ const Htmlhome = () => {
         <div className="bg-white">
           <div className="row g-0">
             {/* Sidebar (Left - col-2) */}
+            
             <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
               <h5 className="fw-bold">HTML Tutorial</h5>
                <ul className="list-unstyled">
-          <li><a href="html">HTML HOME</a></li>
+           <li><a href="html" >HTML HOME</a></li>
           <li><a href="htmlhome">HTML Introduction</a></li>
           <li><a href="editor">HTML Editors</a></li>
           <li><a href="basic">HTML Basic</a></li>
@@ -51,9 +52,7 @@ const Htmlhome = () => {
           <li><a href="htmllayout">HTML Layout</a></li>
           <li><a href="htmlresponsive">HTML Responsive</a></li>
           <li><a href="htmlsemantic">HTML Semantics</a></li>
-        </ul>
-
-         <h5 className="fw-bold">HTML Formst</h5>
+           <h5 className="fw-bold">HTML Forms</h5>
         <ul className="list-unstyled">
         
          
@@ -75,11 +74,15 @@ const Htmlhome = () => {
           
         
         </ul>
+        </ul>
 
-            </div>
+        
 
-            {/* Main Content (Middle - col-8) */}
-            <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
+      </div>
+
+      {/* Main Content (Middle - col-10) */}
+          <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
+
               <h1>HTML Introduction</h1>
 
                {/* Buttons */}

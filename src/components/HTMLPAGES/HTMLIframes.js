@@ -48,8 +48,7 @@ const HTMLIframes = () => {
                 <li><a href="htmllayout">HTML Layout</a></li>
                 <li><a href="htmlresponsive">HTML Responsive</a></li>
                 <li><a href="htmlsemantic">HTML Semantics</a></li>
-              </ul>
-
+                
               <h5 className="fw-bold">HTML Forms</h5>
               <ul className="list-unstyled">
                 <li><a href="htmlform">HTML Forms</a></li>
@@ -66,6 +65,8 @@ const HTMLIframes = () => {
                 <li><a href="htmlvideo">HTML Video</a></li>
               <li><a href="htmlyoutube">HTML Youtube</a></li>
               </ul>
+              </ul>
+
             </div>
 
             {/* Main Content */}

@@ -51,9 +51,7 @@ const Heading = () => {
           <li><a href="htmllayout">HTML Layout</a></li>
           <li><a href="htmlresponsive">HTML Responsive</a></li>
           <li><a href="htmlsemantic">HTML Semantics</a></li>
-        </ul>
-
-         <h5 className="fw-bold">HTML Forms</h5>
+            <h5 className="fw-bold">HTML Forms</h5>
         <ul className="list-unstyled">
         
          
@@ -75,6 +73,9 @@ const Heading = () => {
           
         
         </ul>
+        </ul>
+
+       
                </div>
    
                {/* Main Content (Middle - col-8) */}

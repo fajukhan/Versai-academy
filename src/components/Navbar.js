@@ -7,6 +7,8 @@ import { FaArrowUp } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
+
 
 const Navbar = () => {
 // Theme state
@@ -142,10 +144,31 @@ const Navbar = () => {
      {/* <!-- Second Navbar (Bottom) --> */}
      <nav className="navbar bottom-navbar py-0">
        <div className="container-fluid">
-       
+       {/* 👉 Toggle Button (HTML से पहले add किया गया है) */}
+   
          
          <div className=" w-100 overflow-auto">
+
+        
+
            <ul className="nav d-flex flex-row flex-nowrap gap-1 px-0">
+
+             {/* 👉 First LI = Toggle Button */}
+        <li className="nav-item d-lg-none">  
+          <button
+
+            className="navbar-toggler btn-sm text-white pt-2 p-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#bottomNavbar"
+            aria-controls="bottomNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon "><BsReverseLayoutTextSidebarReverse /></span>
+          </button>
+        </li>
+
              <li className="nav-item">
                <Link className="nav-link" to="/html">HTML</Link>
              </li>
@@ -159,7 +182,7 @@ const Navbar = () => {
                <a className="nav-link" href="Sql">SQL</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="Python">PYTHON</a>
+               <a className="nav-link" href="PythonTutorial">PYTHON</a>
              </li>
              <li className="nav-item">
                <a className="nav-link" href="java">JAVA</a>

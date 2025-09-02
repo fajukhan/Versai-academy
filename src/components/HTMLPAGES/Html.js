@@ -5,10 +5,8 @@ import Navbar from '../Navbar';
 import Footer from "../Footer";
 
 
+
 const Html = () => {
-
-     // Sidebar show/hide state
-
 
   return (
 
@@ -26,11 +24,12 @@ const Html = () => {
     <div className="row g-0">
       
       {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+      
+      <div className="col-lg-2 col-md-3 d-none d-md-block p-3 bg-light sidebar-fixed sidebar-link  sidebar">
         <h5 className="fw-bold">HTML Tutorial</h5>
         <ul className="list-unstyled">
           <li><a href="html"   >HTML HOME</a></li>
-          <li><a href="htmlhome">HTML Introduction</a></li>
+          <li><a href="htmlhome" >HTML Introduction</a></li>
           <li><a href="editor">HTML Editors</a></li>
           <li><a href="basic">HTML Basic</a></li>
           <li><a href="elements">HTML Elements</a></li>
@@ -60,8 +59,8 @@ const Html = () => {
           <li><a href="htmllayout">HTML Layout</a></li>
           <li><a href="htmlresponsive">HTML Responsive</a></li>
           <li><a href="htmlsemantic">HTML Semantics</a></li>
-        </ul>
-        <h5 className="fw-bold">HTML Forms</h5>
+
+            <h5 className="fw-bold">HTML Forms</h5>
         <ul className="list-unstyled">
         
          
@@ -83,10 +82,13 @@ const Html = () => {
           
         
         </ul>
-      </div>
+        </ul>
+      
+       </div>
 
       {/* Main Content (Middle - col-10) */}
-      <div className="col-lg-8 col-md-6 col-12  bg-white p-5">
+          <div className="col-lg-8 col-md-9 col-12 bg-white p-5">
+
       
         <h1>HTML Tutorial</h1>
 

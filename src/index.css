@@ -1,5 +1,30 @@
-   
-     
+   /* Sidebar link styling */
+.sidebar-link {
+  display: block;
+  padding: 8px 12px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+
+/* Active link */
+.sidebar-link.active {
+  background: purple !important;
+  color: white !important;
+  font-weight: bold;
+}
+     .sidebar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;       /* पूरी स्क्रीन की ऊँचाई */
+  overflow-y: auto;    /* अगर sidebar लंबा है तो उसके अंदर scroll होगा */
+  width: 16.6667%;     /* Bootstrap col-2 = 2/12 = 16.66% */
+  border-right: 1px solid #ddd;
+}
       .top-navbar {
         background-color:#ffffff;
             border-bottom: 1px solid #e9ecef;
