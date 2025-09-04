@@ -17,7 +17,7 @@ import Sql from './components/SQL PAGES/Sql';
 import Python from './components/PYTHON PAGES/Python.js';
 import Java from './components/Java';
 import Php from './components/Php';
-import React from './components/React';
+
 import JQuery from './components/JQuery';
 import Excel from './components/Excel';
 import Git from './components/Git';
@@ -127,6 +127,66 @@ import PythonVariables from './components/PYTHON PAGES/PythonVariables .js';
 import PythonDataTypes from './components/PYTHON PAGES/PythonDataTypes .js';
 import PythonNumbers from './components/PYTHON PAGES/PythonNumbers .js';
 import PythonCasting from './components/PYTHON PAGES/PythonCasting .js';
+import PythonStrings from './components/PYTHON PAGES/PythonStrings .js';
+import PythonBooleans from './components/PYTHON PAGES/PythonBooleans .js';
+import PythonOperators from './components/PYTHON PAGES/PythonOperators .js';
+import PythonLists from './components/PYTHON PAGES/PythonLists .js';
+import PythonTuples from './components/PYTHON PAGES/PythonTuples .js';
+import PythonSets from './components/PYTHON PAGES/PythonSets .js';
+import PythonDictionaries from './components/PYTHON PAGES/PythonDictionaries .js';
+import PythonIfElse from './components/PYTHON PAGES/PythonIfElse .js';
+import PythonLoops from './components/PYTHON PAGES/PythonLoops .js';
+import PythonMatch from './components/PYTHON PAGES/PythonMatch .js';
+import PythonWhileLoops from './components/PYTHON PAGES/PythonWhileLoops .js';
+import PythonForLoops from './components/PYTHON PAGES/PythonForLoops .js';
+import PythonFunctions from './components/PYTHON PAGES/PythonFunctions .js';
+import PythonLambda from './components/PYTHON PAGES/PythonLambda .js';
+import PythonArray from './components/PYTHON PAGES/PythonArray .js';
+import PythonOOP from './components/PYTHON PAGES/PythonOOP .js';
+import PythonClassesObjects from './components/PYTHON PAGES/PythonClassesObjects .js';
+import PythonInheritance from './components/PYTHON PAGES/PythonInheritance .js';
+import PythonIterators from './components/PYTHON PAGES/PythonIterators .js';
+import PythonPolymorphism from './components/PYTHON PAGES/PythonPolymorphism .js';
+import PythonScope from './components/PYTHON PAGES/PythonScope .js';
+import PythonModules from './components/PYTHON PAGES/PythonModules .js';
+import PythonDates from './components/PYTHON PAGES/PythonDates .js';
+import PythonMath from './components/PYTHON PAGES/PythonMath .js';
+import PythonJSON from './components/PYTHON PAGES/PythonJSON .js';
+import PythonRegex from './components/PYTHON PAGES/PythonRegex .js';
+import PythonPip from './components/PYTHON PAGES/PythonPip .js';
+import PythonTryExcept from './components/PYTHON PAGES/PythonTryExcept .js';
+import PythonStringFormatting from './components/PYTHON PAGES/PythonStringFormatting .js';
+import PythonUserInput from './components/PYTHON PAGES/PythonUserInput .js';
+import PythonVirtualEnv from './components/PYTHON PAGES/PythonVirtualEnv .js';
+import PythonFileHandling from './components/PYTHON PAGES/PythonFileHandling .js';
+import PythonReadFile from './components/PYTHON PAGES/PythonReadFile .js';
+import PythonWriteFile from './components/PYTHON PAGES/PythonWriteFile .js';
+import PythonDeleteFile from './components/PYTHON PAGES/PythonDeleteFile .js';
+import PythonNumpy from './components/PYTHON PAGES/PythonNumpy .js';
+import PythonPandas from './components/PYTHON PAGES/PythonPandas .js';
+import PythonScipy from './components/PYTHON PAGES/PythonScipy .js';
+import PythonDjango from './components/PYTHON PAGES/PythonDjango .js';
+import React from './components/REACT PAGES/React.js';
+import ReactIntroduction from './components/REACT PAGES/ReactIntroduction .js';
+import ReactGetStarted from './components/REACT PAGES/ReactGetStarted .js';
+import ReactFirstApp from './components/REACT PAGES/ReactFirstApp .js';
+import ReactRenderHtml from './components/REACT PAGES/ReactRenderHtml .js';
+import ReactUpgrade from './components/REACT PAGES/ReactUpgrade .js';
+import ReactES6 from './components/REACT PAGES/ReactES6 .js';
+import ReactJSX from './components/REACT PAGES/ReactJSX .js';
+import ReactJSXExpressions from './components/REACT PAGES/ReactJSXExpressions .js';
+import ReactJSXAttributes from './components/REACT PAGES/ReactJSXAttributes .js';
+import ReactJSXIfStatement from './components/REACT PAGES/ReactJSXIfStatement .js';
+import ReactComponents from './components/REACT PAGES/ReactComponents .js';
+import ReactClass from './components/REACT PAGES/ReactClass .js';
+import ReactProps from './components/REACT PAGES/ReactProps .js';
+import ReactPropsDestructuring from './components/REACT PAGES/ReactPropsDestructuring .js';
+import ReactPropsChildren from './components/REACT PAGES/ReactPropsChildren .js';
+import ReactEvents from './components/REACT PAGES/ReactEvents .js';
+import ReactConditional from './components/REACT PAGES/ReactConditional .js';
+import ReactLists from './components/REACT PAGES/ReactLists .js';
+import ReactForms from './components/REACT PAGES/ReactForms .js';
+
 
 
 
@@ -191,10 +251,7 @@ const App = () => {
       path: "php",
       element: <Php />
     },
-    {
-      path: "react",
-      element: <React />
-    },
+   
     {
       path: "jquery",
       element: <JQuery />
@@ -863,6 +920,350 @@ const App = () => {
       path: "pythoncasting",
       element: <PythonCasting />
     },
+
+     
+           {
+      path: "pythonstrings",
+      element: <PythonStrings />
+    },
+
+        
+           {
+      path: "pythonbooleans",
+      element: <PythonBooleans />
+    },
+
+
+            {
+      path: "pythonoperators",
+      element: <PythonOperators />
+    },
+
+    
+            {
+      path: "pythonlist",
+      element: <PythonLists />
+    },
+
+        
+            {
+      path: "pythontuples",
+      element: <PythonTuples />
+    },
+
+          
+            {
+      path: "pythonsets",
+      element: <PythonSets />
+    },
+
+                {
+      path: "pythondictionaries",
+      element: <PythonDictionaries />
+    },
+
+
+               {
+      path: "pythonifelse",
+      element: <PythonIfElse />
+    },
+
+
+    
+               {
+      path: "pythonloops",
+      element: <PythonLoops />
+    },
+
+                {
+      path: "pythonmatch",
+      element: <PythonMatch />
+    },
+
+              {
+      path: "pythonwhileloops",
+      element: <PythonWhileLoops />
+    },
+
+             {
+      path: "pythonforloops",
+      element: <PythonForLoops />
+    },
+
+               {
+      path: "pythonfunctions",
+      element: <PythonFunctions />
+    },
+
+    
+               {
+      path: "pythonlambda",
+      element: <PythonLambda />
+    },
+
+               {
+      path: "pythonarray",
+      element: <PythonArray />
+    },
+
+                 {
+      path: "pythonoop",
+      element: <PythonOOP />
+    },
+
+
+                    {
+      path: "pythonclassesobjects",
+      element: <PythonClassesObjects />
+    },
+
+    
+                    {
+      path: "pythoninheritance",
+      element: <PythonInheritance />
+    },
+
+
+                        {
+      path: "pythoniterators",
+      element: <PythonIterators />
+    },
+
+                        {
+      path: "pythonpolymorphism",
+      element: <PythonPolymorphism />
+    },
+
+                         {
+      path: "pythonscope",
+      element: <PythonScope />
+    },
+
+                         {
+      path: "pythonmodules",
+      element: <PythonModules />
+    },
+
+                           {
+      path: "pythondates",
+      element: <PythonDates />
+    },
+
+                           {
+      path: "pythonmath",
+      element: <PythonMath />
+    },
+
+                             {
+      path: "pythonjson",
+      element: <PythonJSON />
+    },
+
+
+    
+                             {
+      path: "pythonregex",
+      element: <PythonRegex />
+    },
+
+                             {
+      path: "pytonpip",
+      element: <PythonPip />
+    },
+
+    
+                             {
+      path: "pythontryexcept",
+      element: <PythonTryExcept />
+    },
+
+
+                                 {
+      path: "pythonstringformatting",
+      element: <PythonStringFormatting />
+    },
+
+                                     {
+      path: "pythonuserinput",
+      element: <PythonUserInput />
+    },
+
+
+                                         {
+      path: "pythonvirtualenv",
+      element: <PythonVirtualEnv />
+    },
+
+                                          {
+      path: "pythonfilehandling",
+      element: <PythonFileHandling />
+    },
+
+                                             {
+      path: "pythonreadfile",
+      element: <PythonReadFile />
+    },
+
+                                                 {
+      path: "pythonwritefile",
+      element: <PythonWriteFile />
+    },
+
+                                                    {
+      path: "pythondeletefile",
+      element: <PythonDeleteFile />
+    },
+    
+                                                        {
+      path: "pythonnumpy",
+      element: <PythonNumpy />
+    },
+
+
+                                                            {
+      path: "pythonpandas",
+      element: <PythonPandas />
+    },
+
+                                                             {
+      path: "pythonscipy",
+      element: <PythonScipy />
+    },
+    
+
+                                                             {
+      path: "pythondjango",
+      element: <PythonDjango />
+    },
+   
+    {
+      path:"react",
+      element:<React />
+    },
+    
+
+    {
+      path:"reactintroduction",
+      element:<ReactIntroduction />
+    },
+
+     {
+      path:"reactgetstarted",
+      element:<ReactGetStarted />
+    },
+
+      {
+      path:"reactfirstapp",
+      element:<ReactFirstApp />
+    },
+
+        {
+      path:"reactrenderhtml",
+      element:<ReactRenderHtml />
+    },
+    
+        {
+      path:"reactupgrade",
+      element:<ReactUpgrade />
+    },
+
+      
+        {
+      path:"reactes6",
+      element:<ReactES6 />
+    },
+
+         {
+      path:"reactjsx",
+      element:<ReactJSX />
+    },
+
+    
+         {
+      path:"reactjsxexpressions",
+      element:<ReactJSXExpressions />
+    },
+
+        {
+      path:"reactjsxattributes",
+      element:<ReactJSXAttributes />
+    },
+
+         {
+      path:"reactjsxifstatment",
+      element:<ReactJSXIfStatement />
+    },
+
+             {
+      path:"reactcomponents",
+      element:<ReactComponents />
+    },
+               {
+      path:"reactclass",
+      element:<ReactClass />
+    },
+
+
+                 {
+      path:"reactprops",
+      element:<ReactProps />
+    },
+
+                    {
+      path:"reactpropsdestructuring",
+      element:<ReactPropsDestructuring />
+    },
+
+
+                     {
+      path:"reactpropschildren",
+      element:<ReactPropsChildren />
+    },
+    
+
+                        {
+      path:"reactevents",
+      element:<ReactEvents />
+    },
+
+                        {
+      path:"reactconditional",
+      element:<ReactConditional />
+    },
+
+                            {
+      path:"reactlist",
+      element:<ReactLists />
+    },
+    
+
+                                {
+      path:"reactforms",
+      element:<ReactForms />
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

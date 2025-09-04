@@ -2,17 +2,16 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const PythonNumbers = () => {
+const PythonScipy = () => {
   return (
     <>
-      {/* Navbar */}
       <Navbar />
 
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
 
-               {/* Sidebar (Left - col-2) */}
+             {/* Sidebar (Left - col-2) */}
             <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
               <h5 className="fw-bold">Python Tutorial</h5>
               <ul className="list-unstyled">
@@ -168,44 +167,119 @@ const PythonNumbers = () => {
               </ul>
             </div>
 
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>Python Numbers</h1>
+              <h1>Python SciPy Tutorial</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="pythondatatypes">
+                <a href="pythonpandas">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythoncasting">
+                <a href="pythondjango">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                Python has three numeric types: <b>int</b>, <b>float</b>, and <b>complex</b>.  
-                Numbers are used to store numeric values and can be operated with mathematical operators.
+                <b>SciPy</b> is a Python library built on top of NumPy.  
+                It provides modules for mathematics, science, and engineering.  
+                SciPy is widely used for linear algebra, optimization, integration, interpolation, statistics, signal processing, and more.
               </p>
 
-              {/* Example 1: Integer, Float, Complex */}
+              {/* Installation */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: Integer, Float, and Complex</div>
+                <div className="card-header">Installing SciPy</div>
                 <div className="card-body">
-                  <p>Python automatically detects the type of number.</p>
-                  <pre className="bg-light p-3 rounded">
-{`x = 5        # int
-y = 2.5      # float
-z = 1 + 3j   # complex
+                  <pre className="bg-light p-3 rounded">pip install scipy</pre>
+                  <p>Import it using <code>import scipy</code> or specific modules like <code>from scipy import linalg, optimize</code>.</p>
+                </div>
+              </div>
 
-print(type(x))
-print(type(y))
-print(type(z))`}
+              {/* Example 1: Linear Algebra */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 1: Solving Linear Algebra Equations</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`import numpy as np
+from scipy import linalg
+
+# Solve 2x + y = 5 and x - y = 1
+A = np.array([[2, 1], [1, -1]])
+b = np.array([5, 1])
+
+solution = linalg.solve(A, b)
+print(solution)`}
+                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`[2. 1.]  # x = 2, y = 1`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 2: Integration */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 2: Integration</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`import numpy as np
+from scipy import integrate
+
+# Integrate f(x) = x^2 from 0 to 3
+result, error = integrate.quad(lambda x: x**2, 0, 3)
+print(result)`}
+                  </pre>
+                  <p><b>Output:</b> <code>9.0</code></p>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 3: Optimization */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 3: Optimization</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`from scipy import optimize
+
+# Minimize f(x) = x^2 + 2x + 1
+func = lambda x: x**2 + 2*x + 1
+result = optimize.minimize(func, x0=0)
+print(result.x)`}
+                  </pre>
+                  <p><b>Output:</b> <code>[-1.]</code> (Minimum occurs at x = -1)</p>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 4: Statistics */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 4: Statistics</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`from scipy import stats
+
+data = [2, 4, 4, 4, 5, 5, 7, 9]
+
+mean = np.mean(data)
+median = np.median(data)
+mode = stats.mode(data)
+
+print("Mean:", mean)
+print("Median:", median)
+print("Mode:", mode.mode[0])`}
                   </pre>
                   <p><b>Output:</b></p>
                   <pre className="bg-light p-3 rounded">
-{`<class 'int'>
-<class 'float'>
-<class 'complex'>`}
+{`Mean: 5.0
+Median: 4.5
+Mode: 4`}
                   </pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
@@ -213,82 +287,21 @@ print(type(z))`}
                 </div>
               </div>
 
-              {/* Example 2: Type Conversion */}
+              {/* Example 5: Interpolation */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Type Conversion</div>
+                <div className="card-header">Example 5: Interpolation</div>
                 <div className="card-body">
-                  <p>You can convert numbers from one type to another using <code>int()</code>, <code>float()</code>, and <code>complex()</code>.</p>
                   <pre className="bg-light p-3 rounded">
-{`a = 10
-b = float(a)   # int to float
-c = int(3.99)  # float to int
-d = complex(a) # int to complex
+{`import numpy as np
+from scipy import interpolate
 
-print(b)
-print(c)
-print(d)`}
-                  </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`10.0
-3
-(10+0j)`}
-                  </pre>
-                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+x = np.linspace(0, 10, 10)
+y = np.sin(x)
 
-              {/* Example 3: Random Numbers */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 3: Random Numbers</div>
-                <div className="card-body">
-                  <p>Python does not have a built-in random function, but it has a <code>random</code> module.</p>
-                  <pre className="bg-light p-3 rounded">
-{`import random
-
-print(random.randint(1, 10))  # random integer between 1 and 10
-print(random.random())        # random float between 0 and 1`}
+f = interpolate.interp1d(x, y, kind='cubic')
+print(f(5))`}
                   </pre>
-                  <p><b>Output:</b> (values may differ)</p>
-                  <pre className="bg-light p-3 rounded">
-{`7
-0.53211`}
-                  </pre>
-                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
-
-              {/* Example 4: Mathematical Operations */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 4: Mathematical Operations</div>
-                <div className="card-body">
-                  <p>You can perform arithmetic operations on numbers.</p>
-                  <pre className="bg-light p-3 rounded">
-{`x = 10
-y = 3
-
-print(x + y)   # addition
-print(x - y)   # subtraction
-print(x * y)   # multiplication
-print(x / y)   # division
-print(x % y)   # modulus
-print(x ** y)  # power
-print(x // y)  # floor division`}
-                  </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`13
-7
-30
-3.3333333333333335
-1
-1000
-3`}
-                  </pre>
+                  <p><b>Output:</b> Approximated value of <code>sin(5)</code></p>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
@@ -300,24 +313,22 @@ print(x // y)  # floor division`}
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>Python has three numeric types: <code>int</code>, <code>float</code>, <code>complex</code>.</li>
-                    <li>Numbers can be converted using <code>int()</code>, <code>float()</code>, <code>complex()</code>.</li>
-                    <li>Use the <code>random</code> module to generate random numbers.</li>
-                    <li>Supports mathematical operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>/</code>, <code>**</code>.</li>
+                    <li>SciPy builds on NumPy for scientific computing.</li>
+                    <li>Provides modules for linear algebra, integration, optimization, statistics, and more.</li>
+                    <li>Widely used in engineering, machine learning, and data science.</li>
+                    <li>Install with <code>pip install scipy</code>.</li>
                   </ul>
                 </div>
               </div>
 
-             
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </>
   );
 };
 
-export default PythonNumbers;
+export default PythonScipy;

@@ -2,10 +2,9 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const PythonNumbers = () => {
+const PythonMath = () => {
   return (
     <>
-      {/* Navbar */}
       <Navbar />
 
       <section className="p-0">
@@ -168,127 +167,135 @@ const PythonNumbers = () => {
               </ul>
             </div>
 
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>Python Numbers</h1>
+              <h1>Python Math</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="pythondatatypes">
+                <a href="pythondates">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythoncasting">
+                <a href="pythonjson">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                Python has three numeric types: <b>int</b>, <b>float</b>, and <b>complex</b>.  
-                Numbers are used to store numeric values and can be operated with mathematical operators.
+                Python provides built-in mathematical functions and also has the <code>math</code> module that allows you to perform advanced mathematical operations like square root, trigonometry, logarithms, etc.
               </p>
 
-              {/* Example 1: Integer, Float, Complex */}
+              {/* Example 1: Built-in min, max, abs, pow */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: Integer, Float, and Complex</div>
+                <div className="card-header">Example 1: Built-in Math Functions</div>
                 <div className="card-body">
-                  <p>Python automatically detects the type of number.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 5        # int
-y = 2.5      # float
-z = 1 + 3j   # complex
+{`x = min(5, 10, 25)
+y = max(5, 10, 25)
+z = abs(-7)
+p = pow(2, 3)
 
-print(type(x))
-print(type(y))
-print(type(z))`}
+print("Min:", x)
+print("Max:", y)
+print("Absolute:", z)
+print("Power:", p)`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`<class 'int'>
-<class 'float'>
-<class 'complex'>`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`Min: 5\nMax: 25\nAbsolute: 7\nPower: 8`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Type Conversion */}
+              {/* Example 2: Import math module */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Type Conversion</div>
+                <div className="card-header">Example 2: Using math Module</div>
                 <div className="card-body">
-                  <p>You can convert numbers from one type to another using <code>int()</code>, <code>float()</code>, and <code>complex()</code>.</p>
                   <pre className="bg-light p-3 rounded">
-{`a = 10
-b = float(a)   # int to float
-c = int(3.99)  # float to int
-d = complex(a) # int to complex
+{`import math
 
-print(b)
-print(c)
-print(d)`}
+print(math.sqrt(16))
+print(math.ceil(4.2))
+print(math.floor(4.7))`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`10.0
-3
-(10+0j)`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`4.0\n5\n4`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: Random Numbers */}
+              {/* Example 3: Math constants */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 3: Random Numbers</div>
+                <div className="card-header">Example 3: Math Constants</div>
                 <div className="card-body">
-                  <p>Python does not have a built-in random function, but it has a <code>random</code> module.</p>
                   <pre className="bg-light p-3 rounded">
-{`import random
+{`import math
 
-print(random.randint(1, 10))  # random integer between 1 and 10
-print(random.random())        # random float between 0 and 1`}
+print("PI:", math.pi)
+print("Euler's number:", math.e)`}
                   </pre>
-                  <p><b>Output:</b> (values may differ)</p>
-                  <pre className="bg-light p-3 rounded">
-{`7
-0.53211`}
-                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`PI: 3.141592653589793\nEuler's number: 2.718281828459045`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 4: Mathematical Operations */}
+              {/* Example 4: Trigonometric functions */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 4: Mathematical Operations</div>
+                <div className="card-header">Example 4: Trigonometric Functions</div>
                 <div className="card-body">
-                  <p>You can perform arithmetic operations on numbers.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 10
-y = 3
+{`import math
 
-print(x + y)   # addition
-print(x - y)   # subtraction
-print(x * y)   # multiplication
-print(x / y)   # division
-print(x % y)   # modulus
-print(x ** y)  # power
-print(x // y)  # floor division`}
+print(math.sin(math.radians(90)))
+print(math.cos(math.radians(0)))
+print(math.tan(math.radians(45)))`}
+                  </pre>
+                  <p><b>Output:</b> (approx)</p>
+                  <pre className="bg-light p-3 rounded">{`1.0\n1.0\n0.9999999999999999`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 5: Logarithms */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 5: Logarithmic Functions</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`import math
+
+print(math.log(10))        # Natural log
+print(math.log10(1000))    # Base-10 log
+print(math.log2(16))       # Base-2 log`}
                   </pre>
                   <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`2.302585092994046\n3.0\n4.0`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 6: Factorial and GCD */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 6: Factorial and GCD</div>
+                <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`13
-7
-30
-3.3333333333333335
-1
-1000
-3`}
+{`import math
+
+print(math.factorial(5))
+print(math.gcd(12, 18))`}
                   </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`120\n6`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
@@ -300,10 +307,11 @@ print(x // y)  # floor division`}
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>Python has three numeric types: <code>int</code>, <code>float</code>, <code>complex</code>.</li>
-                    <li>Numbers can be converted using <code>int()</code>, <code>float()</code>, <code>complex()</code>.</li>
-                    <li>Use the <code>random</code> module to generate random numbers.</li>
-                    <li>Supports mathematical operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>/</code>, <code>**</code>.</li>
+                    <li>Python has built-in functions like <code>min()</code>, <code>max()</code>, <code>abs()</code>, and <code>pow()</code>.</li>
+                    <li>The <code>math</code> module provides advanced operations like <code>sqrt()</code>, <code>ceil()</code>, <code>floor()</code>.</li>
+                    <li>Constants like <code>pi</code> and <code>e</code> are available in the math module.</li>
+                    <li>Supports trigonometric and logarithmic functions.</li>
+                    <li>Utility functions: <code>factorial()</code>, <code>gcd()</code>, etc.</li>
                   </ul>
                 </div>
               </div>
@@ -314,10 +322,9 @@ print(x // y)  # floor division`}
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </>
   );
 };
 
-export default PythonNumbers;
+export default PythonMath;

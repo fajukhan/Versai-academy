@@ -194,7 +194,7 @@ const Navbar = () => {
                <a className="nav-link" href="/">BOOTSTRAP</a>
              </li>
              <li className="nav-item">
-               <a className="nav-link" href="React">REACT</a>
+               <a className="nav-link" href="react">REACT</a>
              </li>
              <li className="nav-item">
                <a className="nav-link" href="JQuery">JQUERY</a>

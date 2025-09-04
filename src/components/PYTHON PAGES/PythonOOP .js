@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const PythonNumbers = () => {
+const PythonOOP = () => {
   return (
     <>
       {/* Navbar */}
@@ -12,7 +12,8 @@ const PythonNumbers = () => {
         <div className="bg-white">
           <div className="row g-0">
 
-               {/* Sidebar (Left - col-2) */}
+         
+           {/* Sidebar (Left - col-2) */}
             <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
               <h5 className="fw-bold">Python Tutorial</h5>
               <ul className="list-unstyled">
@@ -167,45 +168,63 @@ const PythonNumbers = () => {
                 </li>
               </ul>
             </div>
-
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>Python Numbers</h1>
+              <h1>Python Object-Oriented Programming (OOP)</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="pythondatatypes">
+                <a href="pythonarray">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythoncasting">
+                <a href="pythonclassesobjects">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                Python has three numeric types: <b>int</b>, <b>float</b>, and <b>complex</b>.  
-                Numbers are used to store numeric values and can be operated with mathematical operators.
+                Python is an object-oriented programming language.  
+                Almost everything in Python is an object, with its properties and methods.
               </p>
 
-              {/* Example 1: Integer, Float, Complex */}
+              <h3>Creating a Class and Object</h3>
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: Integer, Float, and Complex</div>
+                <div className="card-header">Example 1: Create a Class and Object</div>
                 <div className="card-body">
-                  <p>Python automatically detects the type of number.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 5        # int
-y = 2.5      # float
-z = 1 + 3j   # complex
+{`class MyClass:
+    x = 5
 
-print(type(x))
-print(type(y))
-print(type(z))`}
+obj = MyClass()
+print(obj.x)`}
+                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">5</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              <h3>The __init__() Function</h3>
+              <p>The <code>__init__()</code> method is called automatically when an object is created.</p>
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 2: Using __init__()</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Person("John", 36)
+print(p1.name)
+print(p1.age)`}
                   </pre>
                   <p><b>Output:</b></p>
                   <pre className="bg-light p-3 rounded">
-{`<class 'int'>
-<class 'float'>
-<class 'complex'>`}
+{`John
+36`}
                   </pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
@@ -213,81 +232,84 @@ print(type(z))`}
                 </div>
               </div>
 
-              {/* Example 2: Type Conversion */}
+              <h3>The self Parameter</h3>
+              <p>The <code>self</code> parameter is a reference to the current instance of the class.</p>
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Type Conversion</div>
+                <div className="card-header">Example 3: Using self</div>
                 <div className="card-body">
-                  <p>You can convert numbers from one type to another using <code>int()</code>, <code>float()</code>, and <code>complex()</code>.</p>
                   <pre className="bg-light p-3 rounded">
-{`a = 10
-b = float(a)   # int to float
-c = int(3.99)  # float to int
-d = complex(a) # int to complex
+{`class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-print(b)
-print(c)
-print(d)`}
+    def myfunc(self):
+        print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+p1.myfunc()`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`10.0
-3
-(10+0j)`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">Hello my name is John</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: Random Numbers */}
+              <h3>Modifying and Deleting Properties</h3>
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 3: Random Numbers</div>
+                <div className="card-header">Example 4: Modify and Delete Object Properties</div>
                 <div className="card-body">
-                  <p>Python does not have a built-in random function, but it has a <code>random</code> module.</p>
                   <pre className="bg-light p-3 rounded">
-{`import random
+{`class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-print(random.randint(1, 10))  # random integer between 1 and 10
-print(random.random())        # random float between 0 and 1`}
+p1 = Person("John", 36)
+
+p1.age = 40
+print(p1.age)
+
+del p1.age
+# print(p1.age)  # will cause AttributeError`}
                   </pre>
-                  <p><b>Output:</b> (values may differ)</p>
-                  <pre className="bg-light p-3 rounded">
-{`7
-0.53211`}
-                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">40</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 4: Mathematical Operations */}
+              <h3>Inheritance</h3>
+              <p>Inheritance allows us to define a class that inherits all methods and properties from another class.</p>
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 4: Mathematical Operations</div>
+                <div className="card-header">Example 5: Inheritance</div>
                 <div className="card-body">
-                  <p>You can perform arithmetic operations on numbers.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 10
-y = 3
+{`class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
 
-print(x + y)   # addition
-print(x - y)   # subtraction
-print(x * y)   # multiplication
-print(x / y)   # division
-print(x % y)   # modulus
-print(x ** y)  # power
-print(x // y)  # floor division`}
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+x = Student("Mike", "Olsen", 2019)
+x.printname()
+print(x.graduationyear)`}
                   </pre>
                   <p><b>Output:</b></p>
                   <pre className="bg-light p-3 rounded">
-{`13
-7
-30
-3.3333333333333335
-1
-1000
-3`}
+{`Mike Olsen
+2019`}
                   </pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
@@ -300,15 +322,17 @@ print(x // y)  # floor division`}
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>Python has three numeric types: <code>int</code>, <code>float</code>, <code>complex</code>.</li>
-                    <li>Numbers can be converted using <code>int()</code>, <code>float()</code>, <code>complex()</code>.</li>
-                    <li>Use the <code>random</code> module to generate random numbers.</li>
-                    <li>Supports mathematical operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>/</code>, <code>**</code>.</li>
+                    <li>OOP is based on classes and objects.</li>
+                    <li><code>__init__()</code> initializes object properties.</li>
+                    <li><code>self</code> represents the instance of the class.</li>
+                    <li>Objects can have their properties modified or deleted.</li>
+                    <li>Inheritance lets classes share functionality.</li>
                   </ul>
                 </div>
               </div>
 
-             
+            
+
             </div>
           </div>
         </div>
@@ -320,4 +344,4 @@ print(x // y)  # floor division`}
   );
 };
 
-export default PythonNumbers;
+export default PythonOOP;

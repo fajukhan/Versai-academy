@@ -44,126 +44,126 @@ const PythonCasting = () => {
                   <a href="pythoncasting">Python Casting</a>
                 </li>
                 <li>
-                  <a href="/">Python Strings</a>
+                  <a href="pythonstrings">Python Strings</a>
                 </li>
                 <li>
-                  <a href="/">Python Booleans</a>
+                  <a href="pythonbooleans">Python Booleans</a>
                 </li>
                 <li>
-                  <a href="/">Python Operators</a>
+                  <a href="pythonoperators">Python Operators</a>
                 </li>
                 <li>
-                  <a href="/">Python Lists</a>
+                  <a href="pythonlist">Python Lists</a>
                 </li>
                 <li>
-                  <a href="/">Python Tuples</a>
+                  <a href="pythontuples">Python Tuples</a>
                 </li>
                 <li>
-                  <a href="/">Python Sets</a>
+                  <a href="pythonsets">Python Sets</a>
                 </li>
                 <li>
-                  <a href="/">Python Dictionaries</a>
+                  <a href="pythondictionaries">Python Dictionaries</a>
                 </li>
                 <li>
-                  <a href="/">Python If...Else</a>
+                  <a href="pythonifelse">Python If...Else</a>
                 </li>
                 <li>
-                  <a href="/">Python Match</a>
+                  <a href="pythonmatch">Python Match</a>
                 </li>
                 <li>
-                  <a href="/">Python While Loops</a>
+                  <a href="pythonwhileloops">Python While Loops</a>
                 </li>
                 <li>
-                  <a href="/">Python For Loops</a>
+                  <a href="pythonforloops">Python For Loops</a>
                 </li>
                 <li>
-                  <a href="/">Python Functions</a>
+                  <a href="pythonfunctions">Python Functions</a>
                 </li>
                 <li>
-                  <a href="/">Python Lambda</a>
+                  <a href="pythonlambda">Python Lambda</a>
                 </li>
                 <li>
-                  <a href="/">Python Arrays</a>
+                  <a href="pythonarray">Python Arrays</a>
                 </li>
                 <li>
-                  <a href="/">Python OOP</a>
+                  <a href="pythonoop">Python OOP</a>
                 </li>
                 <li>
-                  <a href="/">Python Classes/Objects</a>
+                  <a href="pythonclassesobjects">Python Classes/Objects</a>
                 </li>
                 <li>
-                  <a href="/">Python Inheritance</a>
+                  <a href="pythoninheritance">Python Inheritance</a>
                 </li>
                 <li>
-                  <a href="/">Python Iterators</a>
+                  <a href="pythoniterators">Python Iterators</a>
                 </li>
                 <li>
-                  <a href="/">Python Polymorphism</a>
+                  <a href="pythonpolymorphism">Python Polymorphism</a>
                 </li>
                 <li>
-                  <a href="/">Python Scope</a>
+                  <a href="pythonscope">Python Scope</a>
                 </li>
                 <li>
-                  <a href="/">Python Modules</a>
+                  <a href="pythonmodules">Python Modules</a>
                 </li>
                 <li>
-                  <a href="/">Python Dates</a>
+                  <a href="pythondates">Python Dates</a>
                 </li>
                 <li>
-                  <a href="/">Python Math</a>
+                  <a href="pythonmath">Python Math</a>
                 </li>
                 <li>
-                  <a href="/">Python JSON</a>
+                  <a href="pythonjson">Python JSON</a>
                 </li>
                 <li>
-                  <a href="/">Python RegEx</a>
+                  <a href="pythonregex">Python RegEx</a>
                 </li>
                 <li>
-                  <a href="/">Python PIP</a>
+                  <a href="pytonpip">Python PIP</a>
                 </li>
                 <li>
-                  <a href="/">Python Try...Except</a>
+                  <a href="pythontryexcept">Python Try...Except</a>
                 </li>
                 <li>
-                  <a href="/">Python String Formatting</a>
+                  <a href="pythonstringformatting">Python String Formatting</a>
                 </li>
                 <li>
-                  <a href="/">Python User Input</a>
+                  <a href="pythonuserinput">Python User Input</a>
                 </li>
                 <li>
-                  <a href="/">Python VirtualEnv</a>
+                  <a href="pythonvirtualenv">Python VirtualEnv</a>
                 </li>
               </ul>
 
               <h5 className="fw-bold">File Handling</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/">Python File Handling</a>
+                  <a href="pythonfilehandling">Python File Handling</a>
                 </li>
                 <li>
-                  <a href="/">Python Read Files</a>
+                  <a href="pythonreadfile">Python Read Files</a>
                 </li>
                 <li>
-                  <a href="/">Python Write/Create Files</a>
+                  <a href="pythonwritefile">Python Write/Create Files</a>
                 </li>
                 <li>
-                  <a href="/">Python Delete Files</a>
+                  <a href="pythondeletefile">Python Delete Files</a>
                 </li>
               </ul>
 
               <h5 className="fw-bold">Python Modules</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/">NumPy Tutorial</a>
+                  <a href="pythonnumpy">NumPy Tutorial</a>
                 </li>
                 <li>
-                  <a href="/">Pandas Tutorial</a>
+                  <a href="pythonpandas">Pandas Tutorial</a>
                 </li>
                 <li>
-                  <a href="/">SciPy Tutorial</a>
+                  <a href="pythonscipy">SciPy Tutorial</a>
                 </li>
                 <li>
-                  <a href="/">Django Tutorial</a>
+                  <a href="pythondjango">Django Tutorial</a>
                 </li>
               </ul>
             </div>
@@ -178,7 +178,7 @@ const PythonCasting = () => {
                 <a href="pythonnumbers">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythonoperators">
+                <a href="pythonstrings">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>

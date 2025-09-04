@@ -2,17 +2,16 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const PythonNumbers = () => {
+const PythonNumpy = () => {
   return (
     <>
-      {/* Navbar */}
       <Navbar />
 
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-               {/* Sidebar (Left - col-2) */}
+            
+            {/* Sidebar (Left - col-2) */}
             <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
               <h5 className="fw-bold">Python Tutorial</h5>
               <ul className="list-unstyled">
@@ -168,127 +167,128 @@ const PythonNumbers = () => {
               </ul>
             </div>
 
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>Python Numbers</h1>
+              <h1>Python NumPy Tutorial</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="pythondatatypes">
+                <a href="pythondeletefile">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythoncasting">
+                <a href="pythonpandas">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                Python has three numeric types: <b>int</b>, <b>float</b>, and <b>complex</b>.  
-                Numbers are used to store numeric values and can be operated with mathematical operators.
+                <b>NumPy</b> (Numerical Python) is a powerful library for working with arrays, matrices, and high-level mathematical functions.  
+                It is widely used in scientific computing, data analysis, and machine learning.
               </p>
 
-              {/* Example 1: Integer, Float, Complex */}
+              {/* Installation */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: Integer, Float, and Complex</div>
+                <div className="card-header">Installing NumPy</div>
                 <div className="card-body">
-                  <p>Python automatically detects the type of number.</p>
-                  <pre className="bg-light p-3 rounded">
-{`x = 5        # int
-y = 2.5      # float
-z = 1 + 3j   # complex
+                  <pre className="bg-light p-3 rounded">pip install numpy</pre>
+                  <p>After installing, you can import it using <code>import numpy as np</code>.</p>
+                </div>
+              </div>
 
-print(type(x))
-print(type(y))
-print(type(z))`}
+              {/* Example 1: Create array */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 1: Creating a NumPy Array</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+print(type(arr))`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`<class 'int'>
-<class 'float'>
-<class 'complex'>`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`[1 2 3 4 5]\n<class 'numpy.ndarray'>`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Type Conversion */}
+              {/* Example 2: 2D Array */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Type Conversion</div>
+                <div className="card-header">Example 2: Creating a 2D Array</div>
                 <div className="card-body">
-                  <p>You can convert numbers from one type to another using <code>int()</code>, <code>float()</code>, and <code>complex()</code>.</p>
                   <pre className="bg-light p-3 rounded">
-{`a = 10
-b = float(a)   # int to float
-c = int(3.99)  # float to int
-d = complex(a) # int to complex
+{`import numpy as np
 
-print(b)
-print(c)
-print(d)`}
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+print(arr)
+print("Dimensions:", arr.ndim)`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`10.0
-3
-(10+0j)`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`[[1 2 3]\n [4 5 6]]\nDimensions: 2`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: Random Numbers */}
+              {/* Example 3: Array operations */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 3: Random Numbers</div>
+                <div className="card-header">Example 3: Array Operations</div>
                 <div className="card-body">
-                  <p>Python does not have a built-in random function, but it has a <code>random</code> module.</p>
                   <pre className="bg-light p-3 rounded">
-{`import random
+{`import numpy as np
 
-print(random.randint(1, 10))  # random integer between 1 and 10
-print(random.random())        # random float between 0 and 1`}
+a = np.array([10, 20, 30])
+b = np.array([1, 2, 3])
+
+print("Addition:", a + b)
+print("Multiplication:", a * b)
+print("Square:", a ** 2)`}
                   </pre>
-                  <p><b>Output:</b> (values may differ)</p>
-                  <pre className="bg-light p-3 rounded">
-{`7
-0.53211`}
-                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`Addition: [11 22 33]\nMultiplication: [10 40 90]\nSquare: [100 400 900]`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 4: Mathematical Operations */}
+              {/* Example 4: Useful NumPy functions */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 4: Mathematical Operations</div>
+                <div className="card-header">Example 4: Useful NumPy Functions</div>
                 <div className="card-body">
-                  <p>You can perform arithmetic operations on numbers.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 10
-y = 3
+{`import numpy as np
 
-print(x + y)   # addition
-print(x - y)   # subtraction
-print(x * y)   # multiplication
-print(x / y)   # division
-print(x % y)   # modulus
-print(x ** y)  # power
-print(x // y)  # floor division`}
+arr = np.array([5, 10, 15, 20])
+
+print("Sum:", np.sum(arr))
+print("Mean:", np.mean(arr))
+print("Max:", np.max(arr))
+print("Min:", np.min(arr))`}
                   </pre>
                   <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`Sum: 50\nMean: 12.5\nMax: 20\nMin: 5`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 5: Random numbers */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 5: Generating Random Numbers</div>
+                <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`13
-7
-30
-3.3333333333333335
-1
-1000
-3`}
+{`import numpy as np
+
+rand_arr = np.random.randint(1, 100, 5)
+print(rand_arr)`}
                   </pre>
+                  <p><b>Output:</b> Random 5 numbers between 1 and 100 (example: <code>[23 87 14 55 72]</code>).</p>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
@@ -300,24 +300,24 @@ print(x // y)  # floor division`}
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>Python has three numeric types: <code>int</code>, <code>float</code>, <code>complex</code>.</li>
-                    <li>Numbers can be converted using <code>int()</code>, <code>float()</code>, <code>complex()</code>.</li>
-                    <li>Use the <code>random</code> module to generate random numbers.</li>
-                    <li>Supports mathematical operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>/</code>, <code>**</code>.</li>
+                    <li>NumPy is used for fast numerical operations on arrays and matrices.</li>
+                    <li>Install with <code>pip install numpy</code>.</li>
+                    <li>Supports 1D, 2D, and multi-dimensional arrays.</li>
+                    <li>Provides many mathematical functions like <code>sum()</code>, <code>mean()</code>, <code>max()</code>, etc.</li>
+                    <li>Has a random module for generating random numbers.</li>
                   </ul>
                 </div>
               </div>
 
-             
+            
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </>
   );
 };
 
-export default PythonNumbers;
+export default PythonNumpy;

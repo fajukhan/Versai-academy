@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const PythonNumbers = () => {
+const PythonFunctions = () => {
   return (
     <>
       {/* Navbar */}
@@ -12,7 +12,7 @@ const PythonNumbers = () => {
         <div className="bg-white">
           <div className="row g-0">
 
-               {/* Sidebar (Left - col-2) */}
+           {/* Sidebar (Left - col-2) */}
             <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
               <h5 className="fw-bold">Python Tutorial</h5>
               <ul className="list-unstyled">
@@ -168,127 +168,168 @@ const PythonNumbers = () => {
               </ul>
             </div>
 
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>Python Numbers</h1>
+              <h1>Python Functions</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="pythondatatypes">
+                <a href="pythonforloops">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythoncasting">
+                <a href="pythonlambda">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                Python has three numeric types: <b>int</b>, <b>float</b>, and <b>complex</b>.  
-                Numbers are used to store numeric values and can be operated with mathematical operators.
+                A function in Python is a block of code that only runs when it is called. Functions help in code reusability and make programs modular.
               </p>
 
-              {/* Example 1: Integer, Float, Complex */}
+              {/* Example 1: Creating and calling a function */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: Integer, Float, and Complex</div>
+                <div className="card-header">Example 1: Creating and Calling a Function</div>
                 <div className="card-body">
-                  <p>Python automatically detects the type of number.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 5        # int
-y = 2.5      # float
-z = 1 + 3j   # complex
+{`def my_function():
+    print("Hello from a function")
 
-print(type(x))
-print(type(y))
-print(type(z))`}
+my_function()`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`<class 'int'>
-<class 'float'>
-<class 'complex'>`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">Hello from a function</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Type Conversion */}
+              {/* Example 2: Function with arguments */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Type Conversion</div>
+                <div className="card-header">Example 2: Function with Arguments</div>
                 <div className="card-body">
-                  <p>You can convert numbers from one type to another using <code>int()</code>, <code>float()</code>, and <code>complex()</code>.</p>
                   <pre className="bg-light p-3 rounded">
-{`a = 10
-b = float(a)   # int to float
-c = int(3.99)  # float to int
-d = complex(a) # int to complex
+{`def greet(name):
+    print("Hello, " + name)
 
-print(b)
-print(c)
-print(d)`}
+greet("Alice")
+greet("Bob")`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`10.0
-3
-(10+0j)`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`Hello, Alice\nHello, Bob`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: Random Numbers */}
+              {/* Example 3: Function with return value */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 3: Random Numbers</div>
+                <div className="card-header">Example 3: Function with Return Value</div>
                 <div className="card-body">
-                  <p>Python does not have a built-in random function, but it has a <code>random</code> module.</p>
                   <pre className="bg-light p-3 rounded">
-{`import random
+{`def add(a, b):
+    return a + b
 
-print(random.randint(1, 10))  # random integer between 1 and 10
-print(random.random())        # random float between 0 and 1`}
+result = add(5, 3)
+print(result)`}
                   </pre>
-                  <p><b>Output:</b> (values may differ)</p>
-                  <pre className="bg-light p-3 rounded">
-{`7
-0.53211`}
-                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">8</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 4: Mathematical Operations */}
+              {/* Example 4: Default parameter value */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 4: Mathematical Operations</div>
+                <div className="card-header">Example 4: Default Parameter Value</div>
                 <div className="card-body">
-                  <p>You can perform arithmetic operations on numbers.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 10
-y = 3
+{`def greet(name="Guest"):
+    print("Hello, " + name)
 
-print(x + y)   # addition
-print(x - y)   # subtraction
-print(x * y)   # multiplication
-print(x / y)   # division
-print(x % y)   # modulus
-print(x ** y)  # power
-print(x // y)  # floor division`}
+greet("Alice")
+greet()`}
                   </pre>
                   <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`Hello, Alice\nHello, Guest`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 5: Keyword arguments */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 5: Keyword Arguments</div>
+                <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`13
-7
-30
-3.3333333333333335
-1
-1000
-3`}
+{`def person(name, age):
+    print(name + " is " + str(age) + " years old.")
+
+person(age=25, name="John")`}
                   </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">John is 25 years old.</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 6: Arbitrary Arguments (*args) */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 6: Arbitrary Arguments (*args)</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`def fruits(*names):
+    print("The first fruit is " + names[0])
+
+fruits("Apple", "Banana", "Cherry")`}
+                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">The first fruit is Apple</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 7: Arbitrary Keyword Arguments (**kwargs) */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 7: Arbitrary Keyword Arguments (**kwargs)</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`def person(**data):
+    print("His last name is " + data["lname"])
+
+person(fname="John", lname="Doe")`}
+                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">His last name is Doe</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 8: Passing a list */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 8: Passing a List as Argument</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`def my_function(food):
+    for x in food:
+        print(x)
+
+fruits = ["apple", "banana", "cherry"]
+my_function(fruits)`}
+                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`apple\nbanana\ncherry`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
@@ -300,15 +341,17 @@ print(x // y)  # floor division`}
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>Python has three numeric types: <code>int</code>, <code>float</code>, <code>complex</code>.</li>
-                    <li>Numbers can be converted using <code>int()</code>, <code>float()</code>, <code>complex()</code>.</li>
-                    <li>Use the <code>random</code> module to generate random numbers.</li>
-                    <li>Supports mathematical operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>/</code>, <code>**</code>.</li>
+                    <li>Functions are created using the <code>def</code> keyword.</li>
+                    <li>They can take arguments and return values.</li>
+                    <li>Default parameters can be used when no argument is passed.</li>
+                    <li><code>*args</code> and <code>**kwargs</code> allow multiple arguments.</li>
+                    <li>Functions improve reusability and modularity of code.</li>
                   </ul>
                 </div>
               </div>
 
-             
+           
+
             </div>
           </div>
         </div>
@@ -320,4 +363,4 @@ print(x // y)  # floor division`}
   );
 };
 
-export default PythonNumbers;
+export default PythonFunctions;

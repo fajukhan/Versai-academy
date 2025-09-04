@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const PythonNumbers = () => {
+const PythonLists = () => {
   return (
     <>
       {/* Navbar */}
@@ -11,8 +11,8 @@ const PythonNumbers = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-               {/* Sidebar (Left - col-2) */}
+            
+                  {/* Sidebar (Left - col-2) */}
             <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
               <h5 className="fw-bold">Python Tutorial</h5>
               <ul className="list-unstyled">
@@ -167,128 +167,127 @@ const PythonNumbers = () => {
                 </li>
               </ul>
             </div>
-
+            
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>Python Numbers</h1>
+              <h1>Python Lists</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="pythondatatypes">
+                <a href="pythonoperators">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="pythoncasting">
+                <a href="pythontuples">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                Python has three numeric types: <b>int</b>, <b>float</b>, and <b>complex</b>.  
-                Numbers are used to store numeric values and can be operated with mathematical operators.
+                Lists are used to store multiple items in a single variable.  
+                Lists are one of Python’s most powerful and flexible data structures.
               </p>
 
-              {/* Example 1: Integer, Float, Complex */}
+              {/* Example 1: Creating Lists */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: Integer, Float, and Complex</div>
+                <div className="card-header">Example 1: Creating a List</div>
                 <div className="card-body">
-                  <p>Python automatically detects the type of number.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 5        # int
-y = 2.5      # float
-z = 1 + 3j   # complex
-
-print(type(x))
-print(type(y))
-print(type(z))`}
+{`fruits = ["apple", "banana", "cherry"]
+print(fruits)`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`<class 'int'>
-<class 'float'>
-<class 'complex'>`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`['apple', 'banana', 'cherry']`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Type Conversion */}
+              {/* Example 2: Accessing Items */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Type Conversion</div>
+                <div className="card-header">Example 2: Accessing List Items</div>
                 <div className="card-body">
-                  <p>You can convert numbers from one type to another using <code>int()</code>, <code>float()</code>, and <code>complex()</code>.</p>
                   <pre className="bg-light p-3 rounded">
-{`a = 10
-b = float(a)   # int to float
-c = int(3.99)  # float to int
-d = complex(a) # int to complex
-
-print(b)
-print(c)
-print(d)`}
+{`fruits = ["apple", "banana", "cherry"]
+print(fruits[0])   # First item
+print(fruits[-1])  # Last item`}
                   </pre>
                   <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">
-{`10.0
-3
-(10+0j)`}
-                  </pre>
+                  <pre className="bg-light p-3 rounded">{`apple\ncherry`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: Random Numbers */}
+              {/* Example 3: Changing Items */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 3: Random Numbers</div>
+                <div className="card-header">Example 3: Changing List Items</div>
                 <div className="card-body">
-                  <p>Python does not have a built-in random function, but it has a <code>random</code> module.</p>
                   <pre className="bg-light p-3 rounded">
-{`import random
-
-print(random.randint(1, 10))  # random integer between 1 and 10
-print(random.random())        # random float between 0 and 1`}
+{`fruits = ["apple", "banana", "cherry"]
+fruits[1] = "orange"
+print(fruits)`}
                   </pre>
-                  <p><b>Output:</b> (values may differ)</p>
-                  <pre className="bg-light p-3 rounded">
-{`7
-0.53211`}
-                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`['apple', 'orange', 'cherry']`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 4: Mathematical Operations */}
+              {/* Example 4: Looping Through Lists */}
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 4: Mathematical Operations</div>
+                <div className="card-header">Example 4: Looping Through a List</div>
                 <div className="card-body">
-                  <p>You can perform arithmetic operations on numbers.</p>
                   <pre className="bg-light p-3 rounded">
-{`x = 10
-y = 3
-
-print(x + y)   # addition
-print(x - y)   # subtraction
-print(x * y)   # multiplication
-print(x / y)   # division
-print(x % y)   # modulus
-print(x ** y)  # power
-print(x // y)  # floor division`}
+{`fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)`}
                   </pre>
                   <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`apple\nbanana\ncherry`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 5: Adding Items */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 5: Adding Items</div>
+                <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`13
-7
-30
-3.3333333333333335
-1
-1000
-3`}
+{`fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits)
+
+fruits.insert(1, "kiwi")
+print(fruits)`}
                   </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`['apple', 'banana', 'cherry', 'orange']\n['apple', 'kiwi', 'banana', 'cherry', 'orange']`}</pre>
+                  <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
+                    <button className="try-btn mt-3">Try it Yourself »</button>
+                  </a>
+                </div>
+              </div>
+
+              {/* Example 6: Removing Items */}
+              <div className="card my-4 shadow-sm">
+                <div className="card-header">Example 6: Removing Items</div>
+                <div className="card-body">
+                  <pre className="bg-light p-3 rounded">
+{`fruits = ["apple", "banana", "cherry"]
+fruits.remove("banana")
+print(fruits)
+
+fruits.pop()
+print(fruits)`}
+                  </pre>
+                  <p><b>Output:</b></p>
+                  <pre className="bg-light p-3 rounded">{`['apple', 'cherry']\n['apple']`}</pre>
                   <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
@@ -300,15 +299,14 @@ print(x // y)  # floor division`}
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>Python has three numeric types: <code>int</code>, <code>float</code>, <code>complex</code>.</li>
-                    <li>Numbers can be converted using <code>int()</code>, <code>float()</code>, <code>complex()</code>.</li>
-                    <li>Use the <code>random</code> module to generate random numbers.</li>
-                    <li>Supports mathematical operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>/</code>, <code>**</code>.</li>
+                    <li>Lists are ordered, changeable, and allow duplicate values.</li>
+                    <li>Use square brackets <code>[]</code> to create a list.</li>
+                    <li>Lists support many useful methods like <code>append()</code>, <code>insert()</code>, <code>remove()</code>, <code>pop()</code>, <code>sort()</code>, and <code>reverse()</code>.</li>
                   </ul>
                 </div>
               </div>
 
-             
+            
             </div>
           </div>
         </div>
@@ -320,4 +318,4 @@ print(x // y)  # floor division`}
   );
 };
 
-export default PythonNumbers;
+export default PythonLists;
