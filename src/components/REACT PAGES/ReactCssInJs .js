@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactJSXIntro = () => {
+const ReactCssInJs = () => {
   return (
     <>
       <Navbar />
@@ -10,8 +10,8 @@ const ReactJSXIntro = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-                        {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                              {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -29,7 +29,7 @@ const ReactJSXIntro = () => {
     <li><a href="reactclass">React Class</a></li>
     <li><a href="reactprops">React Props</a></li>
     <li><a href="reactpropsdestructuring">React Props Destructuring</a></li>
-    <li><a href="/">React Props Children</a></li>
+    <li><a href="reactpropschildren">React Props Children</a></li>
     <li><a href="reactevents">React Events</a></li>
     <li><a href="reactconditional">React Conditionals</a></li>
     <li><a href="reactlist">React Lists</a></li>
@@ -68,110 +68,128 @@ const ReactJSXIntro = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React JSX Introduction</h1>
+              <h1>React CSS-in-JS</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="reactes6">
+                <a href="reactcssmodules">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactjsxexpressions">
+                <a href="reactrouter">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                JSX stands for <b>JavaScript XML</b>.  
-                It allows us to write HTML directly within JavaScript.  
-                JSX makes code easier to write and understand in React applications.
+                <b>CSS-in-JS</b> is a styling technique where CSS is written directly inside JavaScript files.  
+                It allows you to define styles as JavaScript objects and apply them directly to components.  
+                Popular libraries like <b>styled-components</b> and <b>Emotion</b> use this concept.
               </p>
 
-              {/* Example 1: Basic JSX */}
-              <h3>1. Basic JSX Example</h3>
+              <h3>1. Inline CSS-in-JS (Basic Example)</h3>
+              <p>You can define styles as objects and apply them using the <code>style</code> attribute.</p>
+
               <div className="card my-4 shadow-sm">
-                <div className="card-header">JSX Example</div>
+                <div className="card-header">Example: Inline CSS-in-JS</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const element = <h1>Hello, JSX!</h1>;
-ReactDOM.render(element, document.getElementById('root'));`}
+{`function App() {
+  const headingStyle = {
+    color: "blue",
+    textAlign: "center",
+    fontSize: "24px"
+  };
+
+  const buttonStyle = {
+    backgroundColor: "green",
+    color: "white",
+    padding: "10px",
+    borderRadius: "5px"
+  };
+
+  return (
+    <div>
+      <h1 style={headingStyle}>Hello CSS-in-JS!</h1>
+      <button style={buttonStyle}>Click Me</button>
+    </div>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello, JSX!`}</pre>
+                  <p><b>Output:</b> Blue heading and a styled green button.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Embedding Expressions */}
-              <h3>2. Embedding Expressions in JSX</h3>
-              <p>You can embed any JavaScript expression inside JSX using curly braces <code>{`{ }`}</code>.</p>
+              <h3>2. Dynamic Styling with CSS-in-JS</h3>
+              <p>Styles can change dynamically based on state or props.</p>
+
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Embedding expressions</div>
+                <div className="card-header">Example: Dynamic CSS-in-JS</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const user = "Alice";
-const element = <h2>Hello, {user}!</h2>;
-ReactDOM.render(element, document.getElementById('root'));`}
+{`import { useState } from "react";
+
+function App() {
+  const [isActive, setIsActive] = useState(false);
+
+  const buttonStyle = {
+    backgroundColor: isActive ? "red" : "blue",
+    color: "white",
+    padding: "12px",
+    border: "none",
+    cursor: "pointer",
+    borderRadius: "6px"
+  };
+
+  return (
+    <div>
+      <button 
+        style={buttonStyle} 
+        onClick={() => setIsActive(!isActive)}
+      >
+        {isActive ? "Active" : "Inactive"}
+      </button>
+    </div>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello, Alice!`}</pre>
+                  <p><b>Output:</b> Button color changes from blue to red when clicked.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: JSX with Attributes */}
-              <h3>3. JSX with Attributes</h3>
-              <p>Attributes in JSX are written using <code>camelCase</code> notation instead of lowercase.</p>
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">JSX Attributes</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`const element = <img src="logo.png" alt="Logo" className="logo" />;
-ReactDOM.render(element, document.getElementById('root'));`}
-                  </pre>
-                  <p><b>Output:</b> An image with class <code>logo</code>.</p>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              <h3>3. Advantages of CSS-in-JS</h3>
+              <ul>
+                <li>Scoped styles (no global conflicts).</li>
+                <li>Dynamic styling based on props or state.</li>
+                <li>Styles live close to components (better maintainability).</li>
+                <li>No need for separate CSS files.</li>
+              </ul>
 
-              {/* Example 4: JSX with Children */}
-              <h3>4. JSX with Children</h3>
-              <p>JSX tags can contain children elements.</p>
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Nested JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`const element = (
-  <div>
-    <h1>Hello World</h1>
-    <p>Welcome to JSX</p>
-  </div>
-);
-ReactDOM.render(element, document.getElementById('root'));`}
-                  </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello World
-Welcome to JSX`}</pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              <h3>4. Popular CSS-in-JS Libraries</h3>
+              <ul>
+                <li><b>styled-components</b></li>
+                <li><b>Emotion</b></li>
+                <li><b>JSS</b></li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>JSX allows us to write HTML inside JavaScript.</li>
-                    <li>JavaScript expressions can be embedded with <code>{`{ }`}</code>.</li>
-                    <li>Attributes use <code>camelCase</code> naming.</li>
-                    <li>JSX elements can contain children elements.</li>
+                    <li>CSS-in-JS allows styling within JavaScript files.</li>
+                    <li>Supports <b>dynamic</b> styles using state/props.</li>
+                    <li>Prevents global style conflicts.</li>
+                    <li>Popular in modern React apps with libraries like styled-components.</li>
                   </ul>
                 </div>
               </div>
@@ -186,4 +204,4 @@ Welcome to JSX`}</pre>
   );
 };
 
-export default ReactJSXIntro;
+export default ReactCssInJs;

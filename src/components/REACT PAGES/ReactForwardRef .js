@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactForwardRef = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                                             {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -67,93 +65,101 @@ const ReactIntroduction = () => {
     <li><a href="reactcustomhooks">React Custom Hooks</a></li>
   </ul>
 </div>
-
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React Forward Ref</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reacttransitions">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reacthoc">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>React Forward Ref</b> is used to forward a ref through a component to one of its child components.  
+                It allows parent components to directly access a DOM node or child component instance.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3>1. Basic Example</h3>
+              <pre className="bg-light p-3 rounded">{`import React, { forwardRef, useRef } from "react";
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+const Input = forwardRef((props, ref) => (
+  <input ref={ref} type="text" placeholder="Type here..." />
+));
 
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+function App() {
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <Input ref={inputRef} />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+export default App;`}</pre>
 
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
+        <button className="try-btn my-5">Try it Yourself »</button>
 
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+              <h3>2. Forward Ref with Class Component</h3>
+              <pre className="bg-light p-3 rounded">{`import React, { forwardRef, useRef } from "react";
 
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
+class CustomInput extends React.Component {
+  render() {
+    return <input ref={this.props.inputRef} type="text" placeholder="Class Component" />;
+  }
+}
+
+const ForwardedInput = forwardRef((props, ref) => {
+  return <CustomInput {...props} inputRef={ref} />;
+});
+
+function App() {
+  const inputRef = useRef(null);
+  return (
+    <div>
+      <ForwardedInput ref={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>Focus Input</button>
+    </div>
+  );
+}
 
 export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+
+</pre>
+ <button className="try-btn my-5">Try it Yourself »</button>
+
+             
+
+              <h3>3. When to Use Forward Ref</h3>
+              <ul>
+                <li>Access a child DOM node directly from the parent.</li>
+                <li>Integrate with third-party libraries that need DOM nodes.</li>
+                <li>Improve reusability of components while exposing internal refs.</li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li><b>forwardRef</b> allows passing refs to child components.</li>
+                    <li>Works with functional and class components.</li>
+                    <li>Useful when parent needs direct access to child's DOM node or instance.</li>
                   </ul>
                 </div>
               </div>
 
+       
             </div>
           </div>
         </div>
@@ -164,4 +170,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactForwardRef;

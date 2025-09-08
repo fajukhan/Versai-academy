@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactSass = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                                                          {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -70,86 +68,90 @@ const ReactIntroduction = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React Sass</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reacthoc">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reacthooks">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>Sass</b> (Syntactically Awesome Stylesheets) is a CSS preprocessor that adds power and elegance to the basic CSS language.  
+                You can use Sass in React projects to write nested rules, variables, mixins, and more.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>1. Installing Sass</h3>
+              <p>Install Sass in your React project:</p>
+              <pre className="bg-light p-3 rounded">npm install sass</pre>
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>2. Creating a Sass File</h3>
+              <p>Create a file with <code>.scss</code> extension, for example: <code>App.scss</code></p>
+              <pre className="bg-light p-3 rounded">
+{`$primary-color: #3498db;
 
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+.container {
+  text-align: center;
+  color: $primary-color;
+}`}
+              </pre>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>3. Importing Sass File</h3>
+              <p>Import the Sass file into your React component:</p>
+              <pre className="bg-light p-3 rounded">
+{`import './App.scss';
+
+function App() {
+  return (
+    <div className="container">
+      <h1>Hello React with Sass!</h1>
+    </div>
+  );
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
-
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
-
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
-
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
-
 export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              </pre>
+
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>4. Nested Rules</h3>
+              <pre className="bg-light p-3 rounded">
+{`.container {
+  text-align: center;
+  color: $primary-color;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-style: italic;
+  }
+}`}
+              </pre>
+
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>5. Advantages of Sass</h3>
+              <ul>
+                <li>Variables to store reusable values.</li>
+                <li>Nested rules for better structure.</li>
+                <li>Mixins for reusable code blocks.</li>
+                <li>Partials and imports for modular styles.</li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li>Sass extends CSS with variables, nested rules, mixins, and more.</li>
+                    <li>Use <code>.scss</code> files in React by importing them.</li>
+                    <li>Enhances maintainability and readability of your styles.</li>
                   </ul>
                 </div>
               </div>
@@ -164,4 +166,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactSass;

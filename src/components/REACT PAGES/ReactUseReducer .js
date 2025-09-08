@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactUseReducer = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                      {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -67,89 +65,107 @@ const ReactIntroduction = () => {
     <li><a href="reactcustomhooks">React Custom Hooks</a></li>
   </ul>
 </div>
-
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React useReducer</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reactuseref">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reactusecallback">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>useReducer</b> is a React Hook used for managing complex state logic in functional components.
+                It is an alternative to <code>useState</code> when you have multiple state transitions or complicated state logic.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>1. Basic useReducer Example</h3>
+              <p>Define a reducer function and use it with <code>useReducer</code>:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useReducer } from 'react';
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
-
-function Greeting() {
-  return <h2>Hello from React!</h2>;
-}
-
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
-
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
-
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
-
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1;
+    case 'decrement':
+      return state - 1;
+    default:
+      return state;
+  }
 };
 
-export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+function Counter() {
+  const [count, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => dispatch('increment')}>Increment</button>
+      <button onClick={() => dispatch('decrement')}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>2. Using useReducer with Objects</h3>
+              <p>Manage more complex state objects with useReducer:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+    </div>
+  );
+}
+
+export default Counter;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>3. Advantages of useReducer</h3>
+              <ul>
+                <li>Better state management for complex logic.</li>
+                <li>Centralizes state updates in a single reducer function.</li>
+                <li>Works well with dispatch actions.</li>
+                <li>Can be combined with useContext for global state management.</li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li><code>useReducer</code> is ideal for complex state updates.</li>
+                    <li>Reduces the need for multiple useState calls.</li>
+                    <li>Improves readability and maintainability of state logic.</li>
                   </ul>
                 </div>
               </div>
@@ -164,4 +180,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactUseReducer;

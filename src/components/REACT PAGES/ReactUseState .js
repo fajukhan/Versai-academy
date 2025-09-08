@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactUseState = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                                                                    {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -62,7 +60,7 @@ const ReactIntroduction = () => {
     <li><a href="reactusecontext">React useContext</a></li>
     <li><a href="reactuseref">React useRef</a></li>
     <li><a href="reactusereducer">React useReducer</a></li>
-    <li><a href="reactusecallback">React useCallback</a></li>
+    <li><a href="/">React useCallback</a></li>
     <li><a href="reactusememo">React useMemo</a></li>
     <li><a href="reactcustomhooks">React Custom Hooks</a></li>
   </ul>
@@ -70,86 +68,107 @@ const ReactIntroduction = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React useState</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reacthooks">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reactuseeffect">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>useState</b> is a React Hook that lets you add state to functional components.
+                You can declare a state variable and a function to update it.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>1. Basic useState Example</h3>
+              <p>Example of a simple counter using <code>useState</code>:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState } from 'react';
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function Counter() {
+  const [count, setCount] = useState(0);
 
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+export default Counter;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>2. Multiple State Variables</h3>
+              <p>You can use multiple state variables in one component:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState } from 'react';
 
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function Form() {
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
 
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
+  return (
+    <div>
+      <input 
+        type="text" 
+        placeholder="Name" 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+      />
+      <input 
+        type="number" 
+        placeholder="Age" 
+        value={age} 
+        onChange={(e) => setAge(e.target.value)} 
+      />
+      <p>Name: {name}, Age: {age}</p>
+    </div>
+  );
+}
 
-export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+export default Form;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>3. Updating State Based on Previous State</h3>
+              <p>Always use the callback version of setState when the new state depends on the previous state:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(prevCount => prevCount + 1);
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+
+export default Counter;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li><code>useState</code> adds state to functional components.</li>
+                    <li>You can declare multiple state variables.</li>
+                    <li>Use the previous state callback when updating based on current state.</li>
                   </ul>
                 </div>
               </div>
@@ -164,4 +183,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactUseState;

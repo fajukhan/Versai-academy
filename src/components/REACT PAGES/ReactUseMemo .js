@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactUseMemo = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                             {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -70,86 +68,96 @@ const ReactIntroduction = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React useMemo</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reactusecallback">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reactcustomhooks">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>useMemo</b> is a React Hook that memoizes the result of a calculation.  
+                It helps optimize performance by preventing expensive recalculations on every render when dependencies haven’t changed.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>1. Basic useMemo Example</h3>
+              <p>Memoize a value so that it is only recalculated when dependencies change:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState, useMemo } from 'react';
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function App() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState('');
 
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+  const doubleCount = useMemo(() => {
+    console.log('Calculating doubleCount...');
+    return count * 2;
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <p>Double Count: {doubleCount}</p>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+      <input value={text} onChange={e => setText(e.target.value)} placeholder="Type something" />
+    </div>
+  );
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+export default App;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>2. useMemo with Expensive Calculation</h3>
+              <p>Use useMemo to avoid recalculating expensive operations unnecessarily:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState, useMemo } from 'react';
 
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function factorial(n) {
+  console.log('Calculating factorial...');
+  return n <= 0 ? 1 : n * factorial(n - 1);
+}
 
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
+function App() {
+  const [number, setNumber] = useState(5);
+  const [text, setText] = useState('');
+
+  const fact = useMemo(() => factorial(number), [number]);
+
+  return (
+    <div>
+      <p>Factorial of {number} is {fact}</p>
+      <input type="number" value={number} onChange={e => setNumber(Number(e.target.value))} />
+      <input type="text" value={text} onChange={e => setText(e.target.value)} placeholder="Type something" />
+    </div>
+  );
+}
 
 export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>3. Advantages of useMemo</h3>
+              <ul>
+                <li>Prevents unnecessary recalculations on every render.</li>
+                <li>Optimizes performance for expensive calculations.</li>
+                <li>Useful when passing computed values to child components.</li>
+                <li>Works well with React.memo for rendering optimizations.</li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li><code>useMemo</code> memoizes the result of a calculation.</li>
+                    <li>Dependencies array controls when the memoized value is recalculated.</li>
+                    <li>Helps improve performance for expensive calculations in React components.</li>
                   </ul>
                 </div>
               </div>
@@ -164,4 +172,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactUseMemo;

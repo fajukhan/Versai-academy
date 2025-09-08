@@ -186,6 +186,31 @@ import ReactEvents from './components/REACT PAGES/ReactEvents .js';
 import ReactConditional from './components/REACT PAGES/ReactConditional .js';
 import ReactLists from './components/REACT PAGES/ReactLists .js';
 import ReactForms from './components/REACT PAGES/ReactForms .js';
+import ReactFormSubmit from './components/REACT PAGES/ReactFormSubmit .js';
+import ReactTextarea from './components/REACT PAGES/ReactTextarea .js';
+import ReactSelect from './components/REACT PAGES/ReactSelect .js';
+import ReactMultipleInput from './components/REACT PAGES/ReactMultipleInput .js';
+import ReactCheckbox from './components/REACT PAGES/ReactCheckbox .js';
+import ReactRadio from './components/REACT PAGES/ReactRadio .js';
+import ReactPortal from './components/REACT PAGES/ReactPortal .js';
+import ReactSuspense from './components/REACT PAGES/ReactSuspense .js';
+import ReactCssStyle from './components/REACT PAGES/ReactCssStyle.js';
+import ReactCssModules from './components/REACT PAGES/ReactCssModules .js';
+import ReactCssInJs from './components/REACT PAGES/ReactCssInJs .js';
+import ReactRouter from './components/REACT PAGES/ReactRouter .js';
+import ReactTransitions from './components/REACT PAGES/ReactTransitions .js';
+import ReactForwardRef from './components/REACT PAGES/ReactForwardRef .js';
+import ReactHOC from './components/REACT PAGES/ReactHOC .js';
+import ReactSass from './components/REACT PAGES/ReactSass .js';
+import ReactHooks from './components/REACT PAGES/ReactHooks .js';
+import ReactUseState from './components/REACT PAGES/ReactUseState .js';
+import ReactUseEffect from './components/REACT PAGES/ReactUseEffect .js';
+import ReactUseContext from './components/REACT PAGES/ReactUseContext .js';
+import ReactUseRef from './components/REACT PAGES/ReactUseRef .js';
+import ReactUseReducer from './components/REACT PAGES/ReactUseReducer .js';
+import ReactUseCallback from './components/REACT PAGES/ReactUseCallback .js';
+import ReactUseMemo from './components/REACT PAGES/ReactUseMemo .js';
+import ReactCustomHooks from './components/REACT PAGES/ReactCustomHooks .js';
 
 
 
@@ -1241,6 +1266,158 @@ const App = () => {
       path:"reactforms",
       element:<ReactForms />
     },
+
+    
+                                {
+      path:"reactformsubmit",
+      element:<ReactFormSubmit />
+    },
+
+                                  {
+      path:"reacttextarea",
+      element:<ReactTextarea />
+    },
+
+    
+                                  {
+      path:"reactselect",
+      element:<ReactSelect />
+    },
+
+                                      {
+      path:"reactmultipleinput",
+      element:<ReactMultipleInput />
+    },
+
+                                       {
+      path:"reactcheckbox",
+      element:<ReactCheckbox />
+    },
+
+    
+                                       {
+      path:"reactradio",
+      element:<ReactRadio />
+    },
+
+        
+                                       {
+      path:"reactportal",
+      element:<ReactPortal />
+    },
+
+            
+                                       {
+      path:"reactsuspense",
+      element:<ReactSuspense />
+    },
+
+                                          {
+      path:"reactcssstyle",
+      element:<ReactCssStyle />
+    },
+
+    
+                                          {
+      path:"reactcssmodules",
+      element:<ReactCssModules />
+    },
+    
+
+                                            {
+      path:"reactcssinjs",
+      element:<ReactCssInJs />
+    },
+
+    
+                                            {
+      path:"reactrouter",
+      element:<ReactRouter />
+    },
+
+        
+                                            {
+      path:"reacttransitions",
+      element:<ReactTransitions />
+    },
+    
+
+                                                {
+      path:"reactforwardref",
+      element:<ReactForwardRef />
+    },
+
+                                                    {
+      path:"reacthoc",
+      element:<ReactHOC />
+    },
+
+                                                   {
+      path:"reactsass",
+      element:<ReactSass />
+    },
+
+                                                      {
+      path:"reacthooks",
+      element:<ReactHooks />
+    },
+
+                                                          {
+      path:"reactusestate",
+      element:<ReactUseState />
+    },
+
+                                                           {
+      path:"reactuseeffect",
+      element:<ReactUseEffect />
+    },
+
+                                                               {
+      path:"reactusecontext",
+      element:<ReactUseContext />
+    },
+
+                                                                  {
+      path:"reactuseref",
+      element:<ReactUseRef />
+    },
+    
+
+                                                                      {
+      path:"reactusereducer",
+      element:<ReactUseReducer />
+    },
+
+                                                                          {
+      path:"reactusecallback",
+      element:<ReactUseCallback />
+    },
+
+                                                                           {
+      path:"reactusememo",
+      element:<ReactUseMemo />
+    },
+
+
+                                                                              {
+      path:"reactcustomhooks",
+      element:<ReactCustomHooks />
+    },
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

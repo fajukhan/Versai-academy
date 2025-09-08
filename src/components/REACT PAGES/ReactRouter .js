@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactJSXIntro = () => {
+const ReactRouter = () => {
   return (
     <>
       <Navbar />
@@ -10,8 +10,8 @@ const ReactJSXIntro = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-                        {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                              {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -29,7 +29,7 @@ const ReactJSXIntro = () => {
     <li><a href="reactclass">React Class</a></li>
     <li><a href="reactprops">React Props</a></li>
     <li><a href="reactpropsdestructuring">React Props Destructuring</a></li>
-    <li><a href="/">React Props Children</a></li>
+    <li><a href="reactpropschildren">React Props Children</a></li>
     <li><a href="reactevents">React Events</a></li>
     <li><a href="reactconditional">React Conditionals</a></li>
     <li><a href="reactlist">React Lists</a></li>
@@ -65,117 +65,153 @@ const ReactJSXIntro = () => {
     <li><a href="reactcustomhooks">React Custom Hooks</a></li>
   </ul>
 </div>
-
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React JSX Introduction</h1>
+              <h1>React Router</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="reactes6">
+                <a href="reactcssinjs">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactjsxexpressions">
+                <a href="reacttransitions">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                JSX stands for <b>JavaScript XML</b>.  
-                It allows us to write HTML directly within JavaScript.  
-                JSX makes code easier to write and understand in React applications.
+                <b>React Router</b> is a standard library for routing in React applications.  
+                It enables navigation between different components, allows you to build single-page applications,  
+                and keeps the UI in sync with the URL.
               </p>
 
-              {/* Example 1: Basic JSX */}
-              <h3>1. Basic JSX Example</h3>
+              <h3>1. Installation</h3>
+              <p>To use React Router, install it via npm:</p>
+              <pre className="bg-light p-3 rounded">npm install react-router-dom</pre>
+
+              <h3>2. Basic Setup</h3>
+              <p>Wrap your app with <code>BrowserRouter</code> and define routes using <code>Route</code> and <code>Routes</code>.</p>
+
               <div className="card my-4 shadow-sm">
-                <div className="card-header">JSX Example</div>
+                <div className="card-header">Example: Basic Routing</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const element = <h1>Hello, JSX!</h1>;
-ReactDOM.render(element, document.getElementById('root'));`}
+{`import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+function Home() {
+  return <h2>Home Page</h2>;
+}
+
+function About() {
+  return <h2>About Page</h2>;
+}
+
+function Contact() {
+  return <h2>Contact Page</h2>;
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link> | 
+        <Link to="/about">About</Link> | 
+        <Link to="/contact">Contact</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello, JSX!`}</pre>
+                  <p><b>Output:</b> Navigation bar with links to Home, About, and Contact pages.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Embedding Expressions */}
-              <h3>2. Embedding Expressions in JSX</h3>
-              <p>You can embed any JavaScript expression inside JSX using curly braces <code>{`{ }`}</code>.</p>
+              <h3>3. Using <code>useNavigate</code> Hook</h3>
+              <p>Navigate programmatically with the <code>useNavigate</code> hook.</p>
+
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Embedding expressions</div>
+                <div className="card-header">Example: useNavigate</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const user = "Alice";
-const element = <h2>Hello, {user}!</h2>;
-ReactDOM.render(element, document.getElementById('root'));`}
+{`import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+
+function Home() {
+  const navigate = useNavigate();
+  return (
+    <div>
+      <h2>Home Page</h2>
+      <button onClick={() => navigate("/about")}>Go to About</button>
+    </div>
+  );
+}
+
+function About() {
+  return <h2>About Page</h2>;
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello, Alice!`}</pre>
+                  <p><b>Output:</b> Clicking the button on Home navigates to About.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: JSX with Attributes */}
-              <h3>3. JSX with Attributes</h3>
-              <p>Attributes in JSX are written using <code>camelCase</code> notation instead of lowercase.</p>
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">JSX Attributes</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`const element = <img src="logo.png" alt="Logo" className="logo" />;
-ReactDOM.render(element, document.getElementById('root'));`}
-                  </pre>
-                  <p><b>Output:</b> An image with class <code>logo</code>.</p>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              <h3>4. Nested Routes</h3>
+              <p>You can define routes inside other routes.</p>
+              <pre className="bg-light p-3 rounded">
+{`<Routes>
+  <Route path="/dashboard" element={<Dashboard />}>
+    <Route path="profile" element={<Profile />} />
+    <Route path="settings" element={<Settings />} />
+  </Route>
+</Routes>`}
+              </pre>
 
-              {/* Example 4: JSX with Children */}
-              <h3>4. JSX with Children</h3>
-              <p>JSX tags can contain children elements.</p>
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Nested JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`const element = (
-  <div>
-    <h1>Hello World</h1>
-    <p>Welcome to JSX</p>
-  </div>
-);
-ReactDOM.render(element, document.getElementById('root'));`}
-                  </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello World
-Welcome to JSX`}</pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              <h3>5. Advantages of React Router</h3>
+              <ul>
+                <li>Declarative routing system.</li>
+                <li>Supports dynamic routing.</li>
+                <li>Works with single-page applications.</li>
+                <li>Programmatic navigation with hooks.</li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>JSX allows us to write HTML inside JavaScript.</li>
-                    <li>JavaScript expressions can be embedded with <code>{`{ }`}</code>.</li>
-                    <li>Attributes use <code>camelCase</code> naming.</li>
-                    <li>JSX elements can contain children elements.</li>
+                    <li>React Router allows navigation between components without reloading the page.</li>
+                    <li>It uses <code>BrowserRouter</code>, <code>Routes</code>, and <code>Route</code> components.</li>
+                    <li>Supports nested routes and programmatic navigation.</li>
                   </ul>
                 </div>
               </div>
 
+      
             </div>
           </div>
         </div>
@@ -186,4 +222,4 @@ Welcome to JSX`}</pre>
   );
 };
 
-export default ReactJSXIntro;
+export default ReactRouter;

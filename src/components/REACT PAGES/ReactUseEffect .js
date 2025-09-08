@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactUseEffect = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+{/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -70,86 +68,99 @@ const ReactIntroduction = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React useEffect</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reactusestate">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reactusecontext">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>useEffect</b> is a React Hook that lets you perform side effects in functional components. 
+                Examples of side effects include data fetching, subscriptions, or manually changing the DOM.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>1. Basic useEffect Example</h3>
+              <p>Run a side effect after the component renders:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState, useEffect } from 'react';
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function Timer() {
+  const [count, setCount] = useState(0);
 
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount(prev => prev + 1);
+    }, 1000);
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
+  return <h2>Timer: {count} seconds</h2>;
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+export default Timer;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>2. useEffect with Dependencies</h3>
+              <p>Run the effect only when a specific value changes:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState, useEffect } from 'react';
 
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function Counter() {
+  const [count, setCount] = useState(0);
 
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
+  useEffect(() => {
+    console.log("Count changed:", count);
+  }, [count]); // effect runs only when count changes
 
-export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+export default Counter;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>3. Cleanup in useEffect</h3>
+              <p>Clean up resources when a component unmounts or before effect runs again:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React, { useState, useEffect } from 'react';
+
+function WindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return <h2>Window Width: {width}px</h2>;
+}
+
+export default WindowWidth;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li><code>useEffect</code> lets you perform side effects in functional components.</li>
+                    <li>Effects can depend on specific values using dependency arrays.</li>
+                    <li>Always clean up subscriptions or intervals to avoid memory leaks.</li>
                   </ul>
                 </div>
               </div>
@@ -164,4 +175,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactUseEffect;

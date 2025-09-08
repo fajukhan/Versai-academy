@@ -34,35 +34,35 @@ const ReactPropsDestructuring = () => {
     <li><a href="reactconditional">React Conditionals</a></li>
     <li><a href="reactlist">React Lists</a></li>
     <li><a href="reactforms">React Forms</a></li>
-    <li><a href="/">React Forms Submit</a></li>
-    <li><a href="/">React Textarea</a></li>
-    <li><a href="/">React Select</a></li>
-    <li><a href="/">React Multiple Inputs</a></li>
-    <li><a href="/">React Checkbox</a></li>
-    <li><a href="/">React Radio</a></li>
-    <li><a href="/">React Portals</a></li>
-    <li><a href="/">React Suspense</a></li>
-    <li><a href="/">React CSS Styling</a></li>
-    <li><a href="/">React CSS Modules</a></li>
-    <li><a href="/">React CSS-in-JS</a></li>
-    <li><a href="/">React Router</a></li>
-    <li><a href="/">React Transitions</a></li>
-    <li><a href="/">React Forward Ref</a></li>
-    <li><a href="/">React HOC</a></li>
-    <li><a href="/">React Sass</a></li>
+    <li><a href="reactformsubmit">React Forms Submit</a></li>
+    <li><a href="reacttextarea">React Textarea</a></li>
+    <li><a href="reactselect">React Select</a></li>
+    <li><a href="reactmultipleinput">React Multiple Inputs</a></li>
+    <li><a href="reactcheckbox">React Checkbox</a></li>
+    <li><a href="reactradio">React Radio</a></li>
+    <li><a href="reactportal">React Portals</a></li>
+    <li><a href="reactsuspense">React Suspense</a></li>
+    <li><a href="reactcssstyle">React CSS Styling</a></li>
+    <li><a href="reactcssmodules">React CSS Modules</a></li>
+    <li><a href="reactcssinjs">React CSS-in-JS</a></li>
+    <li><a href="reactrouter">React Router</a></li>
+    <li><a href="reacttransitions">React Transitions</a></li>
+    <li><a href="reactforwardref">React Forward Ref</a></li>
+    <li><a href="reacthoc">React HOC</a></li>
+    <li><a href="reactsass">React Sass</a></li>
   </ul>
 
   <h5 className="fw-bold">React Hooks</h5>
   <ul className="list-unstyled">
-    <li><a href="/">What is Hooks?</a></li>
-    <li><a href="/">React useState</a></li>
-    <li><a href="/">React useEffect</a></li>
-    <li><a href="/">React useContext</a></li>
-    <li><a href="/">React useRef</a></li>
-    <li><a href="/">React useReducer</a></li>
-    <li><a href="/">React useCallback</a></li>
-    <li><a href="/">React useMemo</a></li>
-    <li><a href="/">React Custom Hooks</a></li>
+    <li><a href="reacthooks">What is Hooks?</a></li>
+    <li><a href="reactusestate">React useState</a></li>
+    <li><a href="reactuseeffect">React useEffect</a></li>
+    <li><a href="reactusecontext">React useContext</a></li>
+    <li><a href="reactuseref">React useRef</a></li>
+    <li><a href="reactusereducer">React useReducer</a></li>
+    <li><a href="reactusecallback">React useCallback</a></li>
+    <li><a href="reactusememo">React useMemo</a></li>
+    <li><a href="reactcustomhooks">React Custom Hooks</a></li>
   </ul>
 </div>
 

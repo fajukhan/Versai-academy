@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactCustomHooks = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                       {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -70,86 +68,82 @@ const ReactIntroduction = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React Custom Hooks</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reactusememo">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="/">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>Custom Hooks</b> in React allow you to extract reusable logic from components into separate functions.  
+                They follow the naming convention of starting with "use" and can call other hooks internally.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>1. Creating a Custom Hook</h3>
+              <p>Example: Creating a hook to manage form input state.</p>
+              <pre className="bg-light p-3 rounded">
+{`import { useState } from 'react';
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
-
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+function useInput(initialValue) {
+  const [value, setValue] = useState(initialValue);
+  const handleChange = (e) => setValue(e.target.value);
+  return [value, handleChange];
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+export default useInput;`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
-              <h3>Features of React</h3>
-              <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
-              </ul>
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>2. Using a Custom Hook</h3>
+              <p>Using the custom hook inside a component:</p>
+              <pre className="bg-light p-3 rounded">
+{`import React from 'react';
+import useInput from './useInput';
 
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
+function App() {
+  const [name, handleNameChange] = useInput('');
+  const [email, handleEmailChange] = useInput('');
 
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(\`Name: \${name}, Email: \${email}\`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={name} onChange={handleNameChange} placeholder="Name" />
+      <input value={email} onChange={handleEmailChange} placeholder="Email" />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
 
 export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: "purple", color: "white", padding: "0.5rem", borderRadius: "0.5rem" }}>3. Advantages of Custom Hooks</h3>
+              <ul>
+                <li>Encapsulates reusable logic for multiple components.</li>
+                <li>Improves code readability and maintainability.</li>
+                <li>Can call other hooks inside them.</li>
+                <li>Follows standard hook rules (useState, useEffect, etc.).</li>
+              </ul>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li>Custom Hooks are functions that start with "use" and encapsulate reusable hook logic.</li>
+                    <li>They help you avoid code duplication across components.</li>
+                    <li>Use them just like built-in hooks inside functional components.</li>
                   </ul>
                 </div>
               </div>
@@ -164,4 +158,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactCustomHooks;

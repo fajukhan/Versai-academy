@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactJSXIntro = () => {
+const ReactRadio = () => {
   return (
     <>
       <Navbar />
@@ -10,8 +10,9 @@ const ReactJSXIntro = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-                        {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+
+                            {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -29,7 +30,7 @@ const ReactJSXIntro = () => {
     <li><a href="reactclass">React Class</a></li>
     <li><a href="reactprops">React Props</a></li>
     <li><a href="reactpropsdestructuring">React Props Destructuring</a></li>
-    <li><a href="/">React Props Children</a></li>
+    <li><a href="reactpropschildren">React Props Children</a></li>
     <li><a href="reactevents">React Events</a></li>
     <li><a href="reactconditional">React Conditionals</a></li>
     <li><a href="reactlist">React Lists</a></li>
@@ -65,98 +66,180 @@ const ReactJSXIntro = () => {
     <li><a href="reactcustomhooks">React Custom Hooks</a></li>
   </ul>
 </div>
-
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React JSX Introduction</h1>
+              <h1>React Radio Buttons</h1>
 
               {/* Prev / Next */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="reactes6">
+                <a href="reactcheckbox">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactjsxexpressions">
+                <a href="reactportal">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                JSX stands for <b>JavaScript XML</b>.  
-                It allows us to write HTML directly within JavaScript.  
-                JSX makes code easier to write and understand in React applications.
+                Radio buttons allow users to select <b>only one option</b> from a group.  
+                In React, radio buttons are controlled components, and we use <code>useState</code> to track the selected value.
               </p>
 
-              {/* Example 1: Basic JSX */}
-              <h3>1. Basic JSX Example</h3>
+              <h3>1. Basic Radio Button Example</h3>
+              <p>
+                You can create radio buttons using the <code>type="radio"</code> input.  
+                All radio buttons in a group should have the same <code>name</code>.
+              </p>
+
               <div className="card my-4 shadow-sm">
-                <div className="card-header">JSX Example</div>
+                <div className="card-header">Example: Basic Radio Button</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const element = <h1>Hello, JSX!</h1>;
-ReactDOM.render(element, document.getElementById('root'));`}
+{`import { useState } from "react";
+
+function App() {
+  const [gender, setGender] = useState("");
+
+  return (
+    <div>
+      <h2>Select Gender</h2>
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          value="Male"
+          checked={gender === "Male"}
+          onChange={(e) => setGender(e.target.value)}
+        />
+        Male
+      </label>
+      <br />
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          value="Female"
+          checked={gender === "Female"}
+          onChange={(e) => setGender(e.target.value)}
+        />
+        Female
+      </label>
+      <p>Selected: {gender}</p>
+    </div>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello, JSX!`}</pre>
+                  <p><b>Output:</b> Users can select only one gender option.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 2: Embedding Expressions */}
-              <h3>2. Embedding Expressions in JSX</h3>
-              <p>You can embed any JavaScript expression inside JSX using curly braces <code>{`{ }`}</code>.</p>
+              <h3>2. Radio Buttons with Multiple Options</h3>
+              <p>
+                You can create a group of radio buttons for categories like food, subjects, etc.
+              </p>
+
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Embedding expressions</div>
+                <div className="card-header">Example: Favorite Fruit</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const user = "Alice";
-const element = <h2>Hello, {user}!</h2>;
-ReactDOM.render(element, document.getElementById('root'));`}
+{`import { useState } from "react";
+
+function App() {
+  const [fruit, setFruit] = useState("");
+
+  return (
+    <div>
+      <h2>Select Your Favorite Fruit</h2>
+      <label>
+        <input
+          type="radio"
+          name="fruit"
+          value="Apple"
+          checked={fruit === "Apple"}
+          onChange={(e) => setFruit(e.target.value)}
+        />
+        Apple
+      </label>
+      <br />
+      <label>
+        <input
+          type="radio"
+          name="fruit"
+          value="Banana"
+          checked={fruit === "Banana"}
+          onChange={(e) => setFruit(e.target.value)}
+        />
+        Banana
+      </label>
+      <br />
+      <label>
+        <input
+          type="radio"
+          name="fruit"
+          value="Orange"
+          checked={fruit === "Orange"}
+          onChange={(e) => setFruit(e.target.value)}
+        />
+        Orange
+      </label>
+      <p>Favorite Fruit: {fruit}</p>
+    </div>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello, Alice!`}</pre>
+                  <p><b>Output:</b> Only one fruit can be selected at a time.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
                 </div>
               </div>
 
-              {/* Example 3: JSX with Attributes */}
-              <h3>3. JSX with Attributes</h3>
-              <p>Attributes in JSX are written using <code>camelCase</code> notation instead of lowercase.</p>
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">JSX Attributes</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`const element = <img src="logo.png" alt="Logo" className="logo" />;
-ReactDOM.render(element, document.getElementById('root'));`}
-                  </pre>
-                  <p><b>Output:</b> An image with class <code>logo</code>.</p>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+              <h3>3. Dynamic Radio Buttons from Array</h3>
+              <p>
+                You can dynamically render radio buttons from an array of options.
+              </p>
 
-              {/* Example 4: JSX with Children */}
-              <h3>4. JSX with Children</h3>
-              <p>JSX tags can contain children elements.</p>
               <div className="card my-4 shadow-sm">
-                <div className="card-header">Nested JSX</div>
+                <div className="card-header">Example: Dynamic Radio Buttons</div>
                 <div className="card-body">
                   <pre className="bg-light p-3 rounded">
-{`const element = (
-  <div>
-    <h1>Hello World</h1>
-    <p>Welcome to JSX</p>
-  </div>
-);
-ReactDOM.render(element, document.getElementById('root'));`}
+{`import { useState } from "react";
+
+function App() {
+  const options = ["Red", "Green", "Blue"];
+  const [color, setColor] = useState("");
+
+  return (
+    <div>
+      <h2>Select a Color</h2>
+      {options.map((option) => (
+        <label key={option}>
+          <input
+            type="radio"
+            name="color"
+            value={option}
+            checked={color === option}
+            onChange={(e) => setColor(e.target.value)}
+          />
+          {option}
+          <br />
+        </label>
+      ))}
+      <p>Selected Color: {color}</p>
+    </div>
+  );
+}
+
+export default App;`}
                   </pre>
-                  <p><b>Output:</b></p>
-                  <pre className="bg-light p-3 rounded">{`Hello World
-Welcome to JSX`}</pre>
+                  <p><b>Output:</b> Colors are rendered dynamically, and only one can be selected.</p>
                   <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
                     <button className="try-btn mt-3">Try it Yourself »</button>
                   </a>
@@ -168,14 +251,14 @@ Welcome to JSX`}</pre>
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>JSX allows us to write HTML inside JavaScript.</li>
-                    <li>JavaScript expressions can be embedded with <code>{`{ }`}</code>.</li>
-                    <li>Attributes use <code>camelCase</code> naming.</li>
-                    <li>JSX elements can contain children elements.</li>
+                    <li>Radio buttons allow only one selection per group.</li>
+                    <li>Use <code>checked</code> and <code>onChange</code> with <code>useState</code> to control them.</li>
+                    <li>Radio buttons can be dynamically generated from arrays.</li>
                   </ul>
                 </div>
               </div>
 
+        
             </div>
           </div>
         </div>
@@ -186,4 +269,4 @@ Welcome to JSX`}</pre>
   );
 };
 
-export default ReactJSXIntro;
+export default ReactRadio;

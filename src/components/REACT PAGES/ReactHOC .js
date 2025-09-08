@@ -2,7 +2,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const ReactIntroduction = () => {
+const ReactHOC = () => {
   return (
     <>
       <Navbar />
@@ -10,10 +10,8 @@ const ReactIntroduction = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-
-                
-      {/* Sidebar (Left - col-2) */}
-      <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
+                                                                   {/* Sidebar (Left - col-2) */}
+ <div className="col-lg-2 col-md-3 col-12 sidebar bg-light p-3">
   <h5 className="fw-bold mt-4">React Tutorial</h5>
   <ul className="list-unstyled">
     <li><a href="react">React Home</a></li>
@@ -70,90 +68,95 @@ const ReactIntroduction = () => {
 
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
-              <h1>React Introduction</h1>
+              <h1>React HOC (Higher-Order Component)</h1>
 
-              {/* Prev / Next */}
+              {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="react">
+                <a href="reactforwardref">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="reactgetstarted">
+                <a href="reactsass">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-5">
-                <b>React</b> is one of the most popular JavaScript libraries for building modern user interfaces.  
-                It was created by <b>Facebook</b> in 2013 and is now maintained by Meta and a large developer community.
+                <b>Higher-Order Component (HOC)</b> is a function that takes a component and returns a new component.  
+                HOCs are used for reusing component logic, such as authentication, theming, or data fetching.
               </p>
 
-              <h3>Why React?</h3>
-              <ul>
-                <li>Component-based: Build reusable UI pieces.</li>
-                <li>Fast rendering with Virtual DOM.</li>
-                <li>JSX syntax makes UI code more intuitive.</li>
-                <li>Large ecosystem and community support.</li>
-              </ul>
+              <h3>1. Basic Example</h3>
+              <pre className="bg-light p-3 rounded">{`import React from "react";
 
-              {/* Example 1 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 1: React Component</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
-
-function Greeting() {
-  return <h2>Hello from React!</h2>;
+// HOC function
+function withLogger(WrappedComponent) {
+  return function(props) {
+    console.log("Props:", props);
+    return <WrappedComponent {...props} />;
+  };
 }
 
-export default Greeting;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
+// Original Component
+function Hello(props) {
+  return <h2>Hello {props.name}</h2>;
+}
 
-              <h3>Features of React</h3>
+// Wrapped Component
+const HelloWithLogger = withLogger(Hello);
+
+function App() {
+  return <HelloWithLogger name="React" />;
+}
+
+export default App;`}</pre>
+
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3>2. Using HOC for Conditional Rendering</h3>
+              <pre className="bg-light p-3 rounded">{`import React from "react";
+
+function withAuth(WrappedComponent) {
+  return function(props) {
+    const isLoggedIn = true;
+    if (!isLoggedIn) return <h2>Access Denied</h2>;
+    return <WrappedComponent {...props} />;
+  };
+}
+
+function Dashboard() {
+  return <h2>Dashboard Page</h2>;
+}
+
+const ProtectedDashboard = withAuth(Dashboard);
+
+function App() {
+  return <ProtectedDashboard />;
+}
+
+export default App;`}</pre>
+
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3>3. Advantages of HOC</h3>
               <ul>
-                <li>Declarative: Describe what you want, React takes care of updates.</li>
-                <li>Unidirectional data flow: Data flows one way, making apps predictable.</li>
-                <li>Cross-platform: React Native allows building mobile apps.</li>
+                <li>Code reuse and logic abstraction.</li>
+                <li>Enhance components without modifying them directly.</li>
+                <li>Works well for cross-cutting concerns like logging, auth, or theming.</li>
               </ul>
-
-              {/* Example 2 */}
-              <div className="card my-4 shadow-sm">
-                <div className="card-header">Example 2: Using JSX</div>
-                <div className="card-body">
-                  <pre className="bg-light p-3 rounded">
-{`import React from "react";
-
-const App = () => {
-  const user = "Afraj";
-  return <h2>Welcome, {user}!</h2>;
-};
-
-export default App;`}
-                  </pre>
-                  <a href="https://codesandbox.io/" target="_blank" rel="noopener noreferrer">
-                    <button className="try-btn mt-3">Try it Yourself »</button>
-                  </a>
-                </div>
-              </div>
 
               {/* Summary */}
               <div className="card my-4 shadow-sm">
                 <div className="card-header">Summary</div>
                 <div className="card-body">
                   <ul>
-                    <li>React is a JavaScript library for building UIs.</li>
-                    <li>Created by Facebook (Meta).</li>
-                    <li>Uses components, JSX, and virtual DOM for efficiency.</li>
-                    <li>Great for building single-page applications (SPAs).</li>
+                    <li>HOC is a function that returns a new component.</li>
+                    <li>It helps in reusing logic across multiple components.</li>
+                    <li>Commonly used for logging, authentication, theming, and data fetching.</li>
                   </ul>
                 </div>
               </div>
 
+         
             </div>
           </div>
         </div>
@@ -164,4 +167,4 @@ export default App;`}
   );
 };
 
-export default ReactIntroduction;
+export default ReactHOC;
