@@ -23,7 +23,7 @@ const ExcelFill = () => {
                 <a href="excelranges">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="excelcell">
+                <a href="excelmovecell">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>

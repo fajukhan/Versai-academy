@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import SidebarExcel from "../SidebarExcel";
 
-const ExcelParentheses = () => {
+const ExcelIF = () => {
   return (
     <>
       <Navbar />
@@ -11,56 +11,62 @@ const ExcelParentheses = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-                                                     {/* Sidebar (Left - col-2) */}
-                    <SidebarExcel />
+
+            {/* Sidebar (Left - col-2) */}
+            <SidebarExcel />
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
 
-              <h1>Excel Parentheses</h1>
+              <h1>Excel IF Function</h1>
 
               {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="excelarithmeticoperators">
+                <a href="excelcountifs">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="excelfunctions">
+                <a href="excelifs">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-4">
-                Parentheses in Excel are used to control the order of calculations in formulas. Excel follows the standard mathematical order of operations (PEMDAS): Parentheses, Exponents, Multiplication/Division, Addition/Subtraction.
+                The IF function in Excel checks a condition and returns one value if the condition is TRUE, and another value if the condition is FALSE.
               </p>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Why Use Parentheses?
+                Syntax
               </h3>
               <p>
-                Parentheses allow you to prioritize certain calculations within a formula. Without them, Excel performs calculations based on the default order of operations.
+                <code>IF(logical_test, value_if_true, value_if_false)</code>
               </p>
+              <ul>
+                <li><code>logical_test</code>: The condition you want to test.</li>
+                <li><code>value_if_true</code>: Value to return if the condition is TRUE.</li>
+                <li><code>value_if_false</code>: Value to return if the condition is FALSE.</li>
+              </ul>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – Without Parentheses
+                Example – Simple IF
               </h3>
-              <p>Excel follows the default order of operations.</p>
               <pre className="bg-light p-3 rounded">
-{`Formula: =5 + 2 * 3
-Calculation: 2 * 3 = 6
-Then: 5 + 6 = 11
-Result: 11`}
+{`=IF(A2>50, "Pass", "Fail")
+
+If A2 = 60 → Result: "Pass"
+If A2 = 40 → Result: "Fail"`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – With Parentheses
+                Example – Nested IF
               </h3>
-              <p>Parentheses change the order of calculation.</p>
               <pre className="bg-light p-3 rounded">
-{`Formula: =(5 + 2) * 3
-Calculation: 5 + 2 = 7
-Then: 7 * 3 = 21
-Result: 21`}
+{`=IF(A2>=90, "A", IF(A2>=75, "B", "C"))
+
+If A2 = 95 → Result: "A"
+If A2 = 80 → Result: "B"
+If A2 = 60 → Result: "C"`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
@@ -68,10 +74,11 @@ Result: 21`}
                 Notes
               </h3>
               <ul>
-                <li>Use parentheses to control and clarify complex formulas.</li>
-                <li>Excel automatically follows standard order of operations, so parentheses are important for overriding defaults.</li>
-                <li>You can nest parentheses for multiple levels of calculations.</li>
+                <li>The IF function allows logical comparisons between values.</li>
+                <li>Nested IFs can evaluate multiple conditions.</li>
+                <li>Combine with other functions for complex calculations.</li>
               </ul>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
             </div>
           </div>
@@ -83,4 +90,4 @@ Result: 21`}
   );
 };
 
-export default ExcelParentheses;
+export default ExcelIF;

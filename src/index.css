@@ -20,7 +20,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;       /* पूरी स्क्रीन की ऊँचाई */
+      height: auto; /* पूरी स्क्रीन की ऊँचाई */
   overflow-y: auto;    /* अगर sidebar लंबा है तो उसके अंदर scroll होगा */
   width: 16.6667%;     /* Bootstrap col-2 = 2/12 = 16.66% */
   border-right: 1px solid #ddd;

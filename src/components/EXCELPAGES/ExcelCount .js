@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import SidebarExcel from "../SidebarExcel";
 
-const ExcelParentheses = () => {
+const ExcelCount = () => {
   return (
     <>
       <Navbar />
@@ -11,56 +11,58 @@ const ExcelParentheses = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-                                                     {/* Sidebar (Left - col-2) */}
-                    <SidebarExcel />
+
+            {/* Sidebar (Left - col-2) */}
+            <SidebarExcel />
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
 
-              <h1>Excel Parentheses</h1>
+              <h1>Excel COUNT Function</h1>
 
               {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="excelarithmeticoperators">
+                <a href="excelconcat">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="excelfunctions">
+                <a href="excelcounta">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-4">
-                Parentheses in Excel are used to control the order of calculations in formulas. Excel follows the standard mathematical order of operations (PEMDAS): Parentheses, Exponents, Multiplication/Division, Addition/Subtraction.
+                The COUNT function in Excel counts the number of numeric values in a range of cells. It ignores empty cells and text values.
               </p>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Why Use Parentheses?
+                Syntax
               </h3>
               <p>
-                Parentheses allow you to prioritize certain calculations within a formula. Without them, Excel performs calculations based on the default order of operations.
+                <code>COUNT(value1, [value2], ...)</code>
               </p>
+              <ul>
+                <li><code>value1</code>: The first cell or range to count.</li>
+                <li><code>value2</code>: (Optional) Additional values or ranges.</li>
+              </ul>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – Without Parentheses
+                Example – Count Numeric Values in a Range
               </h3>
-              <p>Excel follows the default order of operations.</p>
               <pre className="bg-light p-3 rounded">
-{`Formula: =5 + 2 * 3
-Calculation: 2 * 3 = 6
-Then: 5 + 6 = 11
-Result: 11`}
+{`=COUNT(A2:A6)
+
+If A2:A6 = {10, "Text", 20, "", 30}
+Result = 3 (counts only numeric values: 10, 20, 30)`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – With Parentheses
+                Example – Count Multiple Ranges
               </h3>
-              <p>Parentheses change the order of calculation.</p>
               <pre className="bg-light p-3 rounded">
-{`Formula: =(5 + 2) * 3
-Calculation: 5 + 2 = 7
-Then: 7 * 3 = 21
-Result: 21`}
+{`=COUNT(A2:A6, B2:B6)
+
+Counts all numeric values across both ranges.`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
@@ -68,10 +70,11 @@ Result: 21`}
                 Notes
               </h3>
               <ul>
-                <li>Use parentheses to control and clarify complex formulas.</li>
-                <li>Excel automatically follows standard order of operations, so parentheses are important for overriding defaults.</li>
-                <li>You can nest parentheses for multiple levels of calculations.</li>
+                <li>COUNT only counts numbers. To include text, use COUNTA.</li>
+                <li>Empty cells, logical values, and errors are ignored.</li>
+                <li>Use COUNT to quickly determine how many numeric entries are in a dataset.</li>
               </ul>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
             </div>
           </div>
@@ -83,4 +86,4 @@ Result: 21`}
   );
 };
 
-export default ExcelParentheses;
+export default ExcelCount;

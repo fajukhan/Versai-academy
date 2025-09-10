@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import SidebarExcel from "../SidebarExcel";
 
-const ExcelParentheses = () => {
+const ExcelCountIFS = () => {
   return (
     <>
       <Navbar />
@@ -11,56 +11,60 @@ const ExcelParentheses = () => {
       <section className="p-0">
         <div className="bg-white">
           <div className="row g-0">
-                                                     {/* Sidebar (Left - col-2) */}
-                    <SidebarExcel />
+
+            {/* Sidebar (Left - col-2) */}
+           <SidebarExcel />
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
 
-              <h1>Excel Parentheses</h1>
+              <h1>Excel COUNTIFS Function</h1>
 
               {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="excelarithmeticoperators">
+                <a href="excelcountif">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="excelfunctions">
+                <a href="excelif">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-4">
-                Parentheses in Excel are used to control the order of calculations in formulas. Excel follows the standard mathematical order of operations (PEMDAS): Parentheses, Exponents, Multiplication/Division, Addition/Subtraction.
+                The COUNTIFS function in Excel counts the number of cells across one or more ranges that meet multiple criteria. It is useful when you need to evaluate more than one condition at a time.
               </p>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Why Use Parentheses?
+                Syntax
               </h3>
               <p>
-                Parentheses allow you to prioritize certain calculations within a formula. Without them, Excel performs calculations based on the default order of operations.
+                <code>COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)</code>
               </p>
+              <ul>
+                <li><code>criteria_range1</code>: The first range to evaluate.</li>
+                <li><code>criteria1</code>: The condition to apply to the first range.</li>
+                <li><code>criteria_range2, criteria2</code>: (Optional) Additional ranges and conditions.</li>
+              </ul>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – Without Parentheses
+                Example – Count Cells Meeting Two Criteria
               </h3>
-              <p>Excel follows the default order of operations.</p>
               <pre className="bg-light p-3 rounded">
-{`Formula: =5 + 2 * 3
-Calculation: 2 * 3 = 6
-Then: 5 + 6 = 11
-Result: 11`}
+{`=COUNTIFS(A2:A6, ">10", B2:B6, "Apple")
+
+If A2:A6 = {12, 5, 18, 20, 8} and B2:B6 = {"Apple","Apple","Banana","Apple","Apple"}
+Result = 2 (counts cells where A>10 AND B="Apple")`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – With Parentheses
+                Example – Count Cells Meeting Multiple Text Criteria
               </h3>
-              <p>Parentheses change the order of calculation.</p>
               <pre className="bg-light p-3 rounded">
-{`Formula: =(5 + 2) * 3
-Calculation: 5 + 2 = 7
-Then: 7 * 3 = 21
-Result: 21`}
+{`=COUNTIFS(B2:B6, "Apple", C2:C6, "Red")
+
+Counts cells where B column = "Apple" AND C column = "Red".`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
@@ -68,10 +72,11 @@ Result: 21`}
                 Notes
               </h3>
               <ul>
-                <li>Use parentheses to control and clarify complex formulas.</li>
-                <li>Excel automatically follows standard order of operations, so parentheses are important for overriding defaults.</li>
-                <li>You can nest parentheses for multiple levels of calculations.</li>
+                <li>COUNTIFS can handle multiple criteria ranges and conditions.</li>
+                <li>All criteria must be met for a cell to be counted.</li>
+                <li>Use wildcards like * and ? for partial text matching.</li>
               </ul>
+              <button className="try-btn my-5">Try it Yourself »</button>
 
             </div>
           </div>
@@ -83,4 +88,4 @@ Result: 21`}
   );
 };
 
-export default ExcelParentheses;
+export default ExcelCountIFS;

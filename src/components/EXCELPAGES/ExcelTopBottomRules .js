@@ -25,7 +25,7 @@ const ExcelTopBottomRules = () => {
                 <a href="excelhighlightcellrules">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="/">
+                <a href="exceldatabars">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>

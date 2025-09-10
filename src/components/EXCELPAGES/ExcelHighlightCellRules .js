@@ -25,7 +25,7 @@ const ExcelHighlightCellRules = () => {
                 <a href="excelconditionalformat">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="/">
+                <a href="exceltopbottomrules">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>

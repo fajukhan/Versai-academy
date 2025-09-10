@@ -275,6 +275,39 @@ import SidebarPython from "./components/SidebarPython.js";
 import SidebarReact from "./components/SidebarReact.js";
 import SidebarJquery from "./components/SidebarJquery.js";
 import ExcelTopBottomRules from "./components/EXCELPAGES/ExcelTopBottomRules .js";
+import ExcelDataBars from "./components/EXCELPAGES/ExcelDataBars .js";
+import ExcelColorScales from "./components/EXCELPAGES/ExcelColorScales .js";
+import ExcelIconSets from "./components/EXCELPAGES/ExcelIconSets .js";
+import ExcelManageRules from "./components/EXCELPAGES/ExcelManageRules .js";
+import ExcelCharts from "./components/EXCELPAGES/ExcelCharts .js";
+import ExcelTablePivotIntro from "./components/EXCELPAGES/ExcelTablePivotIntro .js";
+import ExcelCasePokeMart from "./components/EXCELPAGES/ExcelCasePokeMart .js";
+import ExcelCasePokeMartStyling from "./components/EXCELPAGES/ExcelCasePokeMartStyling .js";
+import ExcelAnd from "./components/EXCELPAGES/ExcelAnd .js";
+import ExcelAverage from "./components/EXCELPAGES/ExcelAverage .js";
+import ExcelAverageIf from "./components/EXCELPAGES/ExcelAverageIf .js";
+import ExcelAverageIfs from "./components/EXCELPAGES/ExcelAverageIfs .js";
+import ExcelConcat from "./components/EXCELPAGES/ExcelConcat .js";
+import ExcelCount from "./components/EXCELPAGES/ExcelCount .js";
+import ExcelCountA from "./components/EXCELPAGES/ExcelCountA .js";
+import ExcelCountBlank from "./components/EXCELPAGES/ExcelCountBlank .js";
+import ExcelCountIF from "./components/EXCELPAGES/ExcelCountIF .js";
+import ExcelCountIFS from "./components/EXCELPAGES/ExcelCountIFS .js";
+import ExcelIF from "./components/EXCELPAGES/ExcelIF .js";
+import ExcelIFS from "./components/EXCELPAGES/ExcelIFS .js";
+import ExcelLEFT from "./components/EXCELPAGES/ExcelLEFT .js";
+import ExcelLOWER from "./components/EXCELPAGES/ExcelLOWER .js";
+import ExcelMAX from "./components/EXCELPAGES/ExcelMAX .js";
+import ExcelMEDIAN from "./components/EXCELPAGES/ExcelMEDIAN .js";
+import ExcelMIN from "./components/EXCELPAGES/ExcelMIN .js";
+import ExcelMODE from "./components/EXCELPAGES/ExcelMODE .js";
+import ExcelNPV from "./components/EXCELPAGES/ExcelNPV .js";
+import ExcelOR from "./components/EXCELPAGES/ExcelOR .js";
+import ExcelRAND from "./components/EXCELPAGES/ExcelRAND .js";
+import ExcelRIGHT from "./components/EXCELPAGES/ExcelRIGHT .js";
+import ExcelSTDEVP from "./components/EXCELPAGES/ExcelSTDEVP .js";
+import ExcelSTDEVS from "./components/EXCELPAGES/ExcelSTDEVS .js";
+
 
 
 const App = () => {
@@ -298,6 +331,8 @@ const App = () => {
       path:"sidebarreact",
       element:<SidebarReact />
     },
+
+
 
 
      {
@@ -1661,6 +1696,194 @@ const App = () => {
   path:"exceltopbottomrules",
   element:<ExcelTopBottomRules />
  },
+
+
+       {
+  path:"exceldatabars",
+  element:<ExcelDataBars />
+ },
+
+
+ 
+       {
+  path:"excelcolorscales",
+  element:<ExcelColorScales />
+ },
+
+
+ 
+       {
+  path:"exceliconsets",
+  element:<ExcelIconSets />
+ },
+
+        {
+  path:"excelmanagerules",
+  element:<ExcelManageRules />
+ },
+
+       {
+  path:"excelcharts",
+  element:<ExcelCharts />
+ },
+
+      {
+  path:"tablepivotintro",
+  element:<ExcelTablePivotIntro />
+ },
+
+
+       {
+  path:"casepokemart",
+  element:<ExcelCasePokeMart />
+ },
+
+
+ 
+       {
+  path:"casepokemartstyling",
+  element:<ExcelCasePokeMartStyling />
+ },
+
+       {
+  path:"exceland",
+  element:<ExcelAnd />
+ },
+
+
+        {
+  path:"excelaverage",
+  element:<ExcelAverage />
+ },
+
+         {
+  path:"excelaverageif",
+  element:<ExcelAverageIf />
+ },
+
+ 
+         {
+  path:"excelaverageifs",
+  element:<ExcelAverageIfs />
+ },
+
+        {
+  path:"excelconcat",
+  element:<ExcelConcat />
+ },
+
+         {
+  path:"excelcount",
+  element:<ExcelCount />
+ },
+
+
+          {
+  path:"excelcounta",
+  element:<ExcelCountA />
+ },
+
+           {
+  path:"excelcountblank",
+  element:<ExcelCountBlank />
+ },
+
+
+            {
+  path:"excelcountif",
+  element:<ExcelCountIF />
+ },
+
+
+             {
+  path:"excelcountifs",
+  element:<ExcelCountIFS />
+ },
+
+              {
+  path:"excelif",
+  element:<ExcelIF />
+ },
+
+
+ 
+              {
+  path:"excelifs",
+  element:<ExcelIFS />
+ },
+
+
+               {
+  path:"excelleft",
+  element:<ExcelLEFT />
+ },
+
+                {
+  path:"excellower",
+  element:<ExcelLOWER />
+ },
+
+                 {
+  path:"excelmax",
+  element:<ExcelMAX />
+ },
+
+                  {
+  path:"excelmedian",
+  element:<ExcelMEDIAN />
+ },
+
+                   {
+  path:"excelmin",
+  element:<ExcelMIN />
+ },
+
+                    {
+  path:"excelmode",
+  element:<ExcelMODE />
+ },
+
+                     {
+  path:"excelnpv",
+  element:<ExcelNPV />
+ },
+
+                      {
+  path:"excelor",
+  element:<ExcelOR />
+ },
+
+                       {
+  path:"excelrand",
+  element:<ExcelRAND />
+ },
+
+                       {
+  path:"excelright",
+  element:<ExcelRIGHT />
+ },
+
+                        {
+  path:"excelstdevp",
+  element:<ExcelSTDEVP />
+ },
+
+                         {
+  path:"excelstdevs",
+  element:<ExcelSTDEVS />
+ },
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
