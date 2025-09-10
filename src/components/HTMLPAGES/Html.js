@@ -1,223 +1,95 @@
-
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Navbar from '../Navbar';
 import Footer from "../Footer";
-
-
+import Sidebar from '../Sidebar';
 
 const Html = () => {
-
   return (
-
-
-
-
     <>
-      {/* NavBar */}
-     <Navbar />
+      <Navbar />
 
+      <section className="p-0">
+        <div className="bg-white">
+          <div className="row g-0">
+            
+            {/* Sidebar */}
+            <Sidebar />
 
-    {/* Section-1 */}
-<section  className="p-0">
-  <div className="bg-white">
-    <div className="row g-0">
-      
-      {/* Sidebar (Left - col-2) */}
-      
-      <div className="col-lg-2 col-md-3 d-none d-md-block p-3 bg-light sidebar-fixed sidebar-link  sidebar">
-        <h5 className="fw-bold">HTML Tutorial</h5>
-        <ul className="list-unstyled">
-          <li><a href="html"   >HTML HOME</a></li>
-          <li><a href="htmlhome" >HTML Introduction</a></li>
-          <li><a href="editor">HTML Editors</a></li>
-          <li><a href="basic">HTML Basic</a></li>
-          <li><a href="elements">HTML Elements</a></li>
-          <li><a href="attribute">HTML Attributes</a></li>
-          <li><a href="heading">HTML Headings</a></li>
-          <li><a href="paragraph">HTML Paragraphs</a></li>
-          <li><a href="style">HTML Styles</a></li>
-          <li><a href="formatting">HTML Formatting</a></li>
-          <li><a href="quotation">HTML Quotations</a></li>
-          <li><a href="comments">HTML Comments</a></li>
-          <li><a href="colors">HTML Colors</a></li>
-          <li><a href="css2">HTML CSS</a></li>
-          <li><a href="links">HTML Links</a></li>
-          <li><a href="images">HTML Images</a></li>
-          <li><a href="favicon">HTML Favicon</a></li>
-          <li><a href="pagetitle">HTML Page Title</a></li>
-          <li><a href="tables">HTML Tables</a></li>
-          <li><a href="lists">HTML Lists</a></li>
-          <li><a href="divs">HTML Div</a></li>
-          <li><a href="blockinline">HTML Block & Inline</a></li>
-          <li><a href="htmlclass">HTML Class</a></li>
-          <li><a href="htmlid">HTML Id</a></li>
-          <li><a href="htmliframes">HTML Iframes</a></li>
-          <li><a href="htmljavascript">HTML Javascript</a></li>
-          <li><a href="htmlfilepath">HTML File Paths</a></li>
-          <li><a href="htmlhead">HTML Head</a></li>
-          <li><a href="htmllayout">HTML Layout</a></li>
-          <li><a href="htmlresponsive">HTML Responsive</a></li>
-          <li><a href="htmlsemantic">HTML Semantics</a></li>
+            {/* Main Content */}
+            <div className="col-lg-8 col-md-9 col-12 bg-white p-5">
+              <h1>HTML Tutorial</h1>
 
-            <h5 className="fw-bold">HTML Forms</h5>
-        <ul className="list-unstyled">
-        
-         
-          <li><a href="htmlform">HTML Forms</a></li>
-          <li><a href="htmlformelement">HTML Form Elements</a></li>
-          <li><a href="htmlinput">HTML Input Types</a></li>
-          <li><a href="htmlattribute">HTML Input Attributes</a></li>
-            <li><a href="htmlformattribute">HTML Form Attributes</a></li>
-        
-        </ul>
-        <h5 className="fw-bold">HTML Media</h5>
-        <ul className="list-unstyled">
-        
-         
-           <li><a href="htmlmultimedia">HTML Media</a></li>
-        <li><a href="htmlaudio">HTML Audio</a></li>
-          <li><a href="htmlvideo">HTML Video</a></li>
-        <li><a href="htmlyoutube">HTML Youtube</a></li>
-          
-        
-        </ul>
-        </ul>
-      
-       </div>
+              <div className="d-flex justify-content-between gap-3 flex-wrap mt-3">
+                <a href="/html"> 
+                  <button className="custom-btn">
+                    <i className="bi"><FaArrowLeft /></i> Previous
+                  </button>
+                </a>
+                <a href="/htmlhome"> 
+                  <button className="custom-btn">
+                    Next <i className="bi"><FaArrowRight /></i>
+                  </button>
+                </a>
+              </div> 
 
-      {/* Main Content (Middle - col-10) */}
-          <div className="col-lg-8 col-md-9 col-12 bg-white p-5">
+              <h2 className="pt-5">Learn HTML</h2>
+              <p>HTML is the standard markup language for Web pages.</p>
+              <p>With HTML you can create your own Website.</p>
+              <p>HTML is easy to learn - You will enjoy it!</p>
 
-      
-        <h1>HTML Tutorial</h1>
-
-        {/* Buttons */}
-      <div className="d-flex justify-content-between gap-3 flex-wrap mt-3">
-          <a href="html"> <button className="custom-btn">
-            <i className="bi"><FaArrowLeft /></i> Previous
-          </button></a> 
-        <a href="htmlhome"> <button className="custom-btn">
-            Next <i className="bi"><FaArrowRight /></i>
-          </button></a>
-        </div> 
-       
-        <h2 className='pt-5'>Learn HTML</h2>
-        <p>HTML is the standard markup language for Web pages.</p>
-        <p>With HTML you can create your own Website.</p>
-        <p>HTML is easy to learn - You will enjoy it!</p>
-
-
-
-        {/* Example Section */}
+              {/* Example Section */}
               <div className="row justify-content-start pt-3">
                 <div className="col-lg-12 col-md-12">
-                  {/* Heading */}
                   <h4 className="fw-bold mb-3">Example</h4>
-
-                  {/* Code Box */}
                   <div className="code-box mb-3">
-                    &lt;!DOCTYPE html&gt;
-                    <br />
-                    &lt;html&gt;
-                    <br />
-                    &lt;head&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;
-                    <br />
-                    &lt;/head&gt;
-                    <br />
-                    &lt;body&gt;
-                    <br />
-                    <br />
-                    &nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;
-                    <br />
-                    &nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;
-                    <br />
-                    <br />
-                    &lt;/body&gt;
-                    <br />
+                    &lt;!DOCTYPE html&gt;<br/>
+                    &lt;html&gt;<br/>
+                    &lt;head&gt;<br/>
+                    &nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br/>
+                    &lt;/head&gt;<br/>
+                    &lt;body&gt;<br/>
+                    &nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;<br/>
+                    &nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br/>
+                    &lt;/body&gt;<br/>
                     &lt;/html&gt;
                   </div>
-
-                  {/* Button */}
                   <button className="custom-btn">Try it Yourself »</button>
                 </div>
               </div>
-    
 
+              {/* References Section */}
+              <div className="py-5">
+                <h2 className="fw-bold mb-3">HTML References</h2>
+                <p className="text-muted mb-4">
+                  At W3Schools you will find complete references about HTML elements, attributes, events,
+                  color names, entities, character-sets, URL encoding, language codes, HTTP messages,
+                  browser support, and more:
+                </p>
+                <div className="row g-3">
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">HTML Elements</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Browser Support</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Attributes</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Global Attributes</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Event Attributes</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Color Names</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Canvas</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Audio/Video DOM</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Character Sets</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">URL Encoding</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Language Codes</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Country Codes</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">HTTP Messages</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Px to Em Converter</div></div>
+                  <div className="col-lg-4 col-md-6 col-12"><div className="ref-card">Keyboard Shortcuts</div></div>
+                </div>
+              </div>
 
-    {/* <!-- Heading --> */}
-    <div className='py-5'>
-    <h2 class="fw-bold mb-3">HTML References</h2>
-    <p class="text-muted mb-4">
-      At W3Schools you will find complete references about HTML elements, attributes, events,
-      color names, entities, character-sets, URL encoding, language codes, HTTP messages,
-      browser support, and more:
-    </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    {/* <!-- Cards Grid --> */}
-    <div class="row g-3">
-      {/* <!-- Card Item --> */}
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">HTML Elements</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Browser Support</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Attributes</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Global Attributes</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Event Attributes</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Color Names</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Canvas</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Audio/Video DOM</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Character Sets</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">URL Encoding</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Language Codes</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Country Codes</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">HTTP Messages</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Px to Em Converter</div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-12">
-        <div class="ref-card">Keyboard Shortcuts</div>
-      </div>
-    </div>
-   </div>
-
-       
-      
-   </div>
-     
-    </div>
-  </div>
-</section>
-
-{/* Footer */}
-<Footer />
-
+      <Footer />
     </>
   );
 };
