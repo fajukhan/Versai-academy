@@ -19,8 +19,6 @@ import Java from "./components/Java";
 import Php from "./components/Php";
 import JQuery from "./components/JQUERYPAGES/JQuery.js";
 
-import Git from "./components/Git";
-import Wordpress from "./components/Wordpress";
 import DigitalMarketing from "./components/DigitalMarketing";
 import Paragraph from "./components/HTMLPAGES/Paragraph";
 import Style from "./components/HTMLPAGES/Style";
@@ -269,7 +267,6 @@ import ExcelFilter from "./components/EXCELPAGES/ExcelFilter .js";
 import ExcelTables from "./components/EXCELPAGES/ExcelTables .js";
 import ExcelConditionalFormat from "./components/EXCELPAGES/ExcelConditionalFormat .js";
 import ExcelHighlightCellRules from "./components/EXCELPAGES/ExcelHighlightCellRules .js";
-import Sidebar from "./components/Sidebar.js";
 import SidebarSql from "./components/SidebarSql.js";
 import SidebarPython from "./components/SidebarPython.js";
 import SidebarReact from "./components/SidebarReact.js";
@@ -307,11 +304,72 @@ import ExcelRAND from "./components/EXCELPAGES/ExcelRAND .js";
 import ExcelRIGHT from "./components/EXCELPAGES/ExcelRIGHT .js";
 import ExcelSTDEVP from "./components/EXCELPAGES/ExcelSTDEVP .js";
 import ExcelSTDEVS from "./components/EXCELPAGES/ExcelSTDEVS .js";
+import ExcelSUM from "./components/EXCELPAGES/ExcelSUM .js";
+import ExcelSUMIF from "./components/EXCELPAGES/ExcelSUMIF .js";
+import ExcelSUMIFS from "./components/EXCELPAGES/ExcelSUMIFS .js";
+import ExcelTRIM from "./components/EXCELPAGES/ExcelTRIM .js";
+import ExcelVLOOKUP from "./components/EXCELPAGES/ExcelVLOOKUP .js";
+import ExcelXOR from "./components/EXCELPAGES/ExcelXOR .js";
+import ExcelConvertTimeToSeconds from "./components/EXCELPAGES/ExcelConvertTimeToSeconds .js";
+import ExcelDifferenceBetweenTimes from "./components/EXCELPAGES/ExcelDifferenceBetweenTimes .js";
+import ExcelRemoveDuplicates from "./components/EXCELPAGES/ExcelRemoveDuplicates .js";
+import SidebarGit from "./components/SidebarGit.js";
+import Git from "./components/GITPAGES/Git.js";
+import GitIntroduction from "./components/GITPAGES/GitIntroduction .js";
+import GitInstall from "./components/GITPAGES/GitInstall .js";
+import GitConfig from "./components/GITPAGES/GitConfig .js";
+import GitGetStarted from "./components/GITPAGES/GitGetStarted .js";
+import GitNewFiles from "./components/GITPAGES/GitNewFiles .js";
+import GitStaging from "./components/GITPAGES/GitStaging .js";
+import GitCommit from "./components/GITPAGES/GitCommit .js";
+import GitTagging from "./components/GITPAGES/GitTagging .js";
+import GitStash from "./components/GITPAGES/GitStash .js";
+import GitHistory from "./components/GITPAGES/GitHistory .js";
+import GitHelp from "./components/GITPAGES/GitHelp .js";
+import GitBranch from "./components/GITPAGES/GitBranch .js";
+import GitMerge from "./components/GITPAGES/GitMerge .js";
+import GitWorkflow from "./components/GITPAGES/GitWorkflow .js";
+import GitBestPractices from "./components/GITPAGES/GitBestPractices .js";
+import GitGlossary from "./components/GITPAGES/GitGlossary .js";
+import GitHubGetStarted from "./components/GITPAGES/GitHubGetStarted .js";
+import GitSSH from "./components/GITPAGES/GitSSH .js";
+import GitHubAddSSH from "./components/GITPAGES/GitHubAddSSH .js";
+import GitHubSetRemote from "./components/GITPAGES/GitHubSetRemote .js";
+import GitHubAddEdit from "./components/GITPAGES/GitHubAddEdit .js";
+import GitHubPull from "./components/GITPAGES/GitHubPull .js";
+import GitHubPush from "./components/GITPAGES/GitHubPush .js";
+import GitHubBranch from "./components/GITPAGES/GitHubBranch .js";
+import GitHubPullBranch from "./components/GITPAGES/GitHubPullBranch .js";
+import GitHubPushBranch from "./components/GITPAGES/GitHubPushBranch .js";
+import GitHubFlow from "./components/GITPAGES/GitHubFlow .js";
+import GitHubPages from "./components/GITPAGES/GitHubPages .js";
+import GitGUIClients from "./components/GITPAGES/GitGUIClients .js";
+import GitHubFork from "./components/GITPAGES/GitHubFork .js";
+import GitCloneFromFork from "./components/GITPAGES/GitCloneFromFork .js";
+import GitHubSendPullRequest from "./components/GITPAGES/GitHubSendPullRequest .js";
+import GitRevert from "./components/GITPAGES/GitRevert .js";
+import GitReset from "./components/GITPAGES/GitReset .js";
+import GitAmend from "./components/GITPAGES/GitAmend .js";
+import GitRebase from "./components/GITPAGES/GitRebase .js";
+import GitReflog from "./components/GITPAGES/GitReflog .js";
+import GitRecovery from "./components/GITPAGES/GitRecovery .js";
+import Sidebar from "./components/Sidebar.js";
+import WordPress from "./components/WORD/WordPress.js";
+import SideWord from "./components/SideWord.js";
+
+
+
+
+
+
+
+
+
+
 
 
 
 const App = () => {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -323,29 +381,39 @@ const App = () => {
       element: <Navbar />,
     },
 
-      {
-      path:"sidebarjquery",
-      element:<SidebarJquery />
-    },
-       {
-      path:"sidebarreact",
-      element:<SidebarReact />
-    },
-
-
-
-
      {
-      path:"sidebarpython",
-      element:<SidebarPython />
+      path: "sidebargit",
+      element: <Sidebar />,
+    },
+    
+
+    {
+      path: "sidebargit",
+      element: <SidebarGit />,
+    },
+
+
+
+    {
+      path: "sidebarjquery",
+      element: <SidebarJquery />,
+    },
+    {
+      path: "sidebarreact",
+      element: <SidebarReact />,
     },
 
     {
-      path:"sidebarsql",
-      element:<SidebarSql />
+      path: "sidebarpython",
+      element: <SidebarPython />,
     },
 
-     {
+    {
+      path: "sidebarsql",
+      element: <SidebarSql />,
+    },
+
+    {
       path: "sidebar",
       element: <Sidebar />,
     },
@@ -402,7 +470,7 @@ const App = () => {
 
     {
       path: "wordpress",
-      element: <Wordpress />,
+      element: <WordPress />,
     },
     {
       path: "digitalmarketing",
@@ -1527,375 +1595,597 @@ const App = () => {
       element: <JqueryFilters />,
     },
 
-   
- {
-  path:"excel",
-  element:<Excel />
- },
+    {
+      path: "excel",
+      element: <Excel />,
+    },
+
+    {
+      path: "excelintroduction",
+      element: <ExcelIntroduction />,
+    },
+
+    {
+      path: "excelgetstarted",
+      element: <ExcelGetStarted />,
+    },
+
+    {
+      path: "exceloverview",
+      element: <ExcelOverview />,
+    },
+
+    {
+      path: "excelsyntax",
+      element: <ExcelSyntax />,
+    },
+
+    {
+      path: "excelranges",
+      element: <ExcelRanges />,
+    },
+
+    {
+      path: "excelfill",
+      element: <ExcelFill />,
+    },
+
+    {
+      path: "excelmovecell",
+      element: <ExcelMoveCell />,
+    },
+
+    {
+      path: "exceladdcells",
+      element: <ExcelAddCells />,
+    },
+
+    {
+      path: "exceldeletecells",
+      element: <ExcelDeleteCells />,
+    },
+
+    {
+      path: "excelundoredo",
+      element: <ExcelUndoRedo />,
+    },
+
+    {
+      path: "excelformulas",
+      element: <ExcelFormulas />,
+    },
+
+    {
+      path: "excelrelativereference",
+      element: <ExcelRelativeReference />,
+    },
+
+    {
+      path: "excelabsolutereference",
+      element: <ExcelAbsoluteReference />,
+    },
+
+    {
+      path: "excelarithmeticoperators",
+      element: <ExcelArithmeticOperators />,
+    },
+
+    {
+      path: "excelparentheses",
+      element: <ExcelParentheses />,
+    },
+
+    {
+      path: "excelfunctions",
+      element: <ExcelFunctions />,
+    },
+
+    {
+      path: "excelformatting",
+      element: <ExcelFormatting />,
+    },
+
+    {
+      path: "excelformatpainter",
+      element: <ExcelFormatPainter />,
+    },
+
+    {
+      path: "excelformatcolors",
+      element: <ExcelFormatColors />,
+    },
+
+    {
+      path: "excelformatfonts",
+      element: <ExcelFormatFonts />,
+    },
+
+    {
+      path: "excelformatborders",
+      element: <ExcelFormatBorders />,
+    },
+
+    {
+      path: "excelformatnumbers",
+      element: <ExcelFormatNumbers />,
+    },
+
+    {
+      path: "excelformatgrids",
+      element: <ExcelFormatGrids />,
+    },
+
+    {
+      path: "excelformatsettings",
+      element: <ExcelFormatSettings />,
+    },
+
+    {
+      path: "excelsort",
+      element: <ExcelSort />,
+    },
+
+    {
+      path: "excelfilter",
+      element: <ExcelFilter />,
+    },
+
+    {
+      path: "exceltables",
+      element: <ExcelTables />,
+    },
+
+    {
+      path: "excelconditionalformat",
+      element: <ExcelConditionalFormat />,
+    },
+
+    {
+      path: "excelhighlightcellrules",
+      element: <ExcelHighlightCellRules />,
+    },
+
+    {
+      path: "exceltopbottomrules",
+      element: <ExcelTopBottomRules />,
+    },
+
+    {
+      path: "exceldatabars",
+      element: <ExcelDataBars />,
+    },
+
+    {
+      path: "excelcolorscales",
+      element: <ExcelColorScales />,
+    },
+
+    {
+      path: "exceliconsets",
+      element: <ExcelIconSets />,
+    },
+
+    {
+      path: "excelmanagerules",
+      element: <ExcelManageRules />,
+    },
+
+    {
+      path: "excelcharts",
+      element: <ExcelCharts />,
+    },
+
+    {
+      path: "tablepivotintro",
+      element: <ExcelTablePivotIntro />,
+    },
+
+    {
+      path: "casepokemart",
+      element: <ExcelCasePokeMart />,
+    },
+
+    {
+      path: "casepokemartstyling",
+      element: <ExcelCasePokeMartStyling />,
+    },
+
+    {
+      path: "exceland",
+      element: <ExcelAnd />,
+    },
+
+    {
+      path: "excelaverage",
+      element: <ExcelAverage />,
+    },
+
+    {
+      path: "excelaverageif",
+      element: <ExcelAverageIf />,
+    },
+
+    {
+      path: "excelaverageifs",
+      element: <ExcelAverageIfs />,
+    },
+
+    {
+      path: "excelconcat",
+      element: <ExcelConcat />,
+    },
+
+    {
+      path: "excelcount",
+      element: <ExcelCount />,
+    },
+
+    {
+      path: "excelcounta",
+      element: <ExcelCountA />,
+    },
+
+    {
+      path: "excelcountblank",
+      element: <ExcelCountBlank />,
+    },
+
+    {
+      path: "excelcountif",
+      element: <ExcelCountIF />,
+    },
+
+    {
+      path: "excelcountifs",
+      element: <ExcelCountIFS />,
+    },
+
+    {
+      path: "excelif",
+      element: <ExcelIF />,
+    },
+
+    {
+      path: "excelifs",
+      element: <ExcelIFS />,
+    },
+
+    {
+      path: "excelleft",
+      element: <ExcelLEFT />,
+    },
+
+    {
+      path: "excellower",
+      element: <ExcelLOWER />,
+    },
+
+    {
+      path: "excelmax",
+      element: <ExcelMAX />,
+    },
+
+    {
+      path: "excelmedian",
+      element: <ExcelMEDIAN />,
+    },
+
+    {
+      path: "excelmin",
+      element: <ExcelMIN />,
+    },
+
+    {
+      path: "excelmode",
+      element: <ExcelMODE />,
+    },
+
+    {
+      path: "excelnpv",
+      element: <ExcelNPV />,
+    },
+
+    {
+      path: "excelor",
+      element: <ExcelOR />,
+    },
+
+    {
+      path: "excelrand",
+      element: <ExcelRAND />,
+    },
+
+    {
+      path: "excelright",
+      element: <ExcelRIGHT />,
+    },
+
+    {
+      path: "excelstdevp",
+      element: <ExcelSTDEVP />,
+    },
+
+    {
+      path: "excelstdevs",
+      element: <ExcelSTDEVS />,
+    },
+
+    {
+      path: "excelsum",
+      element: <ExcelSUM />,
+    },
+
+    {
+      path: "excelsumif",
+      element: <ExcelSUMIF />,
+    },
+
+    {
+      path: "excelsumifs",
+      element: <ExcelSUMIFS />,
+    },
+
+    {
+      path: "exceltrim",
+      element: <ExcelTRIM />,
+    },
+
+    {
+      path: "excelvlookup",
+      element: <ExcelVLOOKUP />,
+    },
+
+    {
+      path: "excelxor",
+      element: <ExcelXOR />,
+    },
+
+    {
+      path: "excelconverttime",
+      element: <ExcelConvertTimeToSeconds />,
+    },
+
+    {
+      path: "exceldifferencebetween",
+      element: <ExcelDifferenceBetweenTimes />,
+    },
+
+    {
+      path: "excelremoveduplicates",
+      element: <ExcelRemoveDuplicates />,
+    },
+
+    {
+      path: "git",
+      element: <Git />,
+    },
+
+    {
+      path: "gitintro",
+      element: <GitIntroduction />,
+    },
+
+    {
+      path: "gitinstall",
+      element: <GitInstall />,
+    },
+
+    {
+      path: "gitconfig",
+      element: <GitConfig />,
+    },
+
+    {
+      path: "gitgetstarted",
+      element: <GitGetStarted />,
+    },
+
+    {
+      path: "gitnewfiles",
+      element: <GitNewFiles />,
+    },
+
+    {
+      path: "gitstaging",
+      element: <GitStaging />,
+    },
+
+    {
+      path: "gitcommit",
+      element: <GitCommit />,
+    },
+
+    {
+      path: "gittagging",
+      element: <GitTagging />,
+    },
+
+    {
+      path: "gitstash",
+      element: <GitStash />,
+    },
+
+    {
+      path: "githistory",
+      element: <GitHistory />,
+    },
+
+    {
+      path: "githelp",
+      element: <GitHelp />,
+    },
+
+    {
+      path: "gitbranch",
+      element: <GitBranch />,
+    },
+
+    {
+      path: "gitmerge",
+      element: <GitMerge />,
+    },
+
+    {
+      path: "gitworkflow",
+      element: <GitWorkflow />,
+    },
+
+    {
+      path: "gitbestpractices",
+      element: <GitBestPractices />,
+    },
+
+    {
+      path: "gitglossary",
+      element: <GitGlossary />,
+    },
+
+    {
+      path: "githubgetstarted",
+      element: <GitHubGetStarted />,
+    },
+
+    {
+      path: "gitssh",
+      element: <GitSSH />,
+    },
+
+    {
+      path: "githubaddssh",
+      element: <GitHubAddSSH />,
+    },
+
+    {
+      path: "githubsetremote",
+      element: <GitHubSetRemote />,
+    },
+
+    {
+      path: "githubeditcode",
+      element: <GitHubAddEdit />,
+    },
+
+    {
+      path: "pullfromgithub",
+      element: <GitHubPull />,
+    },
+
+    {
+      path: "pushtogithub",
+      element: <GitHubPush />,
+    },
+
+    {
+      path: "githubbranch",
+      element: <GitHubBranch />,
+    },
+
+    {
+      path: "pullbranchfromgithub",
+      element: <GitHubPullBranch />,
+    },
+
+    {
+      path: "pushbranchtogithub",
+      element: <GitHubPushBranch />,
+    },
+
+    {
+      path: "githubflow",
+      element: <GitHubFlow />,
+    },
+
+    {
+      path: "githubpages",
+      element: <GitHubPages />,
+    },
+
+    {
+      path: "gitguiclients",
+      element: <GitGUIClients />,
+    },
+
+    {
+      path: "githubfork",
+      element: <GitHubFork />,
+    },
+
+    {
+      path: "gitclonefromgithub",
+      element: <GitCloneFromFork />,
+    },
+
+    {
+      path: "githubsendpullrequest",
+      element: <GitHubSendPullRequest />,
+    },
+
+    {
+      path: "gitrevert",
+      element: <GitRevert />,
+    },
+
+    {
+      path: "gitreset",
+      element: <GitReset />,
+    },
+
+    {
+      path: "gitreset",
+      element: <GitReset />,
+    },
+
+    {
+      path: "gitamend",
+      element: <GitAmend />,
+    },
+
+    {
+      path: "gitrebase",
+      element: <GitRebase />,
+    },
+
+    {
+      path: "gitreflog",
+      element: <GitReflog />,
+    },
+
+    {
+      path: "gitrecovery",
+      element: <GitRecovery />,
+    },
+
+      {
+      path: "gitrecovery",
+      element: <GitRecovery />,
+    },
+
+       {
+      path: "wordpress",
+      element: <WordPress />,
+    },
+
+
+      {
+      path: "sideword",
+      element: <SideWord />,
+    },
 
     
- {
-  path:"excelintroduction",
-  element:<ExcelIntroduction />
- },
 
-  {
-  path:"excelgetstarted",
-  element:<ExcelGetStarted />
- },
 
-   {
-  path:"exceloverview",
-  element:<ExcelOverview />
- },
+   
 
- 
-   {
-  path:"excelsyntax",
-  element:<ExcelSyntax />
- },
-
+   
   
-   {
-  path:"excelranges",
-  element:<ExcelRanges />
- },
 
-    {
-  path:"excelfill",
-  element:<ExcelFill />
- },
 
-   {
-  path:"excelmovecell",
-  element:<ExcelMoveCell />
- },
 
- 
-   {
-  path:"exceladdcells",
-  element:<ExcelAddCells />
- },
 
-    {
-  path:"exceldeletecells",
-  element:<ExcelDeleteCells />
- },
-
-
-     {
-  path:"excelundoredo",
-  element:<ExcelUndoRedo />
- },
-
-    {
-  path:"excelformulas",
-  element:<ExcelFormulas />
- },
-
-    {
-  path:"excelrelativereference",
-  element:<ExcelRelativeReference />
- },
-
-     {
-  path:"excelabsolutereference",
-  element:<ExcelAbsoluteReference />
- },
-
-      {
-  path:"excelarithmeticoperators",
-  element:<ExcelArithmeticOperators />
- },
-
-       {
-  path:"excelparentheses",
-  element:<ExcelParentheses />
- },
-
-
-        {
-  path:"excelfunctions",
-  element:<ExcelFunctions />
- },
-
-         {
-  path:"excelformatting",
-  element:<ExcelFormatting />
- },
-
-
- 
-         {
-  path:"excelformatpainter",
-  element:<ExcelFormatPainter />
- },
-
-
-          {
-  path:"excelformatcolors",
-  element:<ExcelFormatColors />
- },
-
-           {
-  path:"excelformatfonts",
-  element:<ExcelFormatFonts />
- },
-
-          {
-  path:"excelformatborders",
-  element:<ExcelFormatBorders />
- },
-
-
- 
-          {
-  path:"excelformatnumbers",
-  element:<ExcelFormatNumbers />
- },
-
-           {
-  path:"excelformatgrids",
-  element:<ExcelFormatGrids />
- },
-
-            {
-  path:"excelformatsettings",
-  element:<ExcelFormatSettings />
- },
-
- 
-            {
-  path:"excelsort",
-  element:<ExcelSort />
- },
-
-
-   {
-  path:"excelfilter",
-  element:<ExcelFilter />
- },
-
-    {
-  path:"exceltables",
-  element:<ExcelTables />
- },
-
-     {
-  path:"excelconditionalformat",
-  element:<ExcelConditionalFormat />
- },
-
-      {
-  path:"excelhighlightcellrules",
-  element:<ExcelHighlightCellRules />
- },
-
-
-      {
-  path:"exceltopbottomrules",
-  element:<ExcelTopBottomRules />
- },
-
-
-       {
-  path:"exceldatabars",
-  element:<ExcelDataBars />
- },
-
-
- 
-       {
-  path:"excelcolorscales",
-  element:<ExcelColorScales />
- },
-
-
- 
-       {
-  path:"exceliconsets",
-  element:<ExcelIconSets />
- },
-
-        {
-  path:"excelmanagerules",
-  element:<ExcelManageRules />
- },
-
-       {
-  path:"excelcharts",
-  element:<ExcelCharts />
- },
-
-      {
-  path:"tablepivotintro",
-  element:<ExcelTablePivotIntro />
- },
-
-
-       {
-  path:"casepokemart",
-  element:<ExcelCasePokeMart />
- },
-
-
- 
-       {
-  path:"casepokemartstyling",
-  element:<ExcelCasePokeMartStyling />
- },
-
-       {
-  path:"exceland",
-  element:<ExcelAnd />
- },
-
-
-        {
-  path:"excelaverage",
-  element:<ExcelAverage />
- },
-
-         {
-  path:"excelaverageif",
-  element:<ExcelAverageIf />
- },
-
- 
-         {
-  path:"excelaverageifs",
-  element:<ExcelAverageIfs />
- },
-
-        {
-  path:"excelconcat",
-  element:<ExcelConcat />
- },
-
-         {
-  path:"excelcount",
-  element:<ExcelCount />
- },
-
-
-          {
-  path:"excelcounta",
-  element:<ExcelCountA />
- },
-
-           {
-  path:"excelcountblank",
-  element:<ExcelCountBlank />
- },
-
-
-            {
-  path:"excelcountif",
-  element:<ExcelCountIF />
- },
-
-
-             {
-  path:"excelcountifs",
-  element:<ExcelCountIFS />
- },
-
-              {
-  path:"excelif",
-  element:<ExcelIF />
- },
-
-
- 
-              {
-  path:"excelifs",
-  element:<ExcelIFS />
- },
-
-
-               {
-  path:"excelleft",
-  element:<ExcelLEFT />
- },
-
-                {
-  path:"excellower",
-  element:<ExcelLOWER />
- },
-
-                 {
-  path:"excelmax",
-  element:<ExcelMAX />
- },
-
-                  {
-  path:"excelmedian",
-  element:<ExcelMEDIAN />
- },
-
-                   {
-  path:"excelmin",
-  element:<ExcelMIN />
- },
-
-                    {
-  path:"excelmode",
-  element:<ExcelMODE />
- },
-
-                     {
-  path:"excelnpv",
-  element:<ExcelNPV />
- },
-
-                      {
-  path:"excelor",
-  element:<ExcelOR />
- },
-
-                       {
-  path:"excelrand",
-  element:<ExcelRAND />
- },
-
-                       {
-  path:"excelright",
-  element:<ExcelRIGHT />
- },
-
-                        {
-  path:"excelstdevp",
-  element:<ExcelSTDEVP />
- },
-
-                         {
-  path:"excelstdevs",
-  element:<ExcelSTDEVS />
- },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+    
+   
+  
   ]);
 
   return <RouterProvider router={router} />;

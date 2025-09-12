@@ -92,7 +92,7 @@ const SidebarExcel = () => {
   const howToLinks = [
     { name: "Convert Time to Seconds", path: "/excelconverttime" },
     { name: "Difference Between Times", path: "/exceldifferencebetween" },
-    { name: "NPV (Net Present Value)", path: "/excelnpvcase" },
+   
     { name: "Remove Duplicates", path: "/excelremoveduplicates" },
   ];
 

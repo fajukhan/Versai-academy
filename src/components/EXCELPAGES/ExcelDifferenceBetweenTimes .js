@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import SidebarExcel from "../SidebarExcel";
 
-const ExcelSTDEVS = () => {
+const ExcelDifferenceBetweenTimes = () => {
   return (
     <>
       <Navbar />
@@ -13,45 +13,65 @@ const ExcelSTDEVS = () => {
           <div className="row g-0">
 
             {/* Sidebar (Left - col-2) */}
-         <SidebarExcel />
+           <SidebarExcel />
+
             {/* Main Content */}
             <div className="col-lg-8 col-md-6 col-12 bg-white p-5">
 
-              <h1>Excel STDEV.S Function</h1>
+              <h1>Excel – Difference Between Times</h1>
 
               {/* Prev / Next Buttons */}
               <div className="d-flex justify-content-between gap-3 flex-wrap mt-3 mb-4">
-                <a href="/">
+                <a href="excelconverttime">
                   <button className="custom-btn"><FaArrowLeft /> Previous</button>
                 </a>
-                <a href="excelsum">
+                <a href="excelremoveduplicates">
                   <button className="custom-btn">Next <FaArrowRight /></button>
                 </a>
               </div>
 
               <p className="lead py-4">
-                The STDEV.S function in Excel calculates the standard deviation based on a sample of the population.
+                You can calculate the difference between two times in Excel by subtracting one time from another and formatting the result to display the duration.
               </p>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Syntax
+                Formula
               </h3>
               <p>
-                <code>STDEV.S(number1, [number2], ...)</code>
+                <code>=EndTime - StartTime</code>
               </p>
-              <ul>
-                <li><strong>number1, number2, ...</strong>: These are the numbers or ranges representing a sample for which you want to calculate the standard deviation.</li>
-              </ul>
+              <p>
+                Where <strong>EndTime</strong> and <strong>StartTime</strong> are the cells containing the respective times.
+              </p>
               <button className="try-btn my-5">Try it Yourself »</button>
 
               <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
-                Example – Standard Deviation of Sample
+                Example – Calculate Time Difference
               </h3>
               <pre className="bg-light p-3 rounded">
-{`=STDEV.S(10, 12, 23, 23, 16, 23, 21, 16)
-Result: 5.404`
+{`A1: 08:00 AM
+B1: 05:00 PM
 
-}
+Formula:
+=B1 - A1
+
+Result:
+9:00 (9 hours difference)`}
+              </pre>
+              <button className="try-btn my-5">Try it Yourself »</button>
+
+              <h3 style={{ backgroundColor: 'purple', color: 'white', borderRadius: '8px', padding: '10px' }}>
+                Example – Time Difference Across Midnight
+              </h3>
+              <pre className="bg-light p-3 rounded">
+{`A1: 10:00 PM
+B1: 06:00 AM
+
+Formula:
+=B1 - A1 + IF(B1<A1,1,0)
+
+Result:
+8:00 (8 hours difference)`}
               </pre>
               <button className="try-btn my-5">Try it Yourself »</button>
 
@@ -59,9 +79,9 @@ Result: 5.404`
                 Notes
               </h3>
               <ul>
-                <li>The STDEV.S function is used when you have data representing a sample, not the entire population.</li>
-                <li>It is different from <code>STDEV.P</code>, which is used for complete population data.</li>
-                <li>Helps in statistical analysis to understand variability within a sample group.</li>
+                <li>If the end time is smaller than the start time, you can add 1 to account for the next day.</li>
+                <li>Format the result cell as Time or Custom format [h]:mm to display durations greater than 24 hours.</li>
+                <li>This method is useful for tracking working hours, shift times, and scheduling.</li>
               </ul>
               <button className="try-btn my-5">Try it Yourself »</button>
 
@@ -75,4 +95,4 @@ Result: 5.404`
   );
 };
 
-export default ExcelSTDEVS;
+export default ExcelDifferenceBetweenTimes;
